@@ -711,7 +711,7 @@ Changing any property in the Limits section requires a restart of the RadiantOne
 <p class="chakra-text css-36k3oc">The maximum number of client connections the server can accept concurrently (connecting at the exact same time).</p>
 <h4 class="chakra-heading css-10ar4s8" id="manually-closing-a-client-connection">Manually Closing a Client Connection</h4>
 <p class="chakra-text css-36k3oc">A connection can be manually closed by issuing an LDAP search to RadiantOne with the connection ID. The connection ID can be viewed from the Server Control Panel &gt; Usage &amp; Activity tab &gt; Connections &amp; Operations.</p>
-<p class="chakra-text css-36k3oc">With the connection ID, connect to RadiantOne as the super user (e.g. cn=directory manager) and perform a search request with a base DN of, action=closeconnection,ID=<connectionid>. An example is shown below using the ldapsearch utility. This example closes the connection associated with ID 148300.</connectionid></p>
+<p class="chakra-text css-36k3oc">With the connection ID, connect to RadiantOne as the super user (e.g. cn=directory manager) and perform a search request with a base DN of, <code class="language-text">action=closeconnection,ID=&lt;connectionID&gt;</code>. An example is shown below using the ldapsearch utility. This example closes the connection associated with ID 148300.</p>
 
           <div class="css-pwaf62"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
