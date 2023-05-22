@@ -55,7 +55,7 @@ The commands in this chapter do not support output format configuration. Refer t
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="set-attrenc-key">set-attrenc-key</h2></div>
 <p class="chakra-text css-36k3oc">This command sets the encryption cipher and key used for attribute encryption/decryption.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-attrenc-key -cipher &lt;cipher"> -key &lt;key</code></p>
+<br/><code class="language-text">set-attrenc-key -cipher &lt;cipher&gt; -key &lt;key&gt; [-instance &lt;instance&gt;] [-nowarning]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- cipher &lt;cipher&gt;</code></strong>
 <br/>[required] The name of the cipher to use for encryption. The accepted possible values are: DES3, AES128 and AES256. Possible values are dependent upon whether unlimited strength cipher suites have been installed in RadiantOne. For details on supporting unlimited strength ciphers, see the RadiantOne Hardening Guide.</p>
@@ -99,7 +99,7 @@ set-ldifz-key -cipher <cipher> -key <key> [-instance <instance>]</instance></key
 Enabling this property requires an LDIFZ encryption key to first be defined.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-secure-ldif-export -enable &lt;enable"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">set-secure-ldif-export -enable &lt;enable&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- enable &lt;enable&gt;</code></strong>
 <br/>[required] Indicates if secure LDIF export should be enabled (true) or disabled (false).</p>
@@ -114,7 +114,7 @@ Enabling this property requires an LDIFZ encryption key to first be defined.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="test-cert-mapping">test-cert-mapping</h2></div>
 <p class="chakra-text css-36k3oc">This command tests the subject (or SAN) associated with a given certificate against the existing certificate to DN mappings.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-test-cert-mapping -cert &lt;cert"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">test-cert-mapping -cert &lt;cert&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- cert &lt;cert&gt;</code></strong>
 <br/>[required] The path to the certificate to test.</p>
@@ -129,7 +129,7 @@ Enabling this property requires an LDIFZ encryption key to first be defined.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-cloud-certificate">set-cloud-certificate</h2></div>
 <p class="chakra-text css-36k3oc">The client certificate truststore contains security certificates that RadiantOne uses to establish secure SSL/TLS connections to backend sources. Certificates can be managed from the Main Control Panel &gt; Settings tab &gt; Security &gt; Client Certificate truststore. Certificates can also be added using the following command.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-cloud-certificate -cert &lt;cert"> -name &lt;name</code></p>
+<br/><code class="language-text">set-cloud-certificate -cert &lt;cert&gt; -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- cert &lt;cert&gt;</code></strong>
 <br/>[required] The path to the certificate to add to the client certificate truststore.</p>
@@ -146,7 +146,7 @@ Enabling this property requires an LDIFZ encryption key to first be defined.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="delete-cloud-certificate">delete-cloud-certificate</h2></div>
 <p class="chakra-text css-36k3oc">Certificates can be deleted from the RadiantOne client certificate truststore using the following command.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-cloud-certificate -name &lt;name"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">delete-cloud-certificate -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the certificate to delete from the client certificate truststore. This is equivalent to the certificate alias and must be unique across all certificates in the truststore.</p>
@@ -166,7 +166,7 @@ The name of the RadiantOne instance. If not specified, the default instance name
 This command must be run on all nodes.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-fips-mode-enable [-instance &lt;instance">]</code></p>
+<br/><code class="language-text">fips-mode-enable [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>

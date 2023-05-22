@@ -47,7 +47,7 @@ These nodes should not be accessible by consuming client applications, so do not
 <p class="chakra-text css-36k3oc">Locate the cloud ID associated with the RadiantOne follower-only node(s) from the Main Control Panel &gt; Dashboard tab. Make a note of the Cloud ID as it is used in the next step.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Unregister RadiantOne FID on the follower-only nodes since it is not used. To do so, on one of the core nodes in the cluster, run the following command (using cluster.bat on Windows, cluster.sh on Linux):</p>
-<p class="chakra-text css-36k3oc"><code class="language-&lt;rli_home">/bin/advanced/cluster.bat unregister &lt;instance name</code></p>
+<p class="chakra-text css-36k3oc"><code class="language-text">&lt;RLI_HOME&gt;/bin/advanced/cluster.bat unregister &lt;instance name&gt; &lt;the follower-only node Cloud ID&gt;</code></p>
 </li></ol>
 <p class="chakra-text css-36k3oc">You can use a value of vds_server as the instance name if you only have one RadiantOne instance.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="directory-backend-configuration">Directory Backend Configuration</h2></div>

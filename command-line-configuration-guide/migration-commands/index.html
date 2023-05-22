@@ -46,7 +46,7 @@ The commands in this chapter do not support output format configuration. Refer t
 <style data-emotion="css 5cvzdn">.css-5cvzdn{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;color:var(--chakra-colors-rlBlack);}</style><h3 class="chakra-heading css-5cvzdn" id="resource-traverse">resource-traverse</h3>
 <p class="chakra-text css-36k3oc">This command displays the resource dependency tree. The results include any data sources, .orx files, .dvx files, root naming contexts, and .jar files (from interception scripts or custom object scripts) related to the resource. If you need to migrate the resource to another environment, all of the dependent files must be migrated also.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-resource-traverse -name &lt;name"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">resource-traverse -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the resource. This could be a data source name, a .dvx file name (e.g. contextcatalog.dvx), an .orx file name (e.g. sales.orx), or a root naming context (e.g. o=companydirectory).</p>
@@ -61,7 +61,7 @@ The commands in this chapter do not support output format configuration. Refer t
 <h3 class="chakra-heading css-5cvzdn" id="resource-export">resource-export</h3>
 <p class="chakra-text css-36k3oc">This command exports the resource and its dependencies.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-resource-export -name &lt;name"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">resource-export -name &lt;name&gt; [-instance &lt;instance&gt;] [-path &lt;path&gt;] [-skip &lt;name&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the resource.</p>
@@ -80,7 +80,7 @@ The commands in this chapter do not support output format configuration. Refer t
 <h3 class="chakra-heading css-5cvzdn" id="resource-import">resource-import</h3>
 <p class="chakra-text css-36k3oc">This command imports the resource and its dependencies.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-resource-import -path &lt;path"> [-apply] [-instance &lt;instance</code></p>
+<br/><code class="language-text">resource-import -path &lt;path&gt; [-apply] [-instance &lt;instance&gt;][-interactive] [-overwrite] [-skip &lt;name&gt;] [-skipregex &lt;skipregex&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- path &lt;path&gt;</code></strong>
 <br/>[required] The file or folder to import from.</p>

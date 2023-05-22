@@ -45,7 +45,7 @@
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="print-pwd-policy">print-pwd-policy</h2></div>
 <p class="chakra-text css-36k3oc">This command prints the current settings for a given password policy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-print-pwd-policy -name &lt;name"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">print-pwd-policy -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to refer to the default password policy.</p>
@@ -60,7 +60,7 @@ In the following example, a request is made to display the settings for the defa
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="add-pwd-policy">add-pwd-policy</h2></div>
 <p class="chakra-text css-36k3oc">This command adds a new custom password policy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-pwd-policy -basedn &lt;basedn"> -name &lt;name</code></p>
+<br/><code class="language-text">add-pwd-policy -basedn &lt;basedn&gt; -name &lt;name&gt; -type &lt;type&gt; [-instance &lt;instance&gt;] [-precedence &lt;precedence&gt;] [-pwdAllowUserChange &lt;pwdAllowUserChange&gt;] [-pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;] [-pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;] [-pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;] [-pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;] [-pwdExpireWarning &lt;pwdExpireWarning&gt;] [-pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;] [-pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;] [-pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;] [-pwdInHistory &lt;pwdInHistory&gt;] [-pwdLockoutDuration &lt;pwdLockoutDuration&gt;] [-pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;] [-pwdMaxAge &lt;pwdMaxAge&gt;] [-pwdMaxFailure &lt;pwdMaxFailure&gt;] [-pwdMinAge &lt;pwdMinAge&gt;] [-pwdMinLength &lt;pwdMinLength&gt;] [-pwdMustChange &lt;pwdMustChange&gt;] [-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;] [-pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;] [-pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;] [-pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;] [-pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;] [-pwdSafeModify &lt;pwdSafeModify&gt;] [-pwdStorageScheme &lt;pwdStorageScheme&gt;] [pwdStrRule &lt;pwdStrRule&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- basedn &lt;basedn&gt;</code></strong>
 <br/>[required] The base DN for the subject of the password policy.</p>
@@ -106,7 +106,7 @@ In the following example, a request is made to display the settings for the defa
 <br/>The minimum number of characters that must be used in a password. Default is 0.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code></strong>
 <br/>Indicates if users must change their passwords when they first bind to the directory after their password has been reset by an administrator. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-[-pwdqualityminalteredchar &lt;pwdqualityminalteredchar">]</code></strong>
+<p class="chakra-text css-36k3oc"><strong><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code></strong>
 <br/>The minimum number of characters that must be changed when a new password is set.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code></strong>
 <br/>The minimum number of numerical characters required in passwords. Default is 0.</p>
@@ -134,7 +134,7 @@ In the following example, a request is made to display the settings for the defa
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="update-pwd-policy">update-pwd-policy</h2></div>
 <p class="chakra-text css-36k3oc">This command updates an existing password policy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-pwd-policy -name &lt;name"> [-basedn &lt;basedn</code></p>
+<br/><code class="language-text">update-pwd-policy -name &lt;name&gt; [-basedn &lt;basedn&gt;] [-disablePwdContent] [-instance &lt;instance&gt;] [-precedence &lt;precedence&gt;] [-pwdAllowUserChange &lt;pwdAllowUserChange&gt;] [-pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;] [-pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;] [-pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;] [-pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;] [-pwdExpireWarning &lt;pwdExpireWarning&gt;] [-pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;] [-pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;] [-pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;] [-pwdInHistory &lt;pwdInHistory&gt;] [-pwdLockoutDuration &lt;pwdLockoutDuration&gt;] [-pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;] [-pwdMaxAge &lt;pwdMaxAge&gt;] [-pwdMaxFailure &lt;pwdMaxFailure&gt;] [-pwdMinAge &lt;pwdMinAge&gt;] [-pwdMinLength &lt;pwdMinLength&gt;] [-pwdMustChange &lt;pwdMustChange&gt;] [-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;] [-pwdQualityMinDigitChar  &lt;pwdQualityMinDigitChar&gt;] [-pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;] [-pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;] [-pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;] [-pwdSafeModify &lt;pwdSafeModify&gt;] [-pwdStorageScheme &lt;pwdStorageScheme&gt;] [pwdStrRule &lt;pwdStrRule&gt;] [-type &lt;type&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to update the default password policy.</p>
@@ -180,7 +180,7 @@ In the following example, a request is made to display the settings for the defa
 <br/>The minimum number of characters that must be used in a password. Default is 0.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code></strong>
 <br/>Indicates if users must change their passwords when they first bind to the directory after their password has been reset by an administrator. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-[-pwdqualityminalteredchar &lt;pwdqualityminalteredchar">]</code></strong>
+<p class="chakra-text css-36k3oc"><strong><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code></strong>
 <br/>The minimum number of characters that must be changed when a new password is set.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code></strong>
 <br/>The minimum number of numerical characters required in passwords. Default is 0.</p>
@@ -210,7 +210,7 @@ In the following example, a request is made to update a password policy for o=co
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="delete-pwd-policy">delete-pwd-policy</h2></div>
 <p class="chakra-text css-36k3oc">This command removes an existing password policy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-pwd-policy -name &lt;name"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">delete-pwd-policy -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to update the default password policy.</p>

@@ -47,7 +47,7 @@
 <style data-emotion="css 5cvzdn">.css-5cvzdn{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;color:var(--chakra-colors-rlBlack);}</style><h3 class="chakra-heading css-5cvzdn" id="list-datasource">list-datasource</h3>
 <p class="chakra-text css-36k3oc">This command displays a list of configured data source names.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-list-datasource [-custom] [-database] [-instance &lt;instance">] [-ldap]</code></p>
+<code class="language-text">list-datasource [-custom] [-database] [-instance &lt;instance&gt;] [-ldap]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong>- custom</strong>
 <br/> Indicates that custom-type data sources should be listed.</p>
@@ -66,7 +66,7 @@ In the following example, a request is made to display a list of custom, databas
 <h3 class="chakra-heading css-5cvzdn" id="get-datasource">get-datasource</h3>
 <p class="chakra-text css-36k3oc">This command displays the connection info for the specified data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-datasource -datasourcename &lt;datasourcename"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">get-datasource -datasourcename &lt;datasourcename&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><code class="language-text">- datasourcename &lt;datasourcename&gt;</code>
 <br/> [required] The name of the data source.</p>
@@ -81,7 +81,7 @@ In the following example, a request is made to display a list of custom, databas
 <h3 class="chakra-heading css-5cvzdn" id="delete-datasource">delete-datasource</h3>
 <p class="chakra-text css-36k3oc">This command deletes the data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/> <code class="language-delete-datasource -datasourcename &lt;datasourcename"> [-instance &lt;instance</code></p>
+<br/> <code class="language-text">delete-datasource -datasourcename &lt;datasourcename&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/> [required] The name of the data source.</p>
@@ -99,7 +99,9 @@ datasource&amp;datasourcename=derby-northwind2</code></code></div></div>
 <h3 class="chakra-heading css-5cvzdn" id="create-db-datasource">create-db-datasource</h3>
 <p class="chakra-text css-36k3oc">This command creates a new database data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-create-db-datasource -datasourcename &lt;datasourcename"> [-active &lt;active</code></p>
+<code class="language-text">create-db-datasource -datasourcename &lt;datasourcename&gt; [-active &lt;active&gt;] [-autocommit
+&lt;autocommit&gt;] [-dbtype &lt;dbtype&gt;] [-driverclass &lt;driverclass&gt;] [-failover &lt;failover&gt;] [-instance
+&lt;instance&gt;] [-jdbcurl &lt;jdbcurl&gt;] [-password &lt;password&gt;] [-username &lt;username&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/> [required] The name of the data source. Do not use spaces in the name.
@@ -135,7 +137,7 @@ create-ldap-datasource -datasourcename LDAP2 -autocommit true ....<other props="
 <h3 class="chakra-heading css-5cvzdn" id="update-db-datasource">update-db-datasource</h3>
 <p class="chakra-text css-36k3oc">This command updates the connection info for the specified database data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-db-datasource -datasourcename &lt;datasourcename"> [-active &lt;active</code></p>
+<br/><code class="language-text">update-db-datasource -datasourcename &lt;datasourcename&gt; [-active &lt;active&gt;] [-autocommit &lt;autocommit&gt;] [-dbtype dbtype&gt;] [-driverclass &lt;driverclass&gt;] [-failover &lt;failover&gt;] [-instance &lt;instance&gt;] [-jdbcurl &lt;jdbcurl&gt;] [-password &lt;password&gt;] [-username &lt;username&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/>[required] The name of the data source.</p>
@@ -174,7 +176,8 @@ c:derby://localhost:1527/Northwind%3b&amp;password=app&amp;username=app&amp;acti
 <h3 class="chakra-heading css-5cvzdn" id="create-ldap-datasource">create-ldap-datasource</h3>
 <p class="chakra-text css-36k3oc">This command creates a new LDAP data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-create-ldap-datasource -datasourcename &lt;datasourcename"> [-active &lt;active</code></p>
+<code class="language-text">create-ldap-datasource -datasourcename &lt;datasourcename&gt; [-active &lt;active&gt;] [-autocommit &lt;autocommit&gt;] [-basedn &lt;basedn&gt;] [-binddn &lt;binddn&gt;] [-chaseref &lt;chaseref&gt;]
+[-dirtype dirtype&gt;] [-failover &lt;failover&gt;] [-host &lt;host&gt;] [-instance &lt;instance&gt;] [-pagedresults &lt;pagedresults&gt;] [-pagesize &lt;pagesize&gt;] [-password &lt;password&gt;] [-port &lt;port&gt;] [-ssl &lt;ssl&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/>[required] The name of the data source. Do not use spaces in the name.</p>
@@ -225,7 +228,8 @@ In the following example, a request is made to create an LDAP data source called
 <h3 class="chakra-heading css-5cvzdn" id="update-ldap-datasource">update-ldap-datasource</h3>
 <p class="chakra-text css-36k3oc">This command updates the connection info for the specified LDAP data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/> <code class="language-update-ldap-datasource -datasourcename &lt;datasourcename"> [-active &lt;active</code></p>
+<br/> <code class="language-text">update-ldap-datasource -datasourcename &lt;datasourcename&gt; [-active &lt;active&gt;] [-autocommit &lt;autocommit&gt;] [-basedn &lt;basedn&gt;] [-binddn &lt;binddn&gt;] [-chaseref &lt;chaseref&gt;] [-dirtype &lt;dirtype&gt;] [-failover &lt;failover&gt;] [-host &lt;host&gt;] [-instance &lt;instance&gt;]
+[-pagedresults &lt;pagedresults&gt;] [-pagesize &lt;pagesize&gt;] [-password &lt;password&gt;] [-port &lt;port&gt;] [-ssl &lt;ssl&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/>[required] The name of the data source.</p>
@@ -282,7 +286,7 @@ In the following example, a request is made to add a failover server to a data s
 This command requires you to pass either the -propfile or -propstr command argument to set the custom data source properties.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-create-custom-datasource -datasourcename &lt;datasourcename"> [-instance &lt;instance</code></p>
+<code class="language-text">create-custom-datasource -datasourcename &lt;datasourcename&gt; [-instance &lt;instance&gt;] [-propfile &lt;propfile&gt;] [-propstr &lt;propstr&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 [required] The name of the data source.</p>
@@ -305,7 +309,7 @@ A string containing the different properties to set for your custom data source.
 This command requires you to pass either the -propfile or -propstr command argument to set the custom data source properties.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-custom-datasource -datasourcename &lt;datasourcename">[-instance &lt;instance</code></p>
+<br/><code class="language-text">update-custom-datasource -datasourcename &lt;datasourcename&gt;[-instance &lt;instance&gt;] [-propfile &lt;propfile&gt;] [-propstr &lt;propstr&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/> [required] The name of the data source.</p>
@@ -326,7 +330,7 @@ This command requires you to pass either the -propfile or -propstr command argum
 <h3 class="chakra-heading css-5cvzdn" id="import-datasource">import-datasource</h3>
 <p class="chakra-text css-36k3oc">Imports data sources from a given XML file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-import-datasource -filepath &lt;filepath"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">import-datasource -filepath &lt;filepath&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- filepath &lt;filepath&gt;</code></strong>
 <br/> [required] The full path to the file that contains the data sources to import.</p>
@@ -345,7 +349,8 @@ If a data source in the import file has the same name as an existing data source
 <h3 class="chakra-heading css-5cvzdn" id="export-datasource">export-datasource</h3>
 <p class="chakra-text css-36k3oc">Exports data sources to an XML file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-export-datasource -filepath &lt;filepath"> [-all] [-datasources &lt;datasources</code></p>
+<br/><code class="language-text">export-datasource -filepath &lt;filepath&gt; [-all] [-datasources &lt;datasources&gt;] [-instance &lt;instance&gt;]
+[-overwrite]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- filepath &lt;filepath&gt;</code></strong>
 <br/> [required] The full path to the file that will contain the exported data sources.</p>

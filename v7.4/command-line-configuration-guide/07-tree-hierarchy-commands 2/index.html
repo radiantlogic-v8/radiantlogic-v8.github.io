@@ -45,7 +45,7 @@
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="new-label">new-label</h2></div>
 <p class="chakra-text css-36k3oc">This command creates a new label node in a virtual tree hierarchy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-new-label -parentdn &lt;parentdn"> -rdn &lt;rdn</code></p>
+<br/><code class="language-text">new-label -parentdn &lt;parentdn&gt; -rdn &lt;rdn&gt; [-instance &lt;instance&gt;] [-objectclass &lt;objectclass&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- parentdn &lt;parentdn&gt;</code></strong>
 <br/>[required] The DN of the parent of the new label.</p>
@@ -64,7 +64,7 @@ In the following example, a request is made to create a new label named ou=Group
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="delete-label">delete-label</h2></div>
 <p class="chakra-text css-36k3oc">This command deletes an existing label node in a virtual tree hierarchy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-label -dn &lt;dn"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">delete-label -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 [required] The full DN of the existing label node to delete.</p>
@@ -80,7 +80,7 @@ label&amp;dn=ou=Groups,o=vds</code></code></div></div>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="list-node-property">list-node-property</h2></div>
 <p class="chakra-text css-36k3oc">This command displays a list of all properties/values for the specified virtual node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/> <code class="language-list-node-property -dn &lt;dn"> [-instance &lt;instance</code></p>
+<br/> <code class="language-text">list-node-property -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required argument] The DN of the node.</p>
@@ -96,7 +96,7 @@ In the following example, a request is made to display a list of all properties 
 <p class="chakra-text css-36k3oc">This command displays the current value of a property of a specified node.</p>
 <p class="chakra-text css-36k3oc">IMPORTANT NOTE – The value of -prop is case sensitive. You can use the list-node-property command to get a list of property values that you can pass in -prop. Use the exact case shown for the property (e.g. OutputColumns not outputcolumns).</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-node-property -dn &lt;dn"> -prop &lt;prop</code></p>
+<br/><code class="language-text">get-node-property -dn &lt;dn&gt; -prop &lt;prop&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required argument] The DN of the node.</p>
@@ -167,7 +167,7 @@ In the following example, a request is made to display the value for the Name pr
 <p class="chakra-text css-36k3oc"><span style="color:red"><strong>IMPORTANT NOTE – This command should not be used to modify RDNs. To modify an RDN, use the set-node-rdn command.</strong></span></p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-node-property -dn &lt;dn"> -prop &lt;prop</code></p>
+<br/><code class="language-text">set-node-property -dn &lt;dn&gt; -prop &lt;prop&gt; -value &lt;value&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required argument] The DN of the node.</p>
@@ -203,7 +203,7 @@ On Compare=false
 On Special Operations(invoke)=false
 Script path=C:\radiantone\vds\vds_server\custom\src\com\rli\scripts\intercept\AddressBook.java (file currently exists)</code></code></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-K<br/><code class="language-get-node-interception -dn &lt;dn"> [-instance &lt;instance</code></p>
+K<br/><code class="language-text">get-node-interception -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required argument] The DN of the node. Be sure to use the syntax based on the model of the view, similar to the example shown above.</p>
@@ -220,7 +220,8 @@ In the following example, a request is made to display the values configured for
 <p class="chakra-text css-36k3oc">The first time you use set-node-interception, a default interception script matching your virtual view is generated in &lt;RLI_HOME&gt;\vds_server\custom\src\com\rli\scripts\intercept. You can always get the full path to the java file with get-node-interception.</p>
 <p class="chakra-text css-36k3oc">After editing the Java file, the intercept.jar file must be rebuilt and the RadiantOne service must be restarted for the script to take effect. If deployed in a cluster, restart it on all nodes.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-set-node-interception -dn &lt;dn"> [-add &lt;true/false</code></p>
+<code class="language-text">set-node-interception -dn &lt;dn&gt; [-add &lt;true/false&gt;] [-bind &lt;true/false] [-search &lt;true/false&gt;]
+[-modify &lt;true/false&gt;] [-delete &lt;true/false&gt;] [-srep &lt;true/false&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc">An example of setting interception is as follows:</p>
 
           <div class="css-pwaf62"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
@@ -254,7 +255,7 @@ means it is not enabled.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-node-rdn">set-node-rdn</h2></div>
 <p class="chakra-text css-36k3oc">This command sets the RDN attribute name/value of the specified node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-set-node-rdn -dn &lt;dn"> [-rdn &lt;rdn</code></p>
+<code class="language-text">set-node-rdn -dn &lt;dn&gt; [-rdn &lt;rdn&gt;] [-instance &lt;instance&gt;] [-value &lt;value&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required argument] The DN of the node.</p>

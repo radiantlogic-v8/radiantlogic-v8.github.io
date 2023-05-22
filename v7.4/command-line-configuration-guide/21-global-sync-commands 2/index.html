@@ -57,7 +57,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="create-sync-topology">create-sync-topology</h2></div>
 <p class="chakra-text css-36k3oc">Creates a Global Sync topology and its pipelines between two RadiantOne naming contexts.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-create-sync-topology -namingcontextdn &lt;namingcontextdn"> -targetnamingcontextdn &lt;target naming context DN</code></p>
+<br/><code class="language-text">create-sync-topology -namingcontextdn &lt;namingcontextdn&gt; -targetnamingcontextdn &lt;target naming context DN&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontextdn &lt;naming context DN&gt;</code></strong>
 <br/>[required] The DN of the naming context representing the source in the synchronization topology to be created.</p>
@@ -75,7 +75,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-topology-id">get-topology-id</h2></div>
 <p class="chakra-text css-36k3oc">Get the topology identifier associated with two RadiantOne naming contexts.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-get-topology-id -namingcontextdn &lt;naming context dn"> -targetnamingcontextdn &lt;target naming context DN</code></p>
+<br/><code class="language-text">get-topology-id -namingcontextdn &lt;naming context DN&gt; -targetnamingcontextdn &lt;target naming context DN&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontextdn &lt;naming context DN&gt;</code></strong>
 <br/>[required] The DN of the source naming context in the sync topology.</p>
@@ -126,7 +126,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="change-pipeline-state">change-pipeline-state</h2></div>
 <p class="chakra-text css-36k3oc">This command is used to resume or suspend the synchronization process associated with a given pipeline in a topology.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-change-pipeline-state -pipelineid &lt;pipelineid"> -state </code><state></state></p>
+<br/><code class="language-text">change-pipeline-state -pipelineid &lt;pipelineID&gt; -state </code><state></state></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines identifiers for each topology.</p>
@@ -135,7 +135,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="empty-queues">empty-queues</h2></div>
 <p class="chakra-text css-36k3oc">Every synchronization pipeline has its own queues below the cn=queue and cn=dlqueue naming contexts identified by the pipelineID. Messages are added into the queues by the capture connectors and retrieved from the queues by the sync engine. The sync engine can place failed messages back in the queues to replay later. This command empties the queues for a specific pipeline.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-empty-queues -pipelineid &lt;pipelineid"> [-mode &lt;mode</code></p>
+<br/><code class="language-text">empty-queues -pipelineid &lt;pipelineid&gt; [-mode &lt;mode&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines
@@ -174,7 +174,7 @@ time in a RadiantOne cluster.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="configure-connector-type">configure-connector-type</h2></div>
 <p class="chakra-text css-36k3oc">Sets the connector type for a connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-configure-connector-type -connectortype &lt;connector type"> -pipelineid &lt;pipelineID</code></p>
+<br/><code class="language-text">configure-connector-type -connectortype &lt;connector type&gt; -pipelineid &lt;pipelineID&gt; [-skipconfirmation]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectortype &lt;connector type&gt;</code></strong>
 <br/>[required] The connector type. Use one of the following values: CHANGELOG, AD_DIRSYNC, AD_USN, AD_HYBRID, DB_TIMESTAMP, DB_COUNTER, DB_TRIGGER, SCIM2, SCIM1, GRAPHAPI, MGRAPH, OKTA, KAFKA, KAFKA_GG, PERSISTENT_SEARCH, LDAP_APPLY, SCIM2_APPLY</p>
@@ -199,7 +199,7 @@ time in a RadiantOne cluster.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-connector-property">get-connector-property</h2></div>
 <p class="chakra-text css-36k3oc">Returns the value of a specific property for a connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-get-connector-property -pipelineid &lt;pipelineid"> -propertyid &lt;propertyid</code></p>
+<br/><code class="language-text">get-connector-property -pipelineid &lt;pipelineID&gt; -propertyid &lt;propertyid&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines identifiers for each topology.</p>
@@ -208,7 +208,7 @@ time in a RadiantOne cluster.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-connector-property">set-connector-property</h2></div>
 <p class="chakra-text css-36k3oc">Sets the value of a specific property for a connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-set-connector-property -pipelineid &lt;pipelineid"> -propertyid &lt;propertyID</code></p>
+<br/><code class="language-text">set-connector-property -pipelineid &lt;pipelineID&gt; -propertyid &lt;propertyID&gt; -propertyvalue &lt;property value&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines
@@ -226,7 +226,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="file-set-connector-properties">file-set-connector-properties</h2></div>
 <p class="chakra-text css-36k3oc">This command can be used to set multiple connector properties contained in a property file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-file-set-connector-properties -pipelineid &lt;pipelineid"> -propertyfilename &lt;property file name</code></p>
+<br/><code class="language-text">file-set-connector-properties -pipelineid &lt;pipelineID&gt; -propertyfilename &lt;property file name&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines identifiers for each topology.</p>
@@ -244,7 +244,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="execute-db-changelog-scripts">execute-db-changelog-scripts</h2></div>
 <p class="chakra-text css-36k3oc">Executes scripts to configure or de-configure a database capture connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-execute-db-changelog-scripts -namingcontextdn &lt;naming context dn"> -pipelineid &lt;pipelineID</code></p>
+<br/><code class="language-text">Execute-db-changelog-scripts -namingcontextdn &lt;naming context DN&gt; -pipelineid &lt;pipelineID&gt; [-deconfigure]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontextdn &lt;naming context DN&gt;</code></strong>
 <br/>[required] The DN for the source RadiantOne naming context for a given sync topology.</p>
@@ -255,7 +255,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-transform-mode">set-transform-mode</h2></div>
 <p class="chakra-text css-36k3oc">Sets the transformation mode (mappings, script, or all) for a sync pipeline.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-set-transform-mode -mode &lt;mode"> -pipelineid &lt;pipelineID</code></p>
+<br/><code class="language-text">set-transform-mode -mode &lt;mode&gt; -pipelineid &lt;pipelineID&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- mode &lt;mode&gt;</code></strong>
 <br/>[required] The transformation mode to assign. If you only want to use attribute mappings for the transformation, set the value to: mappings</p>
@@ -268,7 +268,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="create-transform-script">create-transform-script</h2></div>
 <p class="chakra-text css-36k3oc">Re-creates the transformation script for a pipeline.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-create-transform-script -pipelineid &lt;pipelineid"> [-overwrite]</code></p>
+<br/><code class="language-text">create-transform-script -pipelineid &lt;pipelineID&gt; [-overwrite]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines identifiers for each topology.</p>
@@ -284,7 +284,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-pipeline-mappings">set-pipeline-mappings</h2></div>
 <p class="chakra-text css-36k3oc">Sets the attribute mappings for a pipeline.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-set-pipeline-mappings -mappingfile &lt;mappingfile"> -pipelineid &lt;pipelineID</code></p>
+<br/><code class="language-text">set-pipeline-mappings -mappingfile &lt;mappingfile&gt; -pipelineid &lt;pipelineID&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- mappingfile &lt;mappingfile&gt;</code></strong>
 <br/>[required] The full path to a file containing the pipeline mappings in JSON format.</p>

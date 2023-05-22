@@ -138,7 +138,7 @@
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 11: Example Linking Two Existing Views</p>
 <p class="chakra-text css-36k3oc">In the linked view shown above, the sub-branch (view named EmpByDeptView) can be conditioned by setting a linking attribute. In this example, all projects are associated with a department (there is a one-to-one relationship based on the project ID), so the project ID can be established as the linking attribute. By adding a condition to the link based on the project ID attribute, the subtree shown at runtime is dependent upon the project (the parent node). The link parameter syntax is:
-<code class="language-&lt;childobject.attribute">=@[&lt;parentobject_attribute</code></p>
+<code class="language-text">&lt;childobject.attribute&gt;=@[&lt;parentobject_attribute&gt;:&lt;datatype&gt;]</code></p>
 <p class="chakra-text css-36k3oc">An example value is:
 APP.EMP.PROJECTID=(@[projectid:INTEGER])</p>
 <p class="chakra-text css-36k3oc">Without this link condition, all departments would be shown below each project and the hierarchy would not make sense. The difference between using a link parameter and not using one are shown in the following two figures.</p>

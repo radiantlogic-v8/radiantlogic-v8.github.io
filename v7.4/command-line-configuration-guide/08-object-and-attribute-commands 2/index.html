@@ -66,7 +66,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="add-ldap-attr">add-ldap-attr</h2></div>
 <p class="chakra-text css-36k3oc">This command adds attributes associated with an LDAP proxy view, to be customized with special properties.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-add-ldap-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<code class="language-text">add-ldap-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; [-alwaysreq &lt;alwaysreq&gt;] [-dnremap &lt;dnremap&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;] [-mappedname &lt;mappedname&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the attribute to be added.</p>
@@ -95,7 +95,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="update-ldap-attr">update-ldap-attr</h2></div>
 <p class="chakra-text css-36k3oc">This command updates the special properties for a given attribute associated with an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-update-ldap-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<code class="language-text">update-ldap-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; [-alwaysreq &lt;alwaysreq&gt;] [-dnremap &lt;dnremap&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;] [-mappedname &lt;mappedname&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the attribute before remapping.</p>
@@ -125,7 +125,7 @@ dname=fidmanager</code></code></div></div>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="delete-ldap-attr">delete-ldap-attr</h2></div>
 <p class="chakra-text css-36k3oc">This command removes an attribute that has been customized with special properties from LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-delete-ldap-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<code class="language-text">delete-ldap-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the attribute before remapping.</p>
@@ -153,7 +153,7 @@ dname=fidmanager</code></code></div></div>
 <h3 class="chakra-heading css-5cvzdn" id="list-ldap-primary">list-ldap-primary</h3>
 <p class="chakra-text css-36k3oc">This command displays the list of primary objects that can be added to a specific LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-ldap-primary -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">list-ldap-primary -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 [required] The full DN of the node or naming context.</p>
@@ -193,7 +193,7 @@ add-ldap-primary -namingcontext <namingcontext> -primaryobject <primaryobject> [
 <h3 class="chakra-heading css-5cvzdn" id="delete-ldap-primary">delete-ldap-primary</h3>
 <p class="chakra-text css-36k3oc">This command deletes an existing primary object on an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-ldap-primary -namingcontext &lt;namingcontext"> -primaryobject &lt;primaryobject</code></p>
+<br/><code class="language-text">delete-ldap-primary -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; [-instance &lt;instance&gt;][-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -221,7 +221,8 @@ add-ldap-primary -namingcontext <namingcontext> -primaryobject <primaryobject> [
 <h3 class="chakra-heading css-5cvzdn" id="list-ldap-primary-attr">list-ldap-primary-attr</h3>
 <p class="chakra-text css-36k3oc">This command displays a list of all attributes found for a primary object on an LDAP proxy view. The objectclass must be defined as a primary object for the LDAP proxy view before using this command.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-ldap-primary-attr -namingcontext &lt;namingcontext"> -primaryobject &lt;primaryobject</code></p>
+<br/><code class="language-text">list-ldap-primary-attr -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; [-columns &lt;columns&gt;] [-instance &lt;instance&gt;][-mergedatasource &lt;mergedatasource&gt;]
+[-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -244,7 +245,8 @@ add-ldap-primary -namingcontext <namingcontext> -primaryobject <primaryobject> [
 <h3 class="chakra-heading css-5cvzdn" id="add-ldap-primary-attr">add-ldap-primary-attr</h3>
 <p class="chakra-text css-36k3oc">This command adds an attribute to a primary object for an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-ldap-primary-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">add-ldap-primary-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; - primaryobject &lt;primaryobject&gt; -source &lt;source&gt; [-computedexpr &lt;computedexpr&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;] [-mappedname &lt;mappedname&gt;]
+[-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;] [-priority &lt;priority&gt;] [-searchable &lt;searchable&gt;] [-updatable &lt;updatable&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The original name of the attribute.</p>
@@ -281,7 +283,7 @@ The computed expression for the attribute. This expression should contain the at
 <h3 class="chakra-heading css-5cvzdn" id="update-ldap-primary-attr">update-ldap-primary-attr</h3>
 <p class="chakra-text css-36k3oc">This command updates the properties of an existing attribute for a primary object of an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-ldap-primary-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">update-ldap-primary-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; -source &lt;source&gt; [-computedexpr &lt;computedexpr&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;] [-mappedname &lt;mappedname&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;] [-priority &lt;priority&gt;] [-searchable &lt;searchable&gt;] [-updatable &lt;updatable&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The original name of the attribute.</p>
@@ -319,7 +321,7 @@ Strings.</p>
 <h3 class="chakra-heading css-5cvzdn" id="delete-ldap-primary-attr">delete-ldap-primary-attr</h3>
 <p class="chakra-text css-36k3oc">This command deletes an attribute from a primary object on an LDAP proxy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<code class="language-delete-ldap-primary-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<code class="language-text">delete-ldap-primary-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; -source &lt;source&gt; [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The original name of the attribute.</p>
@@ -351,7 +353,7 @@ Strings.</p>
 <h3 class="chakra-heading css-5cvzdn" id="list-ldap-xjoin">list-ldap-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command displays a list of all join IDs found for a primary object on an LDAP proxy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-ldap-xjoin -namingcontext &lt;namingcontext"> -primaryobject &lt;primaryobject</code></p>
+<br/><code class="language-text">list-ldap-xjoin -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; [-instance &lt;instance&gt;] [-joinid &lt;joinid&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -391,7 +393,7 @@ Strings.</p>
 <h3 class="chakra-heading css-5cvzdn" id="add-ldap-xjoin">add-ldap-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command adds a new join to a primary object on an LDAP proxy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-ldap-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">add-ldap-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; [-active &lt;active&gt;] [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-extended] [-instance &lt;instance&gt;] [-joinattr &lt;joinattr&gt;] [-joincondition &lt;joincondition&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;] [-primaryattr &lt;primaryattr&gt;] [-scope &lt;scope&gt;] [-secondaryattr &lt;secondaryattr&gt;] [-secondaryoc &lt;secondaryoc&gt;] [-sizelimit &lt;sizelimit&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 <br/>[required] The join profile name for the join to be added.</p>
@@ -448,7 +450,7 @@ Strings.</p>
 <h3 class="chakra-heading css-5cvzdn" id="update-ldap-xjoin">update-ldap-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command updates the properties of an existing join associated with a given primary object on an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-ldap-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">update-ldap-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; - primaryobject &lt;primaryobject&gt; [-active &lt;active&gt;] [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-instance &lt;instance&gt;] [-joinattr &lt;joinattr&gt;] [-joincondition &lt;joincondition&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;] [-primaryfilter &lt;primaryfilter&gt;][-returnall] [-scope &lt;scope&gt;] [-secondaryoc &lt;secondaryoc&gt;] [-sizelimit &lt;sizelimit&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 <br/>[required] The join profile name for an existing join.</p>
@@ -492,7 +494,7 @@ AllProfiles&amp;datasourcename=vds&amp;joincondition=employeeNumber=@[uid:varcha
 <h3 class="chakra-heading css-5cvzdn" id="delete-ldap-xjoin">delete-ldap-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command deletes an existing join associated with a given primary object on an LDAP proxy view.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-ldap-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">delete-ldap-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; - primaryobject &lt;primaryobject&gt; [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 <br/>[required] The join profile name for an existing join.</p>
@@ -522,7 +524,7 @@ AllProfiles&amp;datasourcename=vds&amp;joincondition=employeeNumber=@[uid:varcha
 <h3 class="chakra-heading css-5cvzdn" id="get-ldap-primary-bindorder">get-ldap-primary-bindorder</h3>
 <p class="chakra-text css-36k3oc">This command displays the bind order for authentication on a primary object.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-ldap-primary-bindorder -namingcontext &lt;namingcontext"> -primaryobject &lt;primaryobject</code></p>
+<br/><code class="language-text">get-ldap-primary-bindorder -namingcontext &lt;namingcontext&gt; -primaryobject &lt;primaryobject&gt; [-instance &lt;instance&gt;] [-list] [-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -545,7 +547,7 @@ AllProfiles&amp;datasourcename=vds&amp;joincondition=employeeNumber=@[uid:varcha
 <h3 class="chakra-heading css-5cvzdn" id="set-ldap-primary-bindorder">set-ldap-primary-bindorder</h3>
 <p class="chakra-text css-36k3oc">Sets the bind order for authentication on a primary object.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-ldap-primary-bindorder -bindorder &lt;bindorder"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">set-ldap-primary-bindorder -bindorder &lt;bindorder&gt; -namingcontext &lt;namingcontext&gt; - primaryobject &lt;primaryobject&gt; [-instance &lt;instance&gt;][-mergedatasource &lt;mergedatasource&gt;] [-mergeremotedn &lt;mergeremotedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- bindorder &lt;bindorder&gt;</code></strong>
 <br/>[required] The bind order to set. This should be an ordered comma-separated list of source IDs. Use the value MAIN to designate the primary backend. Use the join ID to designate other bind sources. Example: MAIN,joinid1,joinid2</p>
@@ -611,7 +613,7 @@ add-merge-backend -datasourcename <data source="" name=""> -namingcontext <namin
 <h3 class="chakra-heading css-5cvzdn" id="delete-merge-backend">delete-merge-backend</h3>
 <p class="chakra-text css-36k3oc">Removes a merged tree backend from an LDAP proxy naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-merge-backend -datasourcename &lt;data source name"> - namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">delete-merge-backend -datasourcename &lt;data source name&gt; - namingcontext &lt;namingcontext&gt; [-basedn &lt;basedn&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename</code></strong>
 <br/>[required] The data source name of the merged LDAP backend.</p>
@@ -645,7 +647,7 @@ add-merge-backend -datasourcename <data source="" name=""> -namingcontext <namin
 <h3 class="chakra-heading css-5cvzdn" id="list-content-attr">list-content-attr</h3>
 <p class="chakra-text css-36k3oc">This command displays a list of all attributes found for a content/container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-content-attr -namingcontext &lt;namingcontext"> [-columns &lt;columns</code></p>
+<br/><code class="language-text">list-content-attr -namingcontext &lt;namingcontext&gt; [-columns &lt;columns&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -662,7 +664,7 @@ add-merge-backend -datasourcename <data source="" name=""> -namingcontext <namin
 <h3 class="chakra-heading css-5cvzdn" id="add-content-attr">add-content-attr</h3>
 <p class="chakra-text css-36k3oc">This command adds an attribute to a content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-content-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">add-content-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; -source &lt;source&gt; [-computedexpr &lt;computedexpr&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;] [-mappedname &lt;mappedname&gt;] [-priority &lt;priority&gt;] [-searchable &lt;searchable&gt;] [-updatable &lt;updatable&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The original name of the attribute.</p>
@@ -695,7 +697,7 @@ attr&amp;namingcontext=employees,dc=db&amp;name=login&amp;source=main</code></co
 <h3 class="chakra-heading css-5cvzdn" id="update-content-attr">update-content-attr</h3>
 <p class="chakra-text css-36k3oc">This command updates the properties of an existing attribute for a content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-content-attr -name &lt;name"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">update-content-attr -name &lt;name&gt; -namingcontext &lt;namingcontext&gt; -source &lt;source&gt; [-computedexpr &lt;computedexpr&gt;] [-hidden &lt;hidden&gt;] [-instance &lt;instance&gt;][-mappedname &lt;mappedname&gt;] [-priority &lt;priority&gt;] [-searchable &lt;searchable&gt;] [-updatable &lt;updatable&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The original name of the attribute.</p>
@@ -752,7 +754,7 @@ delete-content-attr -name <name> -namingcontext <namingcontext> -source <source/
 <h3 class="chakra-heading css-5cvzdn" id="list-content-xjoin">list-content-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command displays a list of all joins defined for a given content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-content-xjoin -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">list-content-xjoin -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-joinid &lt;joinid&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context. For the RDN part, use the name appended with &quot;=*&quot;. For example, assume a join is defined on a content node for a naming context associated with a database backend (like shown below).</p>
@@ -783,7 +785,7 @@ delete-content-attr -name <name> -namingcontext <namingcontext> -source <source/
 <h4 class="chakra-heading css-10ar4s8" id="add-content-xjoin">add-content-xjoin</h4>
 <p class="chakra-text css-36k3oc">This command adds a new join to a content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-content-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">add-content-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; [-active &lt;active&gt;] [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-extended] [-instance &lt;instance&gt;] [-joinattr &lt;joinattr&gt;] [-joincondition &lt;joincondition&gt;] [-primaryattr &lt;primaryattr&gt;] [-scope &lt;scope&gt;] [-secondaryattr &lt;secondaryattr&gt;] [-secondaryoc &lt;secondaryoc&gt;] [-sizelimit &lt;sizelimit&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 <br/>[required] The join profile name for the join to be added.</p>
@@ -822,7 +824,7 @@ delete-content-attr -name <name> -namingcontext <namingcontext> -source <source/
 <h3 class="chakra-heading css-5cvzdn" id="update-content-xjoin">update-content-xjoin</h3>
 <p class="chakra-text css-36k3oc">This command updates the properties of an existing join from a content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-update-content-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">update-content-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; [-active &lt;active&gt;] [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-instance &lt;instance&gt;] [-joinattr &lt;joinattr&gt;] [-joincondition &lt;joincondition&gt;] [-primaryfilter &lt;primaryfilter&gt;] [-returnall] [-scope &lt;scope&gt;] [-secondaryoc &lt;secondaryoc&gt;] [-sizelimit &lt;sizelimit&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 [required] The join profile name for the join to be updated.</p>
@@ -863,7 +865,7 @@ user&amp;namingcontext=employees=*,dc=db&amp;active=true&amp;basedn=o=companypro
 <h4 class="chakra-heading css-10ar4s8" id="delete-content-xjoin">delete-content-xjoin</h4>
 <p class="chakra-text css-36k3oc">This command deletes an existing join from a content or container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-content-xjoin -joinid &lt;joinid"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">delete-content-xjoin -joinid &lt;joinid&gt; -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- joinid &lt;joinid&gt;</code></strong>
 <br/>[required] The join profile name for the join to be deleted.</p>
@@ -887,7 +889,7 @@ user&amp;namingcontext=employees=*,dc=db&amp;active=true&amp;basedn=o=companypro
 <h4 class="chakra-heading css-10ar4s8" id="get-content-bindorder">get-content-bindorder</h4>
 <p class="chakra-text css-36k3oc">This command displays the bind order for authentication on a content/container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-content-bindorder -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">get-content-bindorder -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-list]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The full DN of the node or naming context.</p>
@@ -904,7 +906,7 @@ user&amp;namingcontext=employees=*,dc=db&amp;active=true&amp;basedn=o=companypro
 <h3 class="chakra-heading css-5cvzdn" id="set-content-bindorder">set-content-bindorder</h3>
 <p class="chakra-text css-36k3oc">Sets the bind order for authentication on a content/container node.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-content-bindorder -bindorder &lt;bindorder"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">set-content-bindorder -bindorder &lt;bindorder&gt; -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- bindorder &lt;bindorder&gt;</code></strong>
 <br/>[required] The bind order to set. This should be an ordered comma-separated list of source ids. Use the value MAIN to designate the primary backend. Use the join ID to designate other bind sources. Example: MAIN,joinid1,joinid2</p>

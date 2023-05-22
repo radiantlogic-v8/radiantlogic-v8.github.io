@@ -51,7 +51,7 @@ utility.</p>
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="get-logging-property">get-logging-property</h2></div>
 <p class="chakra-text css-36k3oc">This command displays a logging configuration property.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-logging-property -key &lt;key"> -path &lt;path</code></p>
+<br/><code class="language-text">get-logging-property -key &lt;key&gt; -path &lt;path&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text"> - key &lt;key&gt;</code></strong>
 <br/>[required] The logging property key. Examples of logging property keys for RadiantOne are: server.log.level, server.log.file, and server.log.file.archive. The logging property key names can be seen from the ZooKeeper tab in the Main Control Panel as described above.</p>
@@ -94,7 +94,7 @@ Panel as described above.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="merge-logging-conf">merge-logging-conf</h2></div>
 <p class="chakra-text css-36k3oc">This command performs a merge of two logging configurations.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-merge-logging-conf -mergepath &lt;mergepath"> - path &lt;path</code></p>
+<br/><code class="language-text">merge-logging-conf -mergepath &lt;mergepath&gt; - path &lt;path&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- mergepath &lt;mergepath&gt;</code></strong>
 <br/>[required] The path of the JSON-formatted logging configuration to merge with.</p>

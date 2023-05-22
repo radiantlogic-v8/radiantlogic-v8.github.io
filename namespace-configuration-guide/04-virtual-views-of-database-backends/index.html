@@ -321,7 +321,7 @@ You must enter a valid SQL filter and use the actual database attribute names (a
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Stop the RadiantOne service.</p>
 </li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Edit the <code class="language-/radiantone/&lt;version">/&lt;clustername</code> node either from the Zookeeper tab in the Main Control Panel or from ZooInspector and locate the “multiValuedAttrs” parameter. The value of this parameter should be the database attribute name (or mapped/virtual name if one is being used). For example, using the same database table shown above, the parameter would be</p>
+<p class="chakra-text css-36k3oc">Edit the <code class="language-text">/radiantone/&lt;version&gt;/&lt;clustername&gt;/config/vds_server.conf</code> node either from the Zookeeper tab in the Main Control Panel or from ZooInspector and locate the “multiValuedAttrs” parameter. The value of this parameter should be the database attribute name (or mapped/virtual name if one is being used). For example, using the same database table shown above, the parameter would be</p>
 </li></ol>
 <p class="chakra-text css-36k3oc">“multiValuedAttrs” : “Title,Mail”</p>
 <p class="chakra-text css-36k3oc">As shown above, if there is more than one attribute, separate them with a comma.</p>

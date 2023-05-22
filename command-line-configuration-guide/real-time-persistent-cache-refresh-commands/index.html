@@ -50,12 +50,12 @@
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="change-connector-state">change-connector-state</h2></div>
 <p class="chakra-text css-36k3oc">This command starts or stops a specified connector in a real-time persistent cache refresh.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-change-connector-state [-connectorname &lt;connectorname">] [-state &lt;state</code></p>
+<br/><code class="language-text">change-connector-state [-connectorname &lt;connectorname&gt;] [-state &lt;state&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>The name of the real-time persistent cache connector.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- state &lt;state&gt;</code></strong>
-<br/>Indicates that the connector be started or stopped. Accepted values are   “start” and “stop”.</p>
+<br/>Indicates that the connector be started or stopped. Accepted values are “start” and “stop”.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to start a real-time persistent cache refresh connector.</p>
 
@@ -65,7 +65,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="empty-queues">empty-queues</h2></div>
 <p class="chakra-text css-36k3oc">This command empties the queue of a specified real-time persistent cache refresh, identified by a pipeline ID.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-empty-queues -pipelineid &lt;pipelineid"> [-mode &lt;mode</code></p>
+<br/><code class="language-text">empty-queues -pipelineid &lt;pipelineid&gt; [-mode &lt;mode&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- pipelineid &lt;pipelineID&gt;</code></strong>
 <br/>[required] The identifier of the pipeline. Run the list-topologies command to locate the pipelines
@@ -81,7 +81,7 @@ identifiers for each topology.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="reset-cursor">reset-cursor</h2></div>
 <p class="chakra-text css-36k3oc">This command resets the cursor for a specified persistent cache refresh.</p>
 <p class="chakra-text css-36k3oc">**Usage(())
-<br/><code class="language-reset-cursor [-connectorname &lt;connectorname">]</code></p>
+<br/><code class="language-text">reset-cursor [-connectorname &lt;connectorname&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>The name of the persistent cache connector.</p>
@@ -118,7 +118,7 @@ This command lists both CPLDS agents and real-time persistent cache agents.</p>
 This command can be used to stop either Persistent Cache Refresh agents or CPLDS agents.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-stop-agent [-agentname &lt;agentname">]</code></p>
+<br/><code class="language-text">stop-agent [-agentname &lt;agentname&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- agentname &lt;agentname&gt;</code></strong>
 <br/>The name of the agent to stop.</p>
@@ -215,7 +215,7 @@ configure-connector-type [-connectorname <connectorname>]
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="list-connector-properties">list-connector-properties</h2></div>
 <p class="chakra-text css-36k3oc">This command lists properties and their values for a connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-list-connector-properties [-connectorname &lt;connectorname">]</code></p>
+<br/><code class="language-text">list-connector-properties [-connectorname &lt;connectorname&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>The name of the persistent cache connector.</p>
@@ -228,7 +228,7 @@ configure-connector-type [-connectorname <connectorname>]
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-connector-property">get-connector-property</h2></div>
 <p class="chakra-text css-36k3oc">This command gets a property for a connector configuration.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-get-connector-property [-connectorname &lt;connectorname">] [propertyid &lt;propertyid</code></p>
+<br/><code class="language-text">get-connector-property [-connectorname &lt;connectorname&gt;] [propertyid &lt;propertyid&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>The name of the persistent cache connector.</p>
@@ -247,7 +247,7 @@ you can use the list-connector-properties command to display available options f
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-connector-property">set-connector-property</h2></div>
 <p class="chakra-text css-36k3oc">This command sets a property for a connector configuration. Run the list-connector-properties command first to get the propertyid for the ones you want to update.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-set-connector-property -connectorname &lt;connectorname"> -propertyid &lt;propertyid</code></p>
+<br/><code class="language-text">set-connector-property -connectorname &lt;connectorname&gt; -propertyid &lt;propertyid&gt;</code></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- propertyvalue &lt;propertyvalue&gt;</code></strong></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
@@ -276,7 +276,7 @@ For Windows command line, some property values require double quotes surrounding
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="file-set-connector-properties">file-set-connector-properties</h2></div>
 <p class="chakra-text css-36k3oc">This command sets multiple connector configuration properties with a text file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-file-set-connector-properties [-connectorname &lt;connectorname">] [-propertyfilename &lt;propertyfilename</code></p>
+<br/><code class="language-text">file-set-connector-properties [-connectorname &lt;connectorname&gt;] [-propertyfilename &lt;propertyfilename&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>The name of the persistent cache connector.</p>
@@ -301,7 +301,7 @@ The contents of the file must be in JSON format. An example of the syntax used i
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="execute-db-changelog-scripts">execute-db-changelog-scripts</h2></div>
 <p class="chakra-text css-36k3oc">This command executes DB changelog configure or deconfigure scripts for a DB connector.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage</strong>
-<br/><code class="language-execute-db-changelog-scripts -connectorname &lt;connectorname"> - namingcontextdn &lt;namingcontextdn</code></p>
+<br/><code class="language-text">execute-db-changelog-scripts -connectorname &lt;connectorname&gt; - namingcontextdn &lt;namingcontextdn&gt; [-deconfigure]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- connectorname &lt;connectorname&gt;</code></strong>
 <br/>[required] The name of the persistent cache connector.</p>
@@ -318,7 +318,7 @@ The contents of the file must be in JSON format. An example of the syntax used i
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="fix-cacherefresh">fix-cacherefresh</h2></div>
 <p class="chakra-text css-36k3oc">This command attempts to refresh the cache on entries where errors occurred during the cache refresh process. The command searches the cn=cacherefreshlog with a filter of (&amp;(changenumber&gt;=0)(status=2)). The changenumber and status can be defined in the command arguments. The command invokes an “action=synchronizecache” operation for each entry returned from the search, which attempts to update them in the persistent cache.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-fix-cacherefresh [-changenumber &lt;changenumber">] [-instance &lt;instance</code></p>
+<br/><code class="language-text">fix-cacherefresh [-changenumber &lt;changenumber&gt;] [-instance &lt;instance&gt;] [-status &lt;status&gt;] [-verbose]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- changenumber &lt;changenumber&gt;</code></strong>
 <br/>The changenumber used to search the &#x27;cn=cachefreshlog&#x27;. Only entries equal or greater to the given changenumber will be processed. The default value is 0.</p>

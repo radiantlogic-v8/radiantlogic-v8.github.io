@@ -45,7 +45,7 @@
 <div class="css-0"><style data-emotion="css 1jkpkkc">.css-1jkpkkc{opacity:0.6;border:0;border-color:inherit;border-style:solid;border-bottom-width:1px;width:100%;background:var(--chakra-colors-rlDividerGrey);}</style><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><style data-emotion="css 1sf38d3">.css-1sf38d3{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-2xl);line-height:1.33;color:var(--chakra-colors-rlBlack);}@media screen and (min-width: 48em){.css-1sf38d3{font-size:var(--chakra-fontSizes-3xl);line-height:1.2;}}</style><h2 class="chakra-heading css-1sf38d3" id="list-acis">list-acis</h2></div>
 <p class="chakra-text css-36k3oc">This command lists all the Access Control Instructions.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-acis -dn &lt;dn"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">list-acis -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required] The target DN to add ACI to.</p>
@@ -60,7 +60,7 @@ In the following example, a request is made to list all ACIs configured for ou=a
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-aci">get-aci</h2></div>
 <p class="chakra-text css-36k3oc">This command gets/exports an Access Control Instruction.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-aci -aciname &lt;aciname"> -dn &lt;dn</code></p>
+<br/><code class="language-text">get-aci -aciname &lt;aciname&gt; -dn &lt;dn&gt; [-file &lt;file&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- aciname &lt;aciname&gt;</code></strong>
 <br/>[required] The name of the ACI to fetch.</p>
@@ -80,7 +80,7 @@ ACI&amp;file=c:/radiantone/vds/vds_server/AllProfilesACI</code></code></div></di
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="add-aci">add-aci</h2></div>
 <p class="chakra-text css-36k3oc">This command creates/imports an Access Control Instruction.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-add-aci -dn &lt;dn"> [-file &lt;file</code></p>
+<br/><code class="language-text">add-aci -dn &lt;dn&gt; [-file &lt;file&gt;] [-instance &lt;instance&gt;] [-value &lt;value&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required] The target DN to add ACI to.</p>
@@ -99,7 +99,7 @@ ACI&amp;file=c:/radiantone/vds/vds_server/AllProfilesACI</code></code></div></di
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="clear-aci">clear-aci</h2></div>
 <p class="chakra-text css-36k3oc">This command removes all Access Control Instructions for a given DN.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-clear-aci -dn &lt;dn"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">clear-aci -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
 <br/>[required] The DN in which all ACIs are removed.</p>

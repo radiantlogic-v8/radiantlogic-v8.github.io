@@ -69,7 +69,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="print-connection">print-connection</h2></div>
 <p class="chakra-text css-36k3oc">Prints the connection information (to the command line interface) associated with a given orx or dvx file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-print-connection -name &lt;name of dvx or orx"> [-dvx] [-instance &lt;instance</code></p>
+<br/><code class="language-text">print-connection -name &lt;name of dvx or orx&gt; [-dvx] [-instance &lt;instance&gt;] [-orx]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name of dvx or orx&gt;</code></strong>
 <br/>[required] The name of the dvx or orx file that you want to print the connection for.</p>
@@ -88,7 +88,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="test-connection">test-connection</h2></div>
 <p class="chakra-text css-36k3oc">Tests the connection to the data source associated with a given orx or dvx file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-test-connection -name &lt;name of dvx or orx"> [-dvx] [-instance &lt;instance</code></p>
+<br/><code class="language-text">test-connection -name &lt;name of dvx or orx&gt; [-dvx] [-instance &lt;instance&gt;] [-orx]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name of dvx or orx&gt;</code></strong>
 <br/>[required] The name of the dvx or orx file that you want to test the connection for.</p>
@@ -107,7 +107,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-connection">set-connection</h2></div>
 <p class="chakra-text css-36k3oc">Allows you to change the data source name associated with an orx or dvx file. For files associated with LDAP backends, you can also change the base DN associated with the data source.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-connection -name &lt;name of dvx or orx"> [-basedn &lt;basedn</code></p>
+<br/><code class="language-text">set-connection -name &lt;name of dvx or orx&gt; [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-dvx] [-instance &lt;instance&gt;] [-orx]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name of dvx or orx&gt;</code></strong>
 <br/>[required] The name of the dvx or orx file that you want to modify the data source and/or base
@@ -131,7 +131,7 @@ DN for.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="extract-orx">extract-orx</h2></div>
 <p class="chakra-text css-36k3oc">This command extracts an LDAP/database schema to a new .orx file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-extract-orx -datasourcename &lt;datasourcename"> -name &lt;name</code></p>
+<br/><code class="language-text">extract-orx -datasourcename &lt;datasourcename&gt; -name &lt;name&gt; -objects &lt;objects&gt; - type &lt;type&gt; [-basedn &lt;basedn&gt;] [-dbschema &lt;dbschema&gt;] [-instance &lt;instance&gt;] [-overwrite]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/>[required] The name of the data source to use for schema extraction.</p>
@@ -158,7 +158,7 @@ In the following example, a request is made to extract an LDAP schema to a new .
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="list-orx-object">list-orx-object</h2></div>
 <p class="chakra-text css-36k3oc">This command prints out the list of objects in a schema(.orx) file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-orx-object -name &lt;name"> -type &lt;type</code></p>
+<br/><code class="language-text">list-orx-object -name &lt;name&gt; -type &lt;type&gt; [-instance &lt;instance&gt;] [-objects] [-relations] [-views]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the file (.dvx or .orx) used with the command.</p>
@@ -182,7 +182,7 @@ In the following example, a request is made to extract an LDAP schema to a new .
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-orx-object-prop">get-orx-object-prop</h2></div>
 <p class="chakra-text css-36k3oc">This command prints out the properties for an object in a schema(.orx) file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-orx-object-prop -name &lt;name"> -object &lt;object</code></p>
+<br/><code class="language-text">get-orx-object-prop -name &lt;name&gt; -object &lt;object&gt; -type &lt;type&gt; [-basetable] [-instance &lt;instance&gt;] [-objectclass] [-pkey] [-rdnattr] [-rdnname]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the file (.dvx or .orx) used with the command.</p>
@@ -211,7 +211,7 @@ In the following example, a request is made to extract an LDAP schema to a new .
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-orx-object-prop">set-orx-object-prop</h2></div>
 <p class="chakra-text css-36k3oc">This command sets properties for an object in a schema(.orx) file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-orx-object-prop -name &lt;name"> - object &lt;object</code></p>
+<br/><code class="language-text">set-orx-object-prop -name &lt;name&gt; - object &lt;object&gt; -type &lt;type&gt; [-basetable &lt;basetable&gt;] [-instance &lt;instance&gt;] [-objectclass &lt;objectclass&gt;] [-pkey &lt;pkey&gt;] [-rdnattr &lt;rdnattr&gt;] [-rdnname &lt;rdnname&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the file (.dvx or .orx) used with the command.</p>
@@ -240,7 +240,7 @@ In the following example, a request is made to extract an LDAP schema to a new .
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="list-orx-attr">list-orx-attr</h2></div>
 <p class="chakra-text css-36k3oc">This command prints out the list of attributes for an object in a schema(.orx) file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-orx-attr -name &lt;name"> -object &lt;object</code></p>
+<br/><code class="language-text">list-orx-attr -name &lt;name&gt; -object &lt;object&gt; -type &lt;type&gt; [-instance &lt;instance&gt;] [-properties]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
 <br/>[required] The name of the file (.dvx or .orx) used with the command.</p>

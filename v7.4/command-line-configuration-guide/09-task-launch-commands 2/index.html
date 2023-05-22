@@ -47,7 +47,7 @@
 <style data-emotion="css 5cvzdn">.css-5cvzdn{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;color:var(--chakra-colors-rlBlack);}</style><h3 class="chakra-heading css-5cvzdn" id="init-pcache">init-pcache</h3>
 <p class="chakra-text css-36k3oc">This command launches a task to initialize a persistent cache. In multi-node clusters, this command must be executed on the RadiantOne leader node. For information on determining the RadiantOne leader, refer to the RadiantOne System Administration Guide.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-init-pcache -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">init-pcache -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-interactive] [-ldif &lt;ldif&gt;] [-nthreads &lt;nthreads&gt;] [-useldifz] [-vpp]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -75,7 +75,7 @@ In the following example, a request is made to initialize a persistent cache for
 <h3 class="chakra-heading css-5cvzdn" id="import-ldif">import-ldif</h3>
 <p class="chakra-text css-36k3oc">This command launches a task to import an LDIF file.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-import-ldif -ldif &lt;ldif or ldifz file"> [-basedn &lt;basedn</code></p>
+<br/><code class="language-text">import-ldif -ldif &lt;ldif or ldifz file&gt; [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-instance &lt;instance&gt;] [-interactive] [-override]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <style data-emotion="css 9822z3">.css-9822z3{list-style-type:initial;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ul role="list" class="css-9822z3"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">ldif <ldif></ldif></li></ul>
 <p class="chakra-text css-36k3oc">[required] The path to an LDIF file. If you have defined an LDIF Encryption Key from Main

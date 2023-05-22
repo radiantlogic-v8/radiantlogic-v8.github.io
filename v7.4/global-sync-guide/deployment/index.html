@@ -126,7 +126,7 @@ Pay attention to the <span class="chakra-text css-yk429l"><a style="color:rlBlue
     </span></p>
 <h4 class="chakra-heading css-10ar4s8" id="replay-messages-in-the-dead-letter-queue">Replay messages in the dead letter queue</h4>
 <p class="chakra-text css-36k3oc">To replay failed messages from the dead letter queue, you can use the vdsconfig command line utility with the following command.</p>
-<p class="chakra-text css-36k3oc"><code class="language-{rli_home}\bin">vdsconfig dl-replay-sync-pipeline -pipelineid {PIPELINE_ID}</code></p>
+<p class="chakra-text css-36k3oc"><code class="language-text">{RLI_HOME}\bin&gt;vdsconfig dl-replay-sync-pipeline -pipelineid {PIPELINE_ID}</code></p>
 <p class="chakra-text css-36k3oc">See <span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/concepts-and-definitions/topology/#pipeline-id">Pipeline ID</a></span> for assistance with finding the pipelineId value to pass in the command.</p>
 <p class="chakra-text css-36k3oc">Failed messages can also be replayed from the Main Control Panel &gt; Global Sync tab. Select the topology and select <strong>Configure</strong> next to the pipeline. Select the <strong>Queue</strong> section on the left and locate the Failed Messages section. Select the <strong>Resend</strong> button next to the failed message that you want to be resent.</p>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1100px">

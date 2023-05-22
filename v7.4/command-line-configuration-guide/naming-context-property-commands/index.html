@@ -62,7 +62,7 @@ list of accepted property names.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="list-ctx">list-ctx</h2></div>
 <p class="chakra-text css-36k3oc">This command displays a list of the current naming contexts and their type.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-list-ctx [-dbproxy] [-hdap] [-http] [-instance &lt;instance">] [-ldapproxy] [-pcache] [-root] [-virtualtree]</code></p>
+<br/><code class="language-text">list-ctx [-dbproxy] [-hdap] [-http] [-instance &lt;instance&gt;] [-ldapproxy] [-pcache] [-root] [-virtualtree]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- dbproxy</code></strong>
 <br/>Indicates that the list of naming contexts should include database proxies.
@@ -92,7 +92,7 @@ list of accepted property names.</p>
 <p class="chakra-text css-36k3oc"><strong>Note - To retrieve properties for a virtual view that uses a merge tree configuration, the mergedatasource and mergedn arguments must be used.</strong></p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-ctx-prop -namingcontext &lt;namingcontext"> -prop &lt;prop</code></p>
+<br/><code class="language-text">get-ctx-prop -namingcontext &lt;namingcontext&gt; -prop &lt;prop&gt; [-cache] [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergedn &lt;mergedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context to get/set the property.</p>
@@ -118,7 +118,7 @@ list of accepted property names.</p>
 <p class="chakra-text css-36k3oc"><strong>Note - To set properties for a virtual view that uses a merge tree configuration, the mergedatasource and mergedn arguments must be used.</strong></p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-ctx-prop -namingcontext &lt;namingcontext"> -prop &lt;prop</code></p>
+<br/><code class="language-text">set-ctx-prop -namingcontext &lt;namingcontext&gt; -prop &lt;prop&gt; -value &lt;value&gt; [-cache] [-instance &lt;instance&gt;][-mergedatasource &lt;mergedatasource&gt;] [-mergedn &lt;mergedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context to get/set the property.</p>
@@ -168,7 +168,7 @@ validationthresholdperiodicrefresh -value &lt;number from 0 to 100&gt;</code></c
 <p class="chakra-text css-36k3oc"><strong>Note - To remove properties for a virtual view that uses a merge tree configuration, the mergedatasource and mergedn arguments must be used.</strong></p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-unset-ctx-prop -namingcontext &lt;namingcontext"> -prop &lt;prop</code></p>
+<br/><code class="language-text">unset-ctx-prop -namingcontext &lt;namingcontext&gt; -prop &lt;prop&gt; [-cache] [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergedn &lt;mergedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context to get/set the property.</p>
@@ -223,7 +223,7 @@ get-ctx-interception -namingcontext <namingcontext> [-instance <instance>]
 <p class="chakra-text css-36k3oc">The first time you use set-ctx-interception, a default interception script matching your naming context is generated in &lt;RLI_HOME&gt;\vds_server\custom\src\com\rli\scripts\intercept. You can always get the full path to the java file with get-ctx-interception.</p>
 <p class="chakra-text css-36k3oc">After editing the Java file, the intercept.jar file must be rebuilt and the RadiantOne service must be restarted for the script to take effect. If deployed in a cluster, restart the RadiantOne service on all nodes.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-ctx-interception -namingcontext &lt;namingcontext"> [-add &lt;true/false</code></p>
+<br/><code class="language-text">set-ctx-interception -namingcontext &lt;namingcontext&gt; [-add &lt;true/false&gt;] [-bind &lt;true/false] [-search &lt;true/false&gt;] [-modify &lt;true/false&gt;] [-delete &lt;true/false&gt;] [-compare &lt;true/false&gt;] [-specialops &lt;true/false&gt;] [-srep &lt;true/false&gt;] [-instance &lt;instance&gt;] [-mergedatasource &lt;mergedatasource&gt;] [-mergedn &lt;mergedn&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The naming context to get the configured interception options for.</p>

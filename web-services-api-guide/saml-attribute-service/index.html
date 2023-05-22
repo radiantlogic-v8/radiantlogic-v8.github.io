@@ -123,7 +123,7 @@ signatures. This property is mandatory.</p>
 <p class="chakra-text css-36k3oc">The mapping2 example looks for the specified DN where the $1 placeholder is replaced by the value passed in the request’s subject name.</p>
 <!-- -->
 <h3 class="chakra-heading css-5cvzdn" id="saml-client-metadata">SAML Client Metadata</h3>
-<p class="chakra-text css-36k3oc">Copy all SAML client metadata files into <code class="language-&lt;rli_home">/&lt;instanceName</code>.</p>
+<p class="chakra-text css-36k3oc">Copy all SAML client metadata files into <code class="language-text">&lt;RLI_HOME&gt;/&lt;instanceName&gt;/conf/saml/clients</code>.</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="pkcs12-keystores">PKCS12 Keystores</h2></div>
 <p class="chakra-text css-36k3oc">The SAML Attribute Service leverages the server certificate configured for RadiantOne which supports PKCS12.</p>
 <p class="chakra-text css-36k3oc">To configure the SAML Attribute Service to use a PKCS12 keystore:</p>
@@ -151,7 +151,7 @@ signatures. This property is mandatory.</p>
 </li></ol>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="radiantone-saml-attribute-service-endpoint">RadiantOne SAML Attribute Service Endpoint</h2></div>
 <p class="chakra-text css-36k3oc">The URL to access the RadiantOne SAML Attribute Service is:</p>
-<p class="chakra-text css-36k3oc"><code class="language-http[s]://&lt;hostname">:&lt;port</code></p>
+<p class="chakra-text css-36k3oc"><code class="language-text">http[s]://&lt;hostname&gt;:&lt;port&gt;/saml/AttributeServiceSoap</code></p>
 <p class="chakra-text css-36k3oc">An example is shown below:</p>
 <p class="chakra-text css-36k3oc"><code class="language-text">http://vds.server.com:8089/saml/AttributeServiceSoap</code></p>
 <p class="chakra-text css-36k3oc">This URL can be reach using the GET and POST HTTP verbs:

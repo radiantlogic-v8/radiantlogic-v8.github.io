@@ -64,7 +64,7 @@ In the following example, a request is made to display all configured alerts.</p
 </div></div></div>
 <p class="chakra-text css-36k3oc">An example of creating an alert that returns the information from the node-monitor data collector for a given node is: vdsconfig.bat new-alert -d node-monitor -p nodeId:4ef6b4c3-a56f-4cd0- 853f-b054c5e851a3 -t not-equals -g isVdsRunning:false -i 60 -e true -n &quot;My Custom Alert&quot; -o FileAlert,EmailAlert</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-new-alert -d &lt;data collector key"> [-p &lt;data property</code></p>
+<br/><code class="language-text">new-alert -d &lt;data collector key&gt; [-p &lt;data property&gt;] -t &lt;trigger type&gt; [-g &lt;key:value&gt;] - i &lt;seconds&gt; [-e &lt;enabled&gt;] [-n &lt;alert name&gt;] [-o &lt;output type&gt;] [-m &lt;alert message&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- d &lt;data collector key&gt;</code></strong>
 <br/>This indicates the data collector that returns the information needed for your monitoring needs. The possible values are: active-alerts, cloud-replication, cluster-info, cluster-latency, cluster- ldap, cluster-zk, connections-info, datasource-status, event-log, hdap-store, pipeline, node-info, node-monitor, node-status, process-info, server-event. For details on each data collector, see the RadiantOne Monitoring and Reporting Guide.</p>
@@ -84,7 +84,7 @@ indicates it is not active.</p>
 <br/>The name of the alert. This value must be unique across all alerts.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- o &lt;output type&gt;</code></strong>
 <br/>This indicates if the output is a file and/or email. Use a value of FileAlert if you want the output to be a file. Use a value of EmailAlert if you want the output to be an email. For both output types, use: -o FileAlert,EmailAlert</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-- m &lt;alert message"> </code></strong>
+<p class="chakra-text css-36k3oc"><strong><code class="language-text">- m &lt;alert message&gt; </code></strong>
 <br/>This indicates the message to include in the alert. An example would be: -m &quot;RadiantOne is not running on node 4ef6b4c3-a56f-4cd0-853f-b054c5e851a3&quot;.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to create a custom alert for when the state of the RadiantOne on a given node changes (e.g. changes from started to stopped).</p>
@@ -99,7 +99,7 @@ indicates it is not active.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc">An example of editing an alert is: vdsconfig.bat edit-alert -x e7dd5763-40eb-4b5c-8799-c6a46cde86ef -g isVdsRunning:true -m &quot;New custom message&quot;</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-edit-alert -x &lt;alert id"> [-d &lt;data collector key</code></p>
+<br/><code class="language-text">edit-alert -x &lt;alert ID&gt; [-d &lt;data collector key&gt;] [-p &lt;data property&gt;] [-t &lt;trigger type&gt;] [-g &lt;key:value&gt;] [-i &lt;seconds&gt;] [-e &lt;enabled&gt;] [-n &lt;alert name&gt;] [-o &lt;output type&gt;] [-m &lt;alert message&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- x &lt;alert ID&gt;</code></strong>
 <br/>The identifier of the alert to be edited. Run list-alerts to get the ID of the alert to pass in the -x argument.</p>
@@ -147,7 +147,7 @@ In the following example, a request is made to edit the message that is sent in 
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-email-prop">get-email-prop</h2></div>
 <p class="chakra-text css-36k3oc">This command displays the current properties for email alerts.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-get-email-prop [-instance &lt;instance">]</code></p>
+<br/><code class="language-text">get-email-prop [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
@@ -160,7 +160,7 @@ In the following example, a request is made to edit the message that is sent in 
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="set-email-prop">set-email-prop</h2></div>
 <p class="chakra-text css-36k3oc">This command. sets the properties for email alerts.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-set-email-prop [-propfile &lt;propfile">] [-instance &lt;instance</code></p>
+<br/><code class="language-text">set-email-prop [-propfile &lt;propfile&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- propfile &lt;propfile&gt;</code></strong>
 <br/>[required] The full path to a file containing the property names and values to set for email alerts. The following names are accepted: subject, recipient, from, protocol, enablessl, host, port, username, password.</p>

@@ -51,7 +51,7 @@
 <style data-emotion="css 5cvzdn">.css-5cvzdn{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;color:var(--chakra-colors-rlBlack);}</style><h3 class="chakra-heading css-5cvzdn" id="create-dbproxy">create-dbproxy</h3>
 <p class="chakra-text css-36k3oc">This command creates a new database proxy naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-create-dbproxy -datasourcename &lt;datasourcename"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">create-dbproxy -datasourcename &lt;datasourcename&gt; -namingcontext &lt;namingcontext&gt; - tables &lt;tables&gt; [-instance &lt;instance&gt;] [-rootnc &lt;rootnc&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/> [required] The name of the data source used to create the root naming context.</p>
@@ -72,7 +72,7 @@ In the following example, a request is made to create a database proxy called o=
 <h3 class="chakra-heading css-5cvzdn" id="create-ldapproxy">create-ldapproxy</h3>
 <p class="chakra-text css-36k3oc">This command creates a new LDAP proxy naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-create-ldapproxy -datasourcename &lt;datasourcename"> -namingcontext &lt;namingcontext</code></p>
+<br/><code class="language-text">create-ldapproxy -datasourcename &lt;datasourcename&gt; -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-rootnc &lt;rootnc&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
 <br/> [required] The name of the data source used to create the root naming context.</p>
@@ -93,7 +93,7 @@ In the following example, a request is made to create a database proxy called o=
 <h3 class="chakra-heading css-5cvzdn" id="create-hdapstore">create-hdapstore</h3>
 <p class="chakra-text css-36k3oc">This command creates a new RadiantOne Universal Directory (HDAP) store naming context.</p>
 <p class="chakra-text css-36k3oc">Usage:
-<br/><code class="language-create-hdapstore -namingcontext &lt;namingcontext"> [-inactive] [-indexattr &lt;indexattr</code></p>
+<br/><code class="language-text">create-hdapstore -namingcontext &lt;namingcontext&gt; [-inactive] [-indexattr &lt;indexattr&gt;] [-instance &lt;instance&gt;] [-normalizenames] [-rootnc &lt;rootnc&gt;] [-schemacheck] [-sortedindexattr &lt;sortedindexattr&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -121,7 +121,7 @@ In the following example, a request is made to create a Universal Directory stor
 <h3 class="chakra-heading css-5cvzdn" id="create-vtree">create-vtree</h3>
 <p class="chakra-text css-36k3oc">This command creates a new virtual tree naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-create-vtree -namingcontext &lt;namingcontext"> [-dvxname &lt;dvxname</code></p>
+<br/><code class="language-text">create-vtree -namingcontext &lt;namingcontext&gt; [-dvxname &lt;dvxname&gt;] [-instance &lt;instance&gt;] [-rootnc &lt;rootnc&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -140,7 +140,7 @@ In the following example, a request is made to create a Universal Directory stor
 <h3 class="chakra-heading css-5cvzdn" id="delete-context">delete-context</h3>
 <p class="chakra-text css-36k3oc">This command deletes a naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-context -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">delete-context -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/> [required] The name of the naming context.</p>
@@ -169,7 +169,7 @@ In the following example, a request is made to create a Universal Directory stor
 <p class="chakra-text css-36k3oc">**Note – Use the <style data-emotion="css yk429l">.css-yk429l{color:var(--chakra-colors-rlBlue);}</style><span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/real-time-persistent-cache-refresh-commands/#configure-real-time-pcache-sync-topology">configure-real-time-pcache-sync-topology</a></span> command to configure a real-time refresh.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-create-pcache -namingcontext &lt;namingcontext"> [-autorefresh] [-indexattr &lt;indexattr</code></p>
+<br/><code class="language-text">create-pcache -namingcontext &lt;namingcontext&gt; [-autorefresh] [-indexattr &lt;indexattr&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc">Command Arguments:</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -186,7 +186,7 @@ In the following example, a request is made to create a Universal Directory stor
 <h3 class="chakra-heading css-5cvzdn" id="delete-cache">delete-cache</h3>
 <p class="chakra-text css-36k3oc">This command deletes an existing cache on a naming context.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-delete-cache -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">delete-cache -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -209,7 +209,7 @@ cache&amp;namingcontext=o=companyprofiles</code></code></div></div>
 <h3 class="chakra-heading css-5cvzdn" id="backup-hdapstore">backup-hdapstore</h3>
 <p class="chakra-text css-36k3oc">This command creates a backup image of a RadiantOne Universal Directory store. This command can also be used on persistent cache stores. In multi-node clusters, this command must be executed on the RadiantOne leader node. For information on determining the RadiantOne leader, refer to the RadiantOne System Administration Guide.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-backup-hdapstore -namingcontext &lt;namingcontext"> [-backupzip &lt;backupzip</code></p>
+<br/><code class="language-text">backup-hdapstore -namingcontext &lt;namingcontext&gt; [-backupzip &lt;backupzip&gt;] [-instance &lt;instance&gt;] [-nocopy]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -230,7 +230,7 @@ cache&amp;namingcontext=o=companyprofiles</code></code></div></div>
 <p class="chakra-text css-36k3oc">This command restores a RadiantOne Universal Directory store back to the state of a given backup image. In multi-node clusters, this command must be executed on the RadiantOne leader node. For information on determining the RadiantOne leader, refer to the RadiantOne System Administration Guide. To restore from the most recent backup image do not pass a backupid in the command. To restore from a specific point in time, pass the applicable backupid in the command. Use the -list argument to obtain a list of possible backup ids for the given naming context.</p>
 <p class="chakra-text css-36k3oc">The restore is performed using the compressed file located in the folder indicated in the - backupdir or -backupid argument. The compressed file is automatically decrypted using the RadiantOne server certificate keystore password. The server where you are restoring the RadiantOne Universal Directory store must have the same server certificate keystore password than the server where you created the backup from.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-restore-hdapstore -namingcontext &lt;namingcontext"> [-backupzip &lt;backupzip</code></p>
+<br/><code class="language-text">restore-hdapstore -namingcontext &lt;namingcontext&gt; [-backupzip &lt;backupzip&gt;] [-backupid &lt;backupid&gt;] [-instance &lt;instance&gt;] [-list]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
 <br/>[required] The name of the naming context.</p>
@@ -304,7 +304,7 @@ The naming context has been successfully restored from its backup.</code></code>
 <p class="chakra-text css-36k3oc">Before converting a persistent cache to a RadiantOne Universal Directory store, the persistent cache refresh should be stopped. You can set the refresh method to “none” on the Main Control Panel -&gt; Directory Namespace -&gt; Cache -&gt; <code class="language-text">&lt;cached branch&gt;</code> -&gt; Refresh Settings tab. Also, suspend inter-cluster replication if it is used by setting “replicationInSuspendMode” : true, in ZooKeeper at /radiantone/&lt;zk_version&gt;/<clustername>/config/namings/&lt;namingcontext_being_replicated&gt;</clustername></p>
 <p class="chakra-text css-36k3oc">After the persistent cache has been converted to a RadiantOne Universal Directory store, <span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/task-launch-commands/#rebuilding-indexes-for-radiantone-universal-directory-stores">rebuild the index</a></span> to remove any persistent cache operational attributes. If inter-cluster replication is used, enable it by setting “replicationInSuspendMode” : false, in ZooKeeper at /radiantone/&lt;zk_version&gt;/<clustername>/config/namings/&lt;namingcontext_being_replicated&gt;</clustername></p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
-<br/><code class="language-convert-pcache-to-hdap -namingcontext &lt;namingcontext"> [-instance &lt;instance</code></p>
+<br/><code class="language-text">convert-pcache-to-hdap -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
 <style data-emotion="css 9822z3">.css-9822z3{list-style-type:initial;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ul role="list" class="css-9822z3"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">namingcontext <namingcontext></namingcontext></li></ul>
 <p class="chakra-text css-36k3oc"><br/>[required] The name of the persistent cache naming context to be converted to an HDAP store.</p>
