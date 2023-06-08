@@ -47,25 +47,25 @@
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">list-acis -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- dn &lt;dn&gt;</code>
 <br/>[required] The target DN to add ACI to.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong>
-In the following example, a request is made to list all ACIs configured for ou=allprofiles.</p>
+<p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
+<p class="chakra-text css-36k3oc">In the following example, a request is made to list all ACIs configured for ou=allprofiles.</p>
 <p class="chakra-text css-36k3oc"><code class="language-text">https://&lt;rli_server_name&gt;:8090/adap/util?action=vdsconfig&amp;commandname=list-acis&amp;dn=ou=allprofiles</code></p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="get-aci">get-aci</h2></div>
 <p class="chakra-text css-36k3oc">This command gets/exports an Access Control Instruction.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">get-aci -aciname &lt;aciname&gt; -dn &lt;dn&gt; [-file &lt;file&gt;] [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- aciname &lt;aciname&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- aciname &lt;aciname&gt;</code>
 <br/>[required] The name of the ACI to fetch.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- dn &lt;dn&gt;</code>
 <br/>[required] The target DN to add ACI to.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- file &lt;file&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- file &lt;file&gt;</code>
 <br/>The file to export the ACI to.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to export the ACI configured for ou=AllProfiles.</p>
@@ -75,13 +75,13 @@ In the following example, a request is made to list all ACIs configured for ou=a
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">add-aci -dn &lt;dn&gt; [-file &lt;file&gt;] [-instance &lt;instance&gt;] [-value &lt;value&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- dn &lt;dn&gt;</code>
 <br/>[required] The target DN to add ACI to.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- file &lt;file&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- file &lt;file&gt;</code>
 <br/>The file containing the ACI to add to RadiantOne.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- value &lt;value&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- value &lt;value&gt;</code>
 <br/>The ACI to add to RadiantOne.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to add an ACI to ou=AllProfiles.</p>
@@ -91,9 +91,9 @@ In the following example, a request is made to list all ACIs configured for ou=a
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">clear-aci -dn &lt;dn&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- dn &lt;dn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- dn &lt;dn&gt;</code>
 <br/>[required] The DN in which all ACIs are removed.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to remove ACIs configured for ou=AllProfiles.</p>

@@ -49,22 +49,22 @@
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">init-pcache -namingcontext &lt;namingcontext&gt; [-instance &lt;instance&gt;] [-interactive] [-ldif &lt;ldif&gt;] [-nthreads &lt;nthreads&gt;] [-useldifz] [-vpp]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- namingcontext &lt;namingcontext&gt;</code>
 <br/>[required] The name of the naming context.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If this is not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- interactive</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- interactive</code>
 <br/>When this argument is specified, the command launches the tasks and periodically displays their current state until they are finished. An error code is returned if the task ends with an error. If this argument is not specified, the command launches the tasks and terminates.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- ldif &lt;ldif&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- ldif &lt;ldif&gt;</code>
 <br/>The path to an LDIF file that is used to initialize the cache. If not specified, an LDIF is generated directly from the data source.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- nthreads &lt;nthreads&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- nthreads &lt;nthreads&gt;</code>
 <br/>Defines the number of threads to use during indexing. It is advised to let the system handle this automatically unless the vpp option is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- useldifz</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- useldifz</code>
 <br/>If this argument is specified, an LDIFz (secure and zipped) file will be generated to initialize the cache. If not specified, the default LDIF file format is used.</p>
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- vpp</code></strong>
 <br/>Use the virtual engine parallel processor (vpp) to speed up the cache image creation while indexing. This is useful when the virtual view to be cached contains many entries and other time-intensive configurations like joins, and computed attributes involving lookups. This option isn’t compatible with views associated with interception scripts. Initializing a view that is incompatible with the -vpp command results in an error that indicates why the view is incompatible.</p>
-<p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong>
-In the following example, a request is made to initialize a persistent cache for o=companyprofiles.</p>
+<p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
+<p class="chakra-text css-36k3oc">In the following example, a request is made to initialize a persistent cache for o=companyprofiles.</p>
 <p class="chakra-text css-36k3oc"><code class="language-text">https://&lt;rli_server_name&gt;:8090/adap/util?action=vdsconfig&amp;commandname=init-pcache&amp;namingcontext=o=companyprofiles&amp;interactive&amp;vpp&amp;nthreads=32</code></p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="importing-ldif-files">Importing LDIF Files</h2></div>
 <p class="chakra-text css-36k3oc">LDIF Files can be imported from the Main Control Panel in the Directory Namespace and Directory Browser tabs.</p>
@@ -74,17 +74,17 @@ In the following example, a request is made to initialize a persistent cache for
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">import-ldif -ldif &lt;ldif or ldifz file&gt; [-basedn &lt;basedn&gt;] [-datasourcename &lt;datasourcename&gt;] [-instance &lt;instance&gt;] [-interactive] [-override]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- ldif &lt;ldif&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- ldif &lt;ldif&gt;</code>
 <br/>[required] The path to an LDIF file. If you have defined an LDIF Encryption Key from Main Control Panel &gt; Settings &gt; Security &gt; Attribute Encryption (LDIFZ Encryption Key section), indicate an ldifz suffix on the file name to import (e.g. myfile.ldifz). LDIFZ is a zipped and encrypted file format used to prevent the data in the file from being read. Both the source and target RadiantOne services must be configured for the same LDIF Encryption Key in order to support the contents of the ldifz file.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- basedn &lt;basedn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- basedn &lt;basedn&gt;</code>
 <br/>The base DN for a branch containing the entries that should be included in the import.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- datasourcename &lt;datasourcename&gt;</code>
 <br/>The name of an LDAP data source. If this argument is not specified, the &#x27;vds&#x27; data source will be used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- interactive</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- interactive</code>
 <br/>When this argument is specified, the command will launch the tasks and periodically print out their current state until they are finished. If this argument is not specified, the command launches the tasks and terminates.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- override</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- override</code>
 <br/>If this argument is specified, existing entries may be overridden. By default, if not specified, existing entries are not overridden.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to import an LDIF file into o=employees2.</p>
@@ -98,34 +98,32 @@ In the following example, a request is made to initialize a persistent cache for
 <br/><code class="language-text">export-ldif -basedn &lt;basedn&gt; -ldif &lt;ldif or ldifz file&gt; -scope &lt;scope&gt; [-csv] [-datasourcename &lt;datasourcename&gt;] [-filter &lt;filter&gt;] [-instance &lt;instance&gt;] [-interactive]
 [-limit &lt;limit&gt;] [-mappedbasedn &lt;mappedbasedn&gt;] [-replication] [-returnattributes &lt;return attributes&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- basedn &lt;basedn&gt;</code></strong>
-<br/>[required] The base DN that is used to export data to the LDIF.
-<strong><code class="language-text">- ldif &lt;ldif&gt;</code></strong>
-<br/>[required] The path to an LDIF file. If you have defined an LDIF Encryption Key from Main Control Panel &gt; Settings &gt; Security &gt; Attribute Encryption (LDIFZ Encryption Key section), indicate an ldifz suffix on the file name (e.g. myfile.ldifz). LDIFZ is a zipped and encrypted file format used to prevent the data in the file from being read. Both the source and target RadiantOne services must be configured for the same LDIF Encryption Key in order to support the contents of the ldifz file.
-<strong><code class="language-text">- scope &lt;scope&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- basedn &lt;basedn&gt;</code>
+<br/>[required] The base DN that is used to export data to the LDIF.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- ldif &lt;ldif&gt;</code>
+<br/>[required] The path to an LDIF file. If you have defined an LDIF Encryption Key from Main Control Panel &gt; Settings &gt; Security &gt; Attribute Encryption (LDIFZ Encryption Key section), indicate an ldifz suffix on the file name (e.g. myfile.ldifz). LDIFZ is a zipped and encrypted file format used to prevent the data in the file from being read. Both the source and target RadiantOne services must be configured for the same LDIF Encryption Key in order to support the contents of the ldifz file.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- scope &lt;scope&gt;</code>
 <br/>[required] The scope that is used to export data to the LDIF. Accepted values are: base, one, sub. Default value is one.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- csv</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- csv</code>
 <br/>Creates a CSV file after the LDIF file is created. The CSV file will be in the same directory as the LDIF file and have the same name as the LDIF file with .csv extension. If the CSV file exists, it will be overwritten. CSV files are not created if .ldifz is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- datasourcename &lt;datasourcename&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- datasourcename &lt;datasourcename&gt;</code>
 <br/>The name of an LDAP data source. If this argument is not specified, the &#x27;vds&#x27; data source is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- filter &lt;filter&gt;</code></strong>
-<br/>Optional LDAP search filter to be applied before exporting the data to the LDIF file.
-<strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
-<br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server
-is used.
-<strong><code class="language-text">- interactive</code></strong>
-<br/>When this argument is specified, the command will launch the tasks and periodically print out their current state until they are finished. If this argument is not specified, the command launches the tasks and terminates.
-<strong><code class="language-text">- limit &lt;limit&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- filter &lt;filter&gt;</code>
+<br/>Optional LDAP search filter to be applied before exporting the data to the LDIF file.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
+<br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- interactive</code>
+<br/>When this argument is specified, the command will launch the tasks and periodically print out their current state until they are finished. If this argument is not specified, the command launches the tasks and terminates.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- limit &lt;limit&gt;</code>
 <br/>The maximum number of entries to export to the LDIF. If this argument is not specified, all entries are exported. Note: when this argument is specified, the export task may throw a SizeLimitException and end in an ERROR state. However, the LDIF file will still be generated as expected with the specified number of entries.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- mappedbasedn &lt;mappedbasedn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- mappedbasedn &lt;mappedbasedn&gt;</code>
 <br/>The optional remapped base DN that each entry will have in the LDIF file.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- replication</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- replication</code>
 <br/>If this is specified, the UUID attributes are included in the exported LDIF file. If you want to use the exported LDIF file to initialize a RadiantOne Universal Directory store (a replica), then you should pass -replication in the export-ldif command.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- returnattributes &lt;returnattributes&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- returnattributes &lt;returnattributes&gt;</code>
 <br/>Optional list of comma-separated attributes to return from the search and include in the exported LDIF file. If nothing is specified, all attributes are requested.</p>
 <div class="css-0"><style data-emotion="css cy4tg7">.css-cy4tg7{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;height:var(--chakra-sizes-5);}</style><div class="css-cy4tg7"></div><style data-emotion="css q83wl">.css-q83wl{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;overflow:hidden;-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);padding-top:var(--chakra-space-3);padding-bottom:var(--chakra-space-3);--alert-fg:var(--chakra-colors-blue-500);--alert-bg:var(--chakra-colors-blue-100);-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:left;-webkit-box-align:left;-ms-flex-align:left;align-items:left;border-left-width:10px;border-left-style:solid;border-left-color:var(--chakra-colors-rlBlue);background:var(--chakra-colors-rlBlue10);}.chakra-ui-dark .css-q83wl:not([data-theme]),[data-theme=dark] .css-q83wl:not([data-theme]),.css-q83wl[data-theme=dark]{--alert-fg:var(--chakra-colors-blue-200);--alert-bg:rgba(144, 205, 244, 0.16);}</style><div data-status="info" role="alert" class="chakra-alert css-q83wl"><style data-emotion="css koga8d">.css-koga8d{font-weight:var(--chakra-fontWeights-bold);line-height:var(--chakra-lineHeights-6);-webkit-margin-end:var(--chakra-space-2);margin-inline-end:var(--chakra-space-2);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style><div data-status="info" class="chakra-alert__title css-koga8d"><style data-emotion="css ikuqbj">.css-ikuqbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;width:1.5em;height:1.5em;}</style><div class="css-ikuqbj"><style data-emotion="css tspimq">.css-tspimq{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><style data-emotion="css 1hlv1gp">.css-1hlv1gp{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><style data-emotion="css zzks76">.css-zzks76{display:inline;line-height:var(--chakra-lineHeights-6);}</style><div data-status="info" class="chakra-alert__desc css-zzks76">
-<p class="chakra-text css-36k3oc">
-Returnattributes is not considered if the -replication option is used. This is because the -replication option automatically returns all attributes for export.</p>
+<p class="chakra-text css-36k3oc"> Returnattributes is not considered if the -replication option is used. This is because the -replication option automatically returns all attributes for export.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to export a backend to an LDIF file.</p>
@@ -142,13 +140,13 @@ Returnattributes is not considered if the -replication option is used. This is b
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">init-hdap-store -ldif &lt;ldif&gt; -namingcontext &lt;namingcontext&gt;[-instance &lt;instance&gt;] [-interactive]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- ldif &lt;ldif&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- ldif &lt;ldif&gt;</code>
 <br/>[required] The path to the LDIF file used for initializing.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- namingcontext &lt;namingcontext&gt;</code>
 <br/>[required] The name of the naming context.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- interactive</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- interactive</code>
 <br/>When this argument is specified, the command launches the tasks and periodically displays their current state until they are finished. If this argument is not specified, the command launches the tasks and terminates.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to initialize a RadiantOne Universal Directory store from an LDIF file.</p>
@@ -165,11 +163,11 @@ Returnattributes is not considered if the -replication option is used. This is b
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">rebuild-index -namingcontext &lt;namingcontext&gt;[-instance &lt;instance&gt;] [-interactive]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- namingcontext &lt;namingcontext&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- namingcontext &lt;namingcontext&gt;</code>
 <br/>[required] The name of the naming context that you want to rebuild the indexes for.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- interactive</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- interactive</code>
 <br/>When this argument is specified, the command launches the tasks and periodically displays their current state until they are finished. If this argument is not specified, the command launches the tasks and terminates.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to rebuild the indexes for a RadiantOne Universal Directory store.</p>
@@ -194,14 +192,13 @@ Returnattributes is not considered if the -replication option is used. This is b
 <p class="chakra-text css-36k3oc"><strong><code class="language-text">- reportconfigdn &lt;reportconfigdn&gt;</code></strong>
 <br/>[required] The DN of global ID report configuration.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
-<p class="chakra-text css-36k3oc">
-This argument requires a configured query and report in the Global Identity Viewer. Refer to the Global Identity Viewer Guide for more information With a query and report configured, navigate to and expand ou=reports,o=<projectname>,ou=webapps,ou=globalsettings,cn=config on the Directory Browser tab. Select a report and view its filter, format, and frequency values to determine if it is the report you want to schedule. The entrydn value is used for the reportconfigdn.</projectname></p>
+<p class="chakra-text css-36k3oc"> This argument requires a configured query and report in the Global Identity Viewer. Refer to the Global Identity Viewer Guide for more information With a query and report configured, navigate to and expand ou=reports,o=<projectname>,ou=webapps,ou=globalsettings,cn=config on the Directory Browser tab. Select a report and view its filter, format, and frequency values to determine if it is the report you want to schedule. The entrydn value is used for the reportconfigdn.</projectname></p>
 </div></div></div>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:624px">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:29.81818181818182%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAdyCAf/EABYQAQEBAAAAAAAAAAAAAAAAAAARQf/aAAgBAQABBQLKr//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAABD/2gAIAQEABj8Cf//EABgQAAMBAQAAAAAAAAAAAAAAAAABEVFh/9oACAEBAAE/IbGQuCcP/9oADAMBAAIAAwAAABCP/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAACAwEAAAAAAAAAAAAAAAABEQAQMUH/2gAIAQEAAT8QPRJwI2h//9k=&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/fd755ef0e8c8c19af2fda3175aa9874c/b966c/Image9.4.jpg" srcSet="/static/fd755ef0e8c8c19af2fda3175aa9874c/c1cfe/Image9.4.jpg 275w /static/fd755ef0e8c8c19af2fda3175aa9874c/67061/Image9.4.jpg 550w /static/fd755ef0e8c8c19af2fda3175aa9874c/b966c/Image9.4.jpg 624w" sizes="(max-width: 624px) 100vw, 624px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
     </span></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to schedule a report.</p>

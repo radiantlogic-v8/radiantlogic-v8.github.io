@@ -47,9 +47,9 @@
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">print-pwd-policy -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- name &lt;name&gt;</code>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to refer to the default password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong>
 In the following example, a request is made to display the settings for the default password policy.</p>
@@ -59,68 +59,68 @@ In the following example, a request is made to display the settings for the defa
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">add-pwd-policy -basedn &lt;basedn&gt; -name &lt;name&gt; -type &lt;type&gt; [-instance &lt;instance&gt;] [-precedence &lt;precedence&gt;] [-pwdAllowUserChange &lt;pwdAllowUserChange&gt;] [-pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;] [-pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;] [-pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;] [-pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;] [-pwdExpireWarning &lt;pwdExpireWarning&gt;] [-pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;] [-pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;] [-pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;] [-pwdInHistory &lt;pwdInHistory&gt;] [-pwdLockoutDuration &lt;pwdLockoutDuration&gt;] [-pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;] [-pwdMaxAge &lt;pwdMaxAge&gt;] [-pwdMaxFailure &lt;pwdMaxFailure&gt;] [-pwdMinAge &lt;pwdMinAge&gt;] [-pwdMinLength &lt;pwdMinLength&gt;] [-pwdMustChange &lt;pwdMustChange&gt;] [-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;] [-pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;] [-pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;] [-pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;] [-pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;] [-pwdSafeModify &lt;pwdSafeModify&gt;] [-pwdStorageScheme &lt;pwdStorageScheme&gt;] [pwdStrRule &lt;pwdStrRule&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- basedn &lt;basedn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- basedn &lt;basedn&gt;</code>
 <br/>[required] The base DN for the subject of the password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- name &lt;name&gt;</code>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to update the default password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- type &lt;type&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- type &lt;type&gt;</code>
 <br/>[required] The type of subject. Accepted values are: group, subtree</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- precedence &lt;precedence&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- precedence &lt;precedence&gt;</code>
 <br/>The precedence, used to resolve conflicts between password policies. A lower precedence value indicates a higher priority. The highest precedence is 1 and the lowest is 1000. The default value is 1000.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdAllowUserChange &lt;pwdAllowUserChange&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdAllowUserChange &lt;pwdAllowUserChange&gt;</code>
 <br/>Indicates whether users can change their own passwords. Accepted values: true, false. Default value is true.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;</code>
 <br/>Indicates the path to the dictionary file that RadiantOne should use to verify user passwords don’t contain unallowed strings.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;</code>
 <br/>If enabled, user accounts that contain a password encryption with a less secure method than the one set for the current password policy are automatically updated to the stronger encryption after a successful bind.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;</code>
 <br/>Indicates if the policy should keep track of the user’s last successful logon time. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;</code>
 <br/>The password must not contain the user&#x27;s account name or parts of the user&#x27;s full name.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdExpireWarning &lt;pwdExpireWarning&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdExpireWarning &lt;pwdExpireWarning&gt;</code>
 <br/>Used to send a warning, this argument allows a user to set the amount of time before the password expires to send a warning. Default is 0 (no warnings). You can indicate the length of time in any combination of days, hours and/or minutes using “d” for days (e.g. 1d), “h” for hours (e.g. 4h), and “m” for minutes (e.g. 5m).</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;</code>
 <br/>The number of minutes after which the failure count is reset. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;</code>
 <br/>The number of grace login attempt(s) allowed after the password expires. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;</code>
 <br/>The number of day(s) that a user is allowed to be idle before his account is locked. Default value is 0. Note: the -pwdEnableLastLogonTime option must have been set to true for this parameter to be taken into account.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdInHistory &lt;pwdInHistory&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdInHistory &lt;pwdInHistory&gt;</code>
 <br/>The maximum number of used passwords to keep in the &#x27;pwdHistory&#x27; attribute. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdLockoutDuration &lt;pwdLockoutDuration&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdLockoutDuration &lt;pwdLockoutDuration&gt;</code>
 <br/>The number of minutes that an account is locked out for. 0 indicates permanent lockout. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;</code>
 <br/>The frequency at which the time of the last successful authentication is recorded.</p>
-<style data-emotion="css 9822z3">.css-9822z3{list-style-type:initial;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ul role="list" class="css-9822z3"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">pwdMaxAge <pwdmaxage>`**</pwdmaxage></li></ul>
-<p class="chakra-text css-36k3oc"><br/>The amount of time after which the password expires. Default is 0 (password never expires). You can indicate the length of time in any combination of days, hours and/or minutes using “d” for days (e.g. 1d), “h” for hours (e.g. 4h), and “m” for minutes (e.g. 5m). A value of 1d would indicate a maximum password age of 1 day.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMaxFailure &lt;pwdMaxFailure&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMaxAge &lt;pwdMaxAge&gt;</code>
+<br/>The amount of time after which the password expires. Default is 0 (password never expires). You can indicate the length of time in any combination of days, hours and/or minutes using “d” for days (e.g. 1d), “h” for hours (e.g. 4h), and “m” for minutes (e.g. 5m). A value of 1d would indicate a maximum password age of 1 day.</p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMaxFailure &lt;pwdMaxFailure&gt;</code>
 <br/>The maximum number of login failures to allow, before lockout occurs. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMinAge &lt;pwdMinAge&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMinAge &lt;pwdMinAge&gt;</code>
 <br/>The amount of time that must elapse between modifications to the password. Default is 0 (meaning no limit is enforced). You can indicate the length of time in any combination of days, hours and/or minutes using “d” for days (e.g. 1d), “h” for hours (e.g. 4h), and “m” for minutes (e.g. 5m).</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMinLength &lt;pwdMinLength&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMinLength &lt;pwdMinLength&gt;</code>
 <br/>The minimum number of characters that must be used in a password. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code>
 <br/>Indicates if users must change their passwords when they first bind to the directory after their password has been reset by an administrator. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code>
 <br/>The minimum number of characters that must be changed when a new password is set.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code>
 <br/>The minimum number of numerical characters required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;</code>
 <br/>The minimum number of lower-case characters (a-z) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;</code>
 <br/>The minimum number of special characters (non-alphanumeric 7 - bit ASCII) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;</code>
 <br/>The minimum number of upper-case characters (A-Z) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdSafeModify &lt;pwdSafeModify&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdSafeModify &lt;pwdSafeModify&gt;</code>
 <br/>Indicates whether the existing password must be sent along with the new password when being changed. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdStorageScheme &lt;pwdStorageScheme&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdStorageScheme &lt;pwdStorageScheme&gt;</code>
 <br/>The method of password encryption. Accepted values are integers from 1-7. The following is the list of accepted encryption methods:</p>
 <div class="css-0"><style data-emotion="css cy4tg7">.css-cy4tg7{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;height:var(--chakra-sizes-5);}</style><div class="css-cy4tg7"></div><style data-emotion="css q83wl">.css-q83wl{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;overflow:hidden;-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);padding-top:var(--chakra-space-3);padding-bottom:var(--chakra-space-3);--alert-fg:var(--chakra-colors-blue-500);--alert-bg:var(--chakra-colors-blue-100);-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:left;-webkit-box-align:left;-ms-flex-align:left;align-items:left;border-left-width:10px;border-left-style:solid;border-left-color:var(--chakra-colors-rlBlue);background:var(--chakra-colors-rlBlue10);}.chakra-ui-dark .css-q83wl:not([data-theme]),[data-theme=dark] .css-q83wl:not([data-theme]),.css-q83wl[data-theme=dark]{--alert-fg:var(--chakra-colors-blue-200);--alert-bg:rgba(144, 205, 244, 0.16);}</style><div data-status="info" role="alert" class="chakra-alert css-q83wl"><style data-emotion="css koga8d">.css-koga8d{font-weight:var(--chakra-fontWeights-bold);line-height:var(--chakra-lineHeights-6);-webkit-margin-end:var(--chakra-space-2);margin-inline-end:var(--chakra-space-2);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}</style><div data-status="info" class="chakra-alert__title css-koga8d"><style data-emotion="css ikuqbj">.css-ikuqbj{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;width:1.5em;height:1.5em;}</style><div class="css-ikuqbj"><style data-emotion="css tspimq">.css-tspimq{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><style data-emotion="css 1hlv1gp">.css-1hlv1gp{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><style data-emotion="css zzks76">.css-zzks76{display:inline;line-height:var(--chakra-lineHeights-6);}</style><div data-status="info" class="chakra-alert__desc css-zzks76">
-<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Clear</li><li class="css-1msrd8y">MD4</li><li class="css-1msrd8y">PBKDF2AD</li><li class="css-1msrd8y">Salted SHA-1</li><li class="css-1msrd8y">Salted SHA-256</li><li class="css-1msrd8y">Salted SHA-384</li><li class="css-1msrd8y">Salted SHA-512</li></ol>
+<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">Clear</li><li class="css-1msrd8y">MD4</li><li class="css-1msrd8y">PBKDF2AD</li><li class="css-1msrd8y">Salted SHA-1</li><li class="css-1msrd8y">Salted SHA-256</li><li class="css-1msrd8y">Salted SHA-384</li><li class="css-1msrd8y">Salted SHA-512</li></ol>
 </div></div></div>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdStrRule &lt;pwdStrRule&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdStrRule &lt;pwdStrRule&gt;</code>
 <br/>The rule for the password strength, expressed as a regular expression pattern. If there is a value for this property and you want to disable it, set the value to an empty string: “”</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to create a password policy for o=companyprofiles.</p>
@@ -130,82 +130,82 @@ In the following example, a request is made to display the settings for the defa
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">update-pwd-policy -name &lt;name&gt; [-basedn &lt;basedn&gt;] [-disablePwdContent] [-instance &lt;instance&gt;] [-precedence &lt;precedence&gt;] [-pwdAllowUserChange &lt;pwdAllowUserChange&gt;] [-pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;] [-pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;] [-pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;] [-pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;] [-pwdExpireWarning &lt;pwdExpireWarning&gt;] [-pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;] [-pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;] [-pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;] [-pwdInHistory &lt;pwdInHistory&gt;] [-pwdLockoutDuration &lt;pwdLockoutDuration&gt;] [-pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;] [-pwdMaxAge &lt;pwdMaxAge&gt;] [-pwdMaxFailure &lt;pwdMaxFailure&gt;] [-pwdMinAge &lt;pwdMinAge&gt;] [-pwdMinLength &lt;pwdMinLength&gt;] [-pwdMustChange &lt;pwdMustChange&gt;] [-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;] [-pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;] [-pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;] [-pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;] [-pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;] [-pwdSafeModify &lt;pwdSafeModify&gt;] [-pwdStorageScheme &lt;pwdStorageScheme&gt;] [pwdStrRule &lt;pwdStrRule&gt;] [-type &lt;type&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- name &lt;name&gt;</code>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to update the default password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- basedn &lt;basedn&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- basedn &lt;basedn&gt;</code>
 <br/>The base DN for the subject of the password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- disablePwdContent</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- disablePwdContent</code>
 <br/>If this option is specified, all fields related to the &#x27;Password Content&#x27; section will be disabled from the current policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- precedence &lt;precedence&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- precedence &lt;precedence&gt;</code>
 <br/>The precedence, used to resolve conflicts between password policies. A lower precedence value indicates a higher priority. The highest precedence is 1 and the lowest is 1000. The default value is 1000.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdAllowUserChange &lt;pwdAllowUserChange&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdAllowUserChange &lt;pwdAllowUserChange&gt;</code>
 <br/>Indicates whether users can change their own passwords. Accepted values: true, false. Default value is true.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdDictionaryFilePath &lt;pwdDictionaryFilePath&gt;</code>
 <br/>Indicates the path to the dictionary file that RadiantOne should use to verify user passwords don’t contain unallowed strings.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableAlgorithmUpgrade &lt;pwdEnableAlgorithmUpgrade&gt;</code>
 <br/>If enabled, user accounts that contain a password encryption with a less secure method than the one set for the current password policy are automatically updated to the stronger encryption after a successful bind.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableLastLogonTime &lt;pwdEnableLastLogonTime&gt;</code>
 <br/>Indicates if the policy should keep track of the user’s last successful logon time. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdEnableNotContainNames &lt;pwdEnableNotContainNames&gt;</code>
 <br/>The password must not contain the user&#x27;s account name or parts of the user&#x27;s full name.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdExpireWarning &lt;pwdExpireWarning&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdExpireWarning &lt;pwdExpireWarning&gt;</code>
 <br/>Used to send a warning, this argument allows a user to set the number of day(s) before the password expires to send a warning. Default is 0 (no warnings).</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdFailureCountInterval &lt;pwdFailureCountInterval&gt;</code></strong>`**
-<br/>The number of minutes after which the failure count is reset. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;</code></strong>
+<p class="chakra-text css-36k3oc">`- pwdFailureCountInterval <pwdfailurecountinterval>``
+<br/>The number of minutes after which the failure count is reset. The default is 0.</pwdfailurecountinterval></p>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdGraceAuthNLimit &lt;pwdGraceAuthNLimit&gt;</code>
 <br/>The number of grace login attempt(s) allowed after the password expires. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdIdleLockoutInterval &lt;pwdIdleLockoutInterval&gt;</code>
 <br/>The number of day(s) that a user is allowed to be idle before his account is locked. Default value is 0. Note: the -pwdEnableLastLogonTime option must have been set to true for this parameter to be taken into account.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdInHistory &lt;pwdInHistory&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdInHistory &lt;pwdInHistory&gt;</code>
 <br/>The maximum number of used passwords to keep in the &#x27;pwdHistory&#x27; attribute. Default is 0.</p>
-<ul role="list" class="css-9822z3"><li class="css-1msrd8y">pwdLockoutDuration <pwdlockoutduration>`**</pwdlockoutduration></li></ul>
+<style data-emotion="css 9822z3">.css-9822z3{list-style-type:initial;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ul role="list" class="css-9822z3"><li class="css-1msrd8y">pwdLockoutDuration <pwdlockoutduration>`</pwdlockoutduration></li></ul>
 <p class="chakra-text css-36k3oc"><br/>The number of minutes that an account is locked out for. 0 indicates permanent lockout. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdLogonTimeSyncInterval &lt;pwdLogonTimeSyncInterval&gt;</code>
 <br/>The frequency at which the time of the last successful authentication is recorded.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMaxAge &lt;pwdMaxAge&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMaxAge &lt;pwdMaxAge&gt;</code>
 <br/>The number of days after which the password expires. Default is 0 (password never expires).</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMaxFailure &lt;pwdMaxFailure&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMaxFailure &lt;pwdMaxFailure&gt;</code>
 <br/>The maximum number of login failures to allow, before lockout occurs. The default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMinAge &lt;pwdMinAge&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMinAge &lt;pwdMinAge&gt;</code>
 <br/>The number of day(s) that must elapse between modifications to the password. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMinLength &lt;pwdMinLength&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMinLength &lt;pwdMinLength&gt;</code>
 <br/>The minimum number of characters that must be used in a password. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdMustChange &lt;pwdMustChange&gt;</code>
 <br/>Indicates if users must change their passwords when they first bind to the directory after their password has been reset by an administrator. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">[-pwdQualityMinAlteredChar &lt;pwdQualityMinAlteredChar&gt;]</code>
 <br/>The minimum number of characters that must be changed when a new password is set.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinDigitChar &lt;pwdQualityMinDigitChar&gt;</code>
 <br/>The minimum number of numerical characters required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinLowercaseChar &lt;pwdQualityMinLowercaseChar&gt;</code>
 <br/>The minimum number of lower-case characters (a-z) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinSpecialChar &lt;pwdQualityMinSpecialChar&gt;</code>
 <br/>The minimum number of special characters (non-alphanumeric 7-bit ASCII) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdQualityMinUppercaseChar &lt;pwdQualityMinUppercaseChar&gt;</code>
 <br/>The minimum number of upper-case characters (A-Z) required in passwords. Default is 0.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdSafeModify &lt;pwdSafeModify&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdSafeModify &lt;pwdSafeModify&gt;</code>
 <br/>Indicates whether the existing password must be sent along with the new password when being changed. Accepted values: true, false. Default value is false.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdStorageScheme &lt;pwdStorageScheme&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdStorageScheme &lt;pwdStorageScheme&gt;</code>
 <br/>The method of password hashing. Accepted values are integers from 1-7. The following is the list of accepted methods:</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Clear</li><li class="css-1msrd8y">MD4</li><li class="css-1msrd8y">PBKDF2AD</li><li class="css-1msrd8y">Salted SHA- 1</li><li class="css-1msrd8y">Salted SHA- 256</li><li class="css-1msrd8y">Salted SHA- 384</li><li class="css-1msrd8y">Salted SHA- 512</li></ol>
 </div></div></div>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- pwdStrRule &lt;pwdStrRule&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- pwdStrRule &lt;pwdStrRule&gt;</code>
 <br/>The rule for the password strength, expressed as a regular expression pattern. If there is a value for this property and you want to disable it, set the value to an empty string: “”</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- type &lt;type&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- type &lt;type&gt;</code>
 <br/>The type of subject. Accepted values are: group, subtree</p>
-<p class="chakra-text css-36k3oc">**REST (ADAP) Example
-In the following example, a request is made to update a password policy for o=companyprofiles.</p>
+<p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
+<p class="chakra-text css-36k3oc">In the following example, a request is made to update a password policy for o=companyprofiles.</p>
 <p class="chakra-text css-36k3oc"><code class="language-text">https://&lt;rli_server_name&gt;:8090/adap/util?action=vdsconfig&amp;commandname=update-pwd-policy&amp;basedn=o=companyprofiles&amp;type=subtree&amp;pwdAllowUserChange=true&amp;pwdExpireWarning=5d12h30m&amp;pwdMinLength=9&amp;pwdMustChange=true&amp;name=companyprofilesPwdPolicy&amp;pwdGraceAuthNLimit=3&amp;pwdLockoutDuration=15</code></p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="delete-pwd-policy">delete-pwd-policy</h2></div>
 <p class="chakra-text css-36k3oc">This command removes an existing password policy.</p>
 <p class="chakra-text css-36k3oc"><strong>Usage:</strong>
 <br/><code class="language-text">delete-pwd-policy -name &lt;name&gt; [-instance &lt;instance&gt;]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments:</strong></p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- name &lt;name&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- name &lt;name&gt;</code>
 <br/>[required] The password policy name. Use the value &#x27;default&#x27; to update the default password policy.</p>
-<p class="chakra-text css-36k3oc"><strong><code class="language-text">- instance &lt;instance&gt;</code></strong>
+<p class="chakra-text css-36k3oc"><code class="language-text">- instance &lt;instance&gt;</code>
 <br/>The name of the RadiantOne instance. If not specified, the default instance named vds_server is used.</p>
 <p class="chakra-text css-36k3oc"><strong>REST (ADAP) Example</strong></p>
 <p class="chakra-text css-36k3oc">In the following example, a request is made to delete a password policy named companyprofilesPwdPolicy.</p>
