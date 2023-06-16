@@ -48,13 +48,10 @@
 Disable inter-cluster replication for the store prior to re-initializing the store only if you plan on re-initializing all replicas with a clean image. To maintain inter-cluster replication and process changes from other replicas that happen while one (or more) replicas are being re-initialized, do NOT disable inter-cluster replication.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc">Re-initializing a store is an operation that is time-consuming and should only be done while the service is offline during a scheduled maintenance window. The store is inaccessible and no other operations can be performed during the re-initialization.</p>
-<p class="chakra-text css-36k3oc">Stores can be initialized with LDIF files. Click on the Initialize button on the Properties Tab for the selected RadiantOne Universal Directory store on the Main Control Panel &gt; Directory Namespace tab and browse to the desired LDIF file.</p>
+<p class="chakra-text css-36k3oc">Stores can be initialized with LDIF files. Click <strong>Initialize</strong> on the Properties Tab for the selected RadiantOne Universal Directory store on the Main Control Panel &gt; Directory Namespace tab and browse to the desired LDIF file.</p>
 <p class="chakra-text css-36k3oc">Re-initializing the store is processed as a task. The task is executed on the leader node of the cluster. The store on the leader node is initialized, and then activated again. All follower/follower-only nodes copy the data from the leader node.</p>
 <p class="chakra-text css-36k3oc">Stores can be initialized/re-initialized from command line using vdsconfig.bat (Windows) or vdsconfig.sh (Linux) located in &lt;RLI_HOME&gt;/bin. This syntax is as follows:</p>
-
-          <style data-emotion="css pwaf62">.css-pwaf62{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;}</style><div class="css-pwaf62"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
-          
-<div class="gatsby-highlight" data-language="text"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><code class="language-text">init-hdap-store -ldif &lt;ldif&gt; -namingcontext &lt;namingcontext&gt;[-instance &lt;instance&gt;] [-interactive]</code></code></div></div>
+<p class="chakra-text css-36k3oc"><code class="language-text">init-hdap-store -ldif &lt;ldif&gt; -namingcontext &lt;namingcontext&gt;[-instance &lt;instance&gt;] [-interactive]</code></p>
 <p class="chakra-text css-36k3oc"><strong>Command Arguments</strong></p>
 <style data-emotion="css 9822z3">.css-9822z3{list-style-type:initial;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ul role="list" class="css-9822z3"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">ldif <code class="language-text">&lt;ldif&gt;</code></li></ul>
 <p class="chakra-text css-36k3oc"><br/>[required] The path to the LDIF file used for initializing.</p>
@@ -72,13 +69,24 @@ Backups can be performed while the store is online. The store can be read/writte
 </div></div></div>
 <p class="chakra-text css-36k3oc">After a store has been initialized, you can create backups anytime.</p>
 <p class="chakra-text css-36k3oc">To back up an HDAP store:</p>
-<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Locate the current RadiantOneleader node on the Main Control Panel &gt; Dashboard tab (is noted with symbol).</li><li class="css-1msrd8y">From the Main Control Panel associated with the RadiantOne leader node, click the Directory Namespace Tab.</li><li class="css-1msrd8y">Select a RadiantOne Universal Directory store node and on the Properties tab on the right, click the Back Up button. The Backup HDAP Store window opens.</li><li class="css-1msrd8y">Select one of the following options.</li></ol>
-<ul role="list" class="css-9822z3"><li class="css-1msrd8y">Default backup location (&lt;RLI_HOME&gt;/vds_server/data/oldbackup)</li><li class="css-1msrd8y">Custom backup location. Click Browse, specify a file path, and click OK.</li></ul>
+<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Locate the current RadiantOneleader node on the Main Control Panel &gt; Dashboard tab (is noted with symbol).</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">From the Main Control Panel associated with the RadiantOne leader node, click the Directory Namespace Tab.</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Select a RadiantOne Universal Directory store node and on the Properties tab on the right, click the Back Up button. The Backup HDAP Store window opens.</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Select one of the following options.</p>
+</li></ol>
+<ul role="list" class="css-9822z3"><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Default backup location (&lt;RLI_HOME&gt;/vds_server/data/oldbackup)</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Custom backup location. Click Browse, specify a file path, and click OK.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
 <p class="chakra-text css-36k3oc">
-The browse option in the Custom Backup Location does not permit browsing above &lt;RLI_HOME&gt;. To select a custom backup location outside the &lt;RLI_HOME&gt; directory, enter the full location manually in the field below the</p>
+The browse option in the Custom Backup Location does not permit browsing above &lt;RLI_HOME&gt;. To select a custom backup location outside the &lt;RLI_HOME&gt; directory, enter the full location manually in the field below the custom backup location radio button.</p>
 </div></div></div>
-<p class="chakra-text css-36k3oc">custom backup location radio button.</p>
+</li></ul>
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Click <strong>OK</strong>. Click <strong>OK</strong> again to close the dialog box.</li></ol>
 <p class="chakra-text css-36k3oc">A compressed backup file is created in the location indicated in step 4 above, in a folder named after the root naming context being backed up (i.e. o_companydirectory-backup). The naming convention for the compressed file is yyyy-mm-dd_hh-mm-ss.zip. The compressed file is automatically encrypted using the RadiantOne server certificate keystore password.</p>
 <p class="chakra-text css-36k3oc">Back ups can also be performed from command line. For details, please see the Command Line Configuration Guide.</p>
@@ -90,25 +98,23 @@ The browse option in the Custom Backup Location does not permit browsing above &
 <p class="chakra-text css-36k3oc">Select a RadiantOne Universal Directory (HDAP) store node and on the Properties tab on the right, click the Restore button.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Select one of the following restore options.</p>
-</li><li class="css-1msrd8y">
+</li></ol>
+<ul role="list" class="css-9822z3"><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Click the “Select the date available in the default backup directory” button, and select the drop-down menu option that corresponds to the data and time of the backup to be restored.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Click the “Select the directory of an existing HDAP Store Backup” button, click Browse, select the location of the backup file, and click OK.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click <strong>OK</strong> again. Click <strong>OK</strong> to close the dialog box.</p>
-</li></ol>
-<p class="chakra-text css-36k3oc">The restore is performed using the compressed file located in the folder indicated. The compressed file is automatically decrypted using the RadiantOne server certificate keystore
-password. The server where you are restoring the store must have the same server certificate keystore password than the server where you created the backup from.</p>
+</li></ul>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Click <strong>OK</strong> again. Click <strong>OK</strong> to close the dialog box.</li></ol>
+<p class="chakra-text css-36k3oc">The restore is performed using the compressed file located in the folder indicated. The compressed file is automatically decrypted using the RadiantOne server certificate keystore password. The server where you are restoring the store must have the same server certificate keystore password than the server where you created the backup from.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
 <p class="chakra-text css-36k3oc">
-The compressed store files can only be unpacked in either the Main Control Panel or using the command line utility. For details on restoring a RadiantOne Universal Directory store from command line, see the RadiantOne</p>
+The compressed store files can only be unpacked in either the Main Control Panel or using the command line utility. For details on restoring a RadiantOne Universal Directory store from command line, see the RadiantOne Command Line Configuration Guide.</p>
 </div></div></div>
-<p class="chakra-text css-36k3oc">Command Line Configuration Guide.</p>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:624px">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:48.72727272727273%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7bYzJeML/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAEhAgMQERL/2gAIAQEAAQUCRBBceqenj//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAIDAAAAAAAAAAAAAAAAAAAQASEx/9oACAEBAAY/AnRsr//EABwQAQACAQUAAAAAAAAAAAAAAAEAERAhQVFxwf/aAAgBAQABPyEHE6QIYbJrtC32x//aAAwDAQACAAMAAAAQjM//xAAWEQEBAQAAAAAAAAAAAAAAAAARECH/2gAIAQMBAT8QdJ//xAAWEQADAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8QUH//xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhQVEQ/9oACAEBAAE/EBAgLXkDdGbrB3oZEtTtVxlN7e/n/9k=&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/24b919282ddd3d8d0727131be1ef2703/b966c/Image3.1.jpg" srcSet="/static/24b919282ddd3d8d0727131be1ef2703/c1cfe/Image3.1.jpg 275w /static/24b919282ddd3d8d0727131be1ef2703/67061/Image3.1.jpg 550w /static/24b919282ddd3d8d0727131be1ef2703/b966c/Image3.1.jpg 624w" sizes="(max-width: 624px) 100vw, 624px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
     </span></p>
-<p class="chakra-text css-36k3oc">Figure 3.1: Restoring Universal Directory (HDAP) Store</p>
+<p class="chakra-text css-36k3oc">Figure 1: Restoring Universal Directory (HDAP) Store</p>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-1jkpkkc"/><h2 class="chakra-heading css-1sf38d3" id="how-to-unlock-accounts">How to Unlock Accounts</h2></div>
 <p class="chakra-text css-36k3oc">A user’s account can be locked due to a violation of password policy (e.g. too many invalid login attempts).</p>
 <p class="chakra-text css-36k3oc">If a user’s account is locked due to a violation of a password policy, only the directory administrator (or someone who is a member of the directory administrator group) can unlock the account by resetting the user’s password. If the lockout policy has a duration period, the account is automatically unlocked after the duration has passed.</p>
