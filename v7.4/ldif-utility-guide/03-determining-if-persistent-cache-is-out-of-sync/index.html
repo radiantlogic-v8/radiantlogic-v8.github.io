@@ -48,7 +48,6 @@
 <p class="chakra-text css-36k3oc"><code class="language-text">C:\ldaputility&gt;ldapsearch -h localhost -p 2389 -D &quot;cn=directory manager&quot; -w password -b &quot;action=ignorecache,o= aggregatedview &quot; (objectclass=*) &gt; C:\radiantone\vds\bin\advanced\nocache.ldif </code></p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Now, the LDIF files must be sorted. Use the -s flag with ldif-utils to sort the files. Examples are shown below.</p>
-</li></ol>
 <p class="chakra-text css-36k3oc"><code class="language-text">C:\radiantone\vds\bin\advanced&gt;ldif-utils.bat -s cache.ldif</code>
 <br/> <code class="language-text">Using RLI home : C:\radiantone\vds</code>
 <br/> <code class="language-text">Using Java home : C:\radiantone\vds\jdk\jre</code>
@@ -60,7 +59,9 @@
 <br/> <code class="language-text">Start sorting...</code>
 <br/> <code class="language-text">Done total entry sorted: 13</code>
 <br/> <code class="language-text">Done in 79ms </code></p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">After sorting, you will have <filename>.ldif.sorted for each file. E.g. cache.ldif.sorted and nocache.ldif.sorted. These are the files to compare. Below is an example of the command to issue to compare the LDIF files:</filename></li></ol>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">After sorting, you will have <filename>.ldif.sorted for each file. E.g. cache.ldif.sorted and nocache.ldif.sorted. These are the files to compare. Below is an example of the command to issue to compare the LDIF files:</filename></p>
+</li></ol>
 <p class="chakra-text css-36k3oc"><code class="language-text">C:\radiantone\vds\bin\advanced&gt;ldif-utils.bat -c cache.ldif.sorted nocache.ldif.sorted -i userPassword -g true -w c:/radiantone/vds/vds_server/ldif/export/LDIFReport.ldif</code>
 <br/> <code class="language-text">Using RLI home : C:\radiantone\vds</code>
 <br/> <code class="language-text">Using Java home : C:\radiantone\vds\jdk\jre</code>
