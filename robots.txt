@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://developer.radiantlogic.com/sitemap/sitemap-index.xml
+Host: https://developer.radiantlogic.com
