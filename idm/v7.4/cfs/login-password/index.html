@@ -143,7 +143,7 @@
 <div class="gatsby-highlight" data-language="text"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text"> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL,
  Value name: ClientAuthTrustMode,
  Value type: REG_DWORD, Value data: 2 (HEX)</code></pre></code></div></div>
-<p class="chakra-text css-36k3oc"><img src=".media/certificate-7.png" alt=""/></p>
+<p class="chakra-text css-36k3oc">![].media/certificate-7.png)</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Restart IIS once step 4 is completed</p>
 </li><li class="css-1msrd8y">
@@ -183,7 +183,7 @@
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-5w2a8a"/><h2 class="chakra-heading css-1sf38d3" id="configure-a-radiantone-trust-connector">Configure a RadiantOne Trust Connector</h2></div>
 <p class="chakra-text css-36k3oc">Make sure you have installed the RTC in each Active Directory Domains you want to cover for your users. Log into CFS with your Tenant Administrator account and navigate to Authentication | Active Directory.</p>
 <p class="chakra-text css-36k3oc"><img src="media/rtc-15.png" alt=""/></p>
-<p class="chakra-text css-36k3oc">If you want to create the RTC manually then click the button &quot;New Active Directory Connector&quot;. Otherwise, click the button &quot;Have a metadata file?&quot; on top of the screen. If the CFS machine can contact the RTC machine over https (port 443), you can click the button &quot;URL&quot;. Use the &quot;Content&quot; option if the RTC machine is not accessible from the CFS machine.</p>
+<p class="chakra-text css-36k3oc">If you want to create the RTC manually then click <strong>New Active Directory Connector</strong>. Otherwise, click <strong>Have a metadata file?</strong> on top of the screen. If the CFS machine can contact the RTC machine over https (port 443), you can click <strong>URL</strong>. Use the &quot;Content&quot; option if the RTC machine is not accessible from the CFS machine.</p>
 <p class="chakra-text css-36k3oc"><img src="media/rtc-16.png" alt=""/></p>
 <p class="chakra-text css-36k3oc">Open a new web browser and navigate to the RTC <code class="language-text">[https://&lt;SERVER_ADDRESS&gt;/rtc/](https://&lt;SERVER_ADDRESS&gt;/rtc/)</code>.</p>
 <p class="chakra-text css-36k3oc"><img src="media/rtc-17.png" alt=""/></p>
@@ -204,7 +204,7 @@
 <p class="chakra-text css-36k3oc"> The RadiantOne Trust Connectors are only working from a CFS Master. The CFS Proxy does not try to redirect the users to an RTC.</p>
 </div></div></div>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-5w2a8a"/><h2 class="chakra-heading css-1sf38d3" id="update-with-metadata">Update with Metadata</h2></div>
-<p class="chakra-text css-36k3oc">If you have configured the RTC with a Metadata URL, you can update the parameters automatically to load a new certificate. If you have not, simply update your RTC with the address of the Metadata file and save the configuration.</p>
+<p class="chakra-text css-36k3oc">If you have configured the RTC with a Metadata URL, you can update the parameters automatically to load a new certificate. If you have not, update your RTC with the address of the Metadata file and save the configuration.</p>
 <p class="chakra-text css-36k3oc">On the Authentication | Active Directory page, select the RTC you want to update with the metadata, click the &quot;Actions&quot; button and select <strong>Update from Metadata</strong>. This action will download the new metadata file and extract the endpoint and certificate.</p>
 <p class="chakra-text css-36k3oc"><img src="media/rtc-24.png" alt=""/></p>
 <p class="chakra-text css-36k3oc">Confirm you want to update your RTC.</p>
