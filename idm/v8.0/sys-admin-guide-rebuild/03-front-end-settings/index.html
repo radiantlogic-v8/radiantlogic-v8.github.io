@@ -140,22 +140,23 @@ The RadiantOne service may be running when this command is executed.</p>
 <br/></p>
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Run the following curl command:</li></ol>
 <br/>
-```
-curl -k --location --request PATCH &quot;$REST_ENDPOINT/adap/$BIND_USER_DN&quot; \
---header &quot;Content-Type: application/json&quot; \
---header &quot;Authorization: Basic $BASE64_USERNAME_PASSWORD&quot; \
---data &#x27;{
-    &quot;params&quot;: {
-        &quot;mods&quot;: [
-            {
-                &quot;attribute&quot;: &quot;userPassword&quot;,
-                &quot;type&quot;: &quot;REPLACE&quot;,
-                &quot;values&quot;: [
-                    &quot;&#x27;$NEW_PASSWORD&#x27;&quot;
-                ]            
-            }
-        ]
-    }
+`curl -k --location --request PATCH &quot;$REST_ENDPOINT/adap/$BIND_USER_DN&quot; \`
+<br/>`--header &quot;Content-Type: application/json&quot; \`
+<br/>`--header &quot;Authorization: Basic $BASE64_USERNAME_PASSWORD&quot; \`
+<br/>`--data`
+```json
+&#x27;{
+   &quot;params&quot;: {
+      &quot;mods&quot;: [
+       {
+         &quot;attribute&quot;: &quot;userPassword&quot;,
+         &quot;type&quot;: &quot;REPLACE&quot;,
+          &quot;values&quot;: [
+           &quot;&#x27;$NEW_PASSWORD&#x27;&quot;
+           ]            
+          }
+       ]
+   }
 }&#x27;
 ```
 <br/>
