@@ -130,22 +130,21 @@ If you change the password and you are currently logged into the Control Panel a
 The RadiantOne service may be running when this command is executed.</p>
 </div></div></div>
 <p class="chakra-text css-36k3oc">You can also change the directory administrator&#x27;s password via REST (ADAP API). The following commands can be issued from a Linux client that is able to connect to the RadiantOne service&#x27;s REST endpoint.</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Set the following:<br/></li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Set the following on the Linux client:<br/></li></ol>
 <p class="chakra-text css-36k3oc">REST_ENDPOINT=&quot;<style data-emotion="css 1on117q">.css-1on117q{transition-property:var(--chakra-transition-property-common);transition-duration:var(--chakra-transition-duration-fast);transition-timing-function:var(--chakra-transition-easing-ease-out);cursor:pointer;-webkit-text-decoration:none;text-decoration:none;outline:2px solid transparent;outline-offset:2px;color:var(--chakra-colors-rlBlue);}.css-1on117q:hover,.css-1on117q[data-hover]{-webkit-text-decoration:underline;text-decoration:underline;}.css-1on117q:focus-visible,.css-1on117q[data-focus-visible]{box-shadow:var(--chakra-shadows-outline);}</style><a class="chakra-link css-1on117q" href="https://localhost:9101">https://localhost:9101</a>&quot;
 <br/>BIND_DN=&quot;cn=Directory Manager&quot;
 <br/>BIND_USER_DN=&quot;cn=Directory Manager,ou=rootusers,cn=config&quot;
 <br/>CURRENT_PASSWORD=&quot;MySuperSecretPassw0rd2&quot;
 <br/>NEW_PASSWORD=&quot;MySuperSecretPassw0rd3&quot;
-<br/>BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)
-<br/></p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Run the following curl command:</li></ol>
-<br/>
-`curl -k --location --request PATCH &quot;$REST_ENDPOINT/adap/$BIND_USER_DN&quot; \`
-<br/>`--header &quot;Content-Type: application/json&quot; \`
-<br/>`--header &quot;Authorization: Basic $BASE64_USERNAME_PASSWORD&quot; \`
-<br/>`--data`
-```json
-&#x27;{
+<br/>BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)<br/></p>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Run the following curl command on the Linux client:</li></ol>
+
+          <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
+          
+<div class="gatsby-highlight" data-language="text"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">curl -k --location --request PATCH &quot;$REST_ENDPOINT/adap/$BIND_USER_DN&quot; \
+--header &quot;Content-Type: application/json&quot; \
+--header &quot;Authorization: Basic $BASE64_USERNAME_PASSWORD&quot; \
+--data &#x27;{
    &quot;params&quot;: {
       &quot;mods&quot;: [
        {
@@ -157,8 +156,7 @@ The RadiantOne service may be running when this command is executed.</p>
           }
        ]
    }
-}&#x27;
-```
+}&#x27;</code></pre></code></div></div>
 <br/>
 If the command in successful, an HTTP status of 200 is returned: 
 {&quot;httpStatus&quot;:200}
@@ -371,9 +369,9 @@ To allow anyone to perform a subtree delete request, use a value of “ldap:///a
 <p class="chakra-text css-36k3oc">For example, there are two delete requests shown below (snippets from vds_server.log). The first delete request shows the scenario where the sub tree delete control isn’t passed and the delete fails (with error code 66) and the other shows where the control (1.2.840.113556.1.4.805) is passed and the delete is successful.</p>
 <p class="chakra-text css-36k3oc">Delete request without passing the subtree delete control:</p>
 
-          <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
+          <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
-<div class="gatsby-highlight" data-language="text"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">2017-10-03 10:39:51,526 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {2.16.840.1.113730.3.4.2 false}
+<div class="gatsby-highlight" data-language="text"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">2017-10-03 10:39:51,526 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {2.16.840.1.113730.3.4.2 false}
 
 2017-10-03 10:39:51,606 ERROR BackendRouter:3743 - ??? BackendRouter.deleteEntry(): Error from backend: com.rli.slapd.server.LDAPException: (66); Only leaf entry can be deleted.; Operation not allowed on nonleaf
 
