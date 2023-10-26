@@ -129,8 +129,8 @@ If you change the password and you are currently logged into the Control Panel a
 <p class="chakra-text css-36k3oc">
 The RadiantOne service may be running when this command is executed.</p>
 </div></div></div>
-<p class="chakra-text css-36k3oc">You can also change the directory administrator&#x27;s password via REST (ADAP API). The following commands can be issued from a Linux client that is able to connect to the RadiantOne service&#x27;s REST endpoint.</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Set the following on the Linux client:</li></ol>
+<p class="chakra-text css-36k3oc">You can also change the directory administrator&#x27;s password via REST (ADAP API). The following commands can be issued from a Linux client that is able to connect to the RadiantOne service&#x27;s REST endpoint.
+Set the following on the Linux client:</p>
 
           <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
@@ -140,7 +140,7 @@ BIND_USER_DN=&quot;cn=Directory Manager,ou=rootusers,cn=config&quot;
 CURRENT_PASSWORD=&quot;MySuperSecretPassw0rd2&quot;
 NEW_PASSWORD=&quot;MySuperSecretPassw0rd3&quot;
 BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)</code></pre></code></div></div>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Run the following curl command on the Linux client:</li></ol>
+<p class="chakra-text css-36k3oc">Run the following curl command on the Linux client:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
@@ -163,6 +163,31 @@ BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)</code></
 <br/>
 If the command is successful, an HTTP status of 200 is returned: 
 {&quot;httpStatus&quot;:200}
+<p class="chakra-text css-36k3oc">An example of using Postman as a REST client to update the cn=directory manager password is shown below.</p>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Add an Authorization header that contains Basic with the base 64 encoded value for cn=directory manager:currentpassword. Use cn=directory manager in the authorization header value, not cn=Directory Manager,ou=RootUsers,cn=config. E.g. <br/>Basic Y249RGlyZWN0b3J5IE1hbmFnZXI6bmV3cGFzc3dvcmQxMjM=</li></ol>
+<p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1100px;z-index:-1">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom:35.63636363636363%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAECBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHdkKCz/8QAFxAAAwEAAAAAAAAAAAAAAAAAABAREv/aAAgBAQABBQKLJ//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFX/8QAGBAAAgMAAAAAAAAAAAAAAAAAAAEQMZH/2gAIAQEABj8Ci3p//8QAFhABAQEAAAAAAAAAAAAAAAAAABEB/9oACAEBAAE/ISNvaH//2gAMAwEAAgADAAAAEIPf/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QQ//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EFP/xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhUYGR/9oACAEBAAE/ECjmnuI7+4EhrYKG/9k=&#x27;);background-size:cover;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="Authorization Header Example" title="" src="/static/936492728bc9b22c973f5b1cb7a312a6/9e444/restheaderexample.jpg" srcSet="/static/936492728bc9b22c973f5b1cb7a312a6/c1cfe/restheaderexample.jpg 275w /static/936492728bc9b22c973f5b1cb7a312a6/67061/restheaderexample.jpg 550w /static/936492728bc9b22c973f5b1cb7a312a6/9e444/restheaderexample.jpg 1100w /static/936492728bc9b22c973f5b1cb7a312a6/78e18/restheaderexample.jpg 1260w" sizes="(max-width: 1100px) 100vw, 1100px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+    </span>
+2. Issue a PATCH operation with <code class="language-text">http://RESTENDPOINT:8089/adap/cn=Directory Manager,ou=RootUsers,cn=config</code> with the following body:</p>
+
+          <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
+          
+<div class="gatsby-highlight" data-language="text"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">{
+    &quot;params&quot;: {
+        &quot;mods&quot;: [
+            {
+                &quot;attribute&quot;: &quot;userPassword&quot;,
+                &quot;type&quot;: &quot;REPLACE&quot;,
+                &quot;values&quot;: [&quot;newpassword&quot;]
+            }
+        ]
+    }
+}</code></pre></code></div></div>
+<p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:1100px;z-index:-1">
+      <span class="gatsby-resp-image-background-image" style="padding-bottom:52.36363636363636%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgABBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHvaUCVZ//EABgQAAIDAAAAAAAAAAAAAAAAAAECEBIg/9oACAEBAAEFAoqpx//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8BbX//xAAWEAADAAAAAAAAAAAAAAAAAAAQIDH/2gAIAQEABj8CET//xAAYEAEBAQEBAAAAAAAAAAAAAAABABEQcf/aAAgBAQABPyHLJZqV8jjf/9oADAMBAAIAAwAAABAQD//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxBGP//EABURAQEAAAAAAAAAAAAAAAAAAABh/9oACAECAQE/EFH/xAAZEAEBAQEBAQAAAAAAAAAAAAABADERIVH/2gAIAQEAAT8Q4+dgk9RNUe2mMt3/2Q==&#x27;);background-size:cover;display:block"></span>
+  <img class="gatsby-resp-image-image" alt="REST PATCH Example" title="" src="/static/521521dff5d65b45fb3c597c4e94b7e8/9e444/restbodyexample.jpg" srcSet="/static/521521dff5d65b45fb3c597c4e94b7e8/c1cfe/restbodyexample.jpg 275w /static/521521dff5d65b45fb3c597c4e94b7e8/67061/restbodyexample.jpg 550w /static/521521dff5d65b45fb3c597c4e94b7e8/9e444/restbodyexample.jpg 1100w /static/521521dff5d65b45fb3c597c4e94b7e8/63107/restbodyexample.jpg 1275w" sizes="(max-width: 1100px) 100vw, 1100px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
+    </span></p>
 <!-- -->
 <h4 class="chakra-heading css-10ar4s8" id="special-users-group-dn">Special Users Group DN</h4>
 <p class="chakra-text css-36k3oc">This parameter can be set to the DN of any special group you want that is defined in the virtual namespace. The special users group is checked for enforcing access regulation (if access restrictions are set). To manage this value, from the Main Control Panel -&gt; Settings Tab -&gt; Administration section, locate the Special Users Group DN parameter. Enter the value of a valid group DN located in the virtual namespace.</p>

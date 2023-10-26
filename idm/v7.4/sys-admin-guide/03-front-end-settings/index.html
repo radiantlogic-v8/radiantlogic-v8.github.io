@@ -181,7 +181,9 @@ BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)</code></
 If the command is successful, an HTTP status of 200 is returned: 
 {&quot;httpStatus&quot;:200}
 <p class="chakra-text css-36k3oc">An example of using Postman as a REST client to update the cn=directory manager password is shown below.</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Add an Authorization header that contains Basic with the base 64 encoded value for cn=directory manager:currentpassword. Use cn=directory manager in the authorization header value, not cn=Directory Manager,ou=RootUsers,cn=config. E.g. <br/>Basic Y249RGlyZWN0b3J5IE1hbmFnZXI6bmV3cGFzc3dvcmQxMjM=</li><li class="css-1msrd8y">Issue a PATCH operation with <code class="language-text">http://RESTENDPOINT:8089/adap/cn=Directory Manager,ou=RootUsers,cn=config</code> with the following body:</li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Add an Authorization header that contains Basic with the base 64 encoded value for cn=directory manager:currentpassword. Use cn=directory manager in the authorization header value, not cn=Directory Manager,ou=RootUsers,cn=config. E.g. <br/>Basic Y249RGlyZWN0b3J5IE1hbmFnZXI6bmV3cGFzc3dvcmQxMjM=</li></ol>
+<p class="chakra-text css-36k3oc"><img src="Media/restheaderexample.jpg" alt="Authorization Header"/>
+2. Issue a PATCH operation with <code class="language-text">http://RESTENDPOINT:8089/adap/cn=Directory Manager,ou=RootUsers,cn=config</code> with the following body:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
@@ -196,6 +198,7 @@ If the command is successful, an HTTP status of 200 is returned:
         ]
     }
 }</code></pre></code></div></div>
+<p class="chakra-text css-36k3oc"><img src="Media/restbodyexample.jpg" alt="REST PATCH Example"/></p>
 <h4 class="chakra-heading css-10ar4s8" id="allowed-ip-addresses">Allowed IP Addresses</h4>
 <p class="chakra-text css-36k3oc">To prevent the unwarranted use of the directory administrator (super user) account, you can set specific IP addresses from where the directory administrator account can connect to the RadiantOne service from. This value can be a single IP address or a list of IP addresses separated by a comma. The IP address syntax can also support a range of IP addresses.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-1uu6wxp"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon chakra-icon css-9xxfp8"><path fill="currentColor" d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z"></path></svg></div>Warning</div><div data-status="info" class="chakra-alert__desc css-zzks76">
