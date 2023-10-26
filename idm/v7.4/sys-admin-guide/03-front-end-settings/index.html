@@ -146,8 +146,8 @@ If you change the password and you are currently logged into the Control Panel a
 <div class="css-0"><div class="css-cy4tg7"></div><style data-emotion="css q83wl">.css-q83wl{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;overflow:hidden;-webkit-padding-start:var(--chakra-space-4);padding-inline-start:var(--chakra-space-4);-webkit-padding-end:var(--chakra-space-4);padding-inline-end:var(--chakra-space-4);padding-top:var(--chakra-space-3);padding-bottom:var(--chakra-space-3);--alert-fg:var(--chakra-colors-blue-500);--alert-bg:var(--chakra-colors-blue-100);-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:left;-webkit-box-align:left;-ms-flex-align:left;align-items:left;border-left-width:10px;border-left-style:solid;border-left-color:var(--chakra-colors-rlBlue);background:var(--chakra-colors-rlBlue10);}.chakra-ui-dark .css-q83wl:not([data-theme]),[data-theme=dark] .css-q83wl:not([data-theme]),.css-q83wl[data-theme=dark]{--alert-fg:var(--chakra-colors-blue-200);--alert-bg:rgba(144, 205, 244, 0.16);}</style><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><style data-emotion="css tspimq">.css-tspimq{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><style data-emotion="css 1hlv1gp">.css-1hlv1gp{width:1em;height:1em;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:currentColor;vertical-align:middle;display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlue);height:var(--chakra-sizes-5);width:var(--chakra-sizes-5);padding-right:var(--chakra-space-1);}</style><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
 <p class="chakra-text css-36k3oc"> The RadiantOne service may be running when this command is executed.</p>
 </div></div></div>
-<p class="chakra-text css-36k3oc">You can also change the directory administrator&#x27;s password via REST (ADAP API). The following commands can be issued from a Linux client that is able to connect to the RadiantOne service&#x27;s REST endpoint.</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Set the following on the Linux client:</li></ol>
+<p class="chakra-text css-36k3oc">You can also change the directory administrator&#x27;s password via REST (ADAP API). The following commands can be issued from a Linux client that is able to connect to the RadiantOne service&#x27;s REST endpoint.
+Set the following on the Linux client:</p>
 
           <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
@@ -157,7 +157,7 @@ BIND_USER_DN=&quot;cn=Directory Manager,ou=rootusers,cn=config&quot;
 CURRENT_PASSWORD=&quot;MySuperSecretPassw0rd2&quot;
 NEW_PASSWORD=&quot;MySuperSecretPassw0rd3&quot;
 BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)</code></pre></code></div></div>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Run the following curl command on the Linux client:</li></ol>
+<p class="chakra-text css-36k3oc">Run the following curl command on the Linux client:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
           
@@ -180,6 +180,22 @@ BASE64_USERNAME_PASSWORD=$(echo -n $BIND_DN:$CURRENT_PASSWORD | base64)</code></
 <br/>
 If the command is successful, an HTTP status of 200 is returned: 
 {&quot;httpStatus&quot;:200}
+<p class="chakra-text css-36k3oc">An example of using Postman as a REST client to update the cn=directory manager password is shown below.</p>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Add an Authorization header that contains Basic with the base 64 encoded value for cn=directory manager:currentpassword. Use cn=directory manager in the authorization header value, not cn=Directory Manager,ou=RootUsers,cn=config. E.g. <br/>Basic Y249RGlyZWN0b3J5IE1hbmFnZXI6bmV3cGFzc3dvcmQxMjM=</li><li class="css-1msrd8y">Issue a PATCH operation with <code class="language-text">http://RESTENDPOINT:8089/adap/cn=Directory Manager,ou=RootUsers,cn=config</code> with the following body:</li></ol>
+
+          <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
+          
+<div class="gatsby-highlight" data-language="text"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">{
+    &quot;params&quot;: {
+        &quot;mods&quot;: [
+            {
+                &quot;attribute&quot;: &quot;userPassword&quot;,
+                &quot;type&quot;: &quot;REPLACE&quot;,
+                &quot;values&quot;: [&quot;newpassword&quot;]
+            }
+        ]
+    }
+}</code></pre></code></div></div>
 <h4 class="chakra-heading css-10ar4s8" id="allowed-ip-addresses">Allowed IP Addresses</h4>
 <p class="chakra-text css-36k3oc">To prevent the unwarranted use of the directory administrator (super user) account, you can set specific IP addresses from where the directory administrator account can connect to the RadiantOne service from. This value can be a single IP address or a list of IP addresses separated by a comma. The IP address syntax can also support a range of IP addresses.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-1uu6wxp"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon chakra-icon css-9xxfp8"><path fill="currentColor" d="M23.119,20,13.772,2.15h0a2,2,0,0,0-3.543,0L.881,20a2,2,0,0,0,1.772,2.928H21.347A2,2,0,0,0,23.119,20ZM11,8.423a1,1,0,0,1,2,0v6a1,1,0,1,1-2,0Zm1.05,11.51h-.028a1.528,1.528,0,0,1-1.522-1.47,1.476,1.476,0,0,1,1.448-1.53h.028A1.527,1.527,0,0,1,13.5,18.4,1.475,1.475,0,0,1,12.05,19.933Z"></path></svg></div>Warning</div><div data-status="info" class="chakra-alert__desc css-zzks76">
