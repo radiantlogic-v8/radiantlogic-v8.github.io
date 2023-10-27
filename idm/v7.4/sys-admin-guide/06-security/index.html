@@ -258,7 +258,7 @@ uid=$1,ou=people,ou=ssl,dc=com</code></p>
 <p class="chakra-text css-36k3oc">Out of the available protocols, not in the disabled list, you can limit which ones you want RadiantOne to support. You can limit the protocols from the Main Control Panel &gt; Settings Tab &gt; Security section &gt; SSL sub-section. Click <strong>Change</strong> next to Enabled SSL Protocols. Select the protocols to support and click <strong>OK</strong>. Restart the RadiantOne service on all nodes.</p>
 <p class="chakra-text css-36k3oc">If you want to support one of the less secure protocols, edit the java.security file and remove the protocol from the jdk.tls.disabledAlgorithms value. Then, make sure it is enabled in RadiantOne. Restart RadiantOne on all nodes. If a protocol is enabled in RadiantOne, but in the list of disabled algorithms in the java.security file, it will not be supported at runtime for SSL communication.</p>
 <div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
-<p class="chakra-text css-36k3oc"> Only enable the SSL protocols that comply withour company’s security policy.</p>
+<p class="chakra-text css-36k3oc"> Only enable the SSL protocols that comply with your company’s security policy.</p>
 </div></div></div>
 <h3 class="chakra-heading css-5cvzdn" id="enable-starttls">Enable STARTTLS</h3>
 <p class="chakra-text css-36k3oc">Start TLS allows clients to request a secure channel to RadiantOne at any time without having to establish a new connection on a different port. For example, a client can process an LDAP search operation on a normal connection and then, without closing the connection, request a secure layer over the same connection with StartTLS for the use of changing passwords or viewing encrypted attributes. After finishing the use of the secure channel, the client can switch back to the non-secure channel on the same connection. The flexibility offered by the Start TLS extension allows for the secure LDAPS channel to be turned on and off on demand.</p>
@@ -897,7 +897,7 @@ To change the default group, on the Main Control Panel, go to the Zookeeper tab 
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">On the right, add required attributes to the encrypted attributes list.</p>
 </li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click <strong>Sav</strong>e.</p>
+<p class="chakra-text css-36k3oc">Click <strong>Save</strong>.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Click <strong>Re-build Index</strong>.</p>
 </li><li class="css-1msrd8y">
