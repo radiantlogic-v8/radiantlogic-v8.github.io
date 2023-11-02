@@ -396,23 +396,13 @@ To allow anyone to perform a subtree delete request, use a value of “ldap:///a
 <p class="chakra-text css-36k3oc">If the target DN is associated with a RadiantOne Universal Directory (HDAP) store, then RadiantOne processes the subtree delete control. If the target DN is a proxy view to a backend directory, RadiantOne request with the subtree delete control is delegated to the backend for processing.</p>
 <p class="chakra-text css-36k3oc">For example, there are two delete requests shown below (snippets from vds_server.log). The first delete request shows the scenario where the sub tree delete control isn’t passed and the delete fails (with error code 66) and the other shows where the control (1.2.840.113556.1.4.805) is passed and the delete is successful.</p>
 <p class="chakra-text css-36k3oc">Delete request without passing the subtree delete control:</p>
-
-          <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
-          
-<div class="gatsby-highlight" data-language="text"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">2017-10-03 10:39:51,526 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {2.16.840.1.113730.3.4.2 false}
-
-2017-10-03 10:39:51,606 ERROR BackendRouter:3743 - ??? BackendRouter.deleteEntry(): Error from backend: com.rli.slapd.server.LDAPException: (66); Only leaf entry can be deleted.; Operation not allowed on nonleaf
-
-2017-10-03 10:39:51,654 INFO SessionHandler:3152 - &lt;== conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteResponse {resultCode=66, matchedDN=null, errorMessage=Only leaf entry can be deleted.} ### etime=128 ###
-
-2017-10-03 10:40:40,583 WARN session:561 - Session 17zh5m7l2n01j1gis29nv1entj is now immortal (maxInactiveInterval=-1)</code></pre></code></div></div>
+<p class="chakra-text css-36k3oc"><code class="language-text">2017-10-03 10:39:51,526 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {2.16.840.1.113730.3.4.2 false}</code>
+<br/><code class="language-text">2017-10-03 10:39:51,606 ERROR BackendRouter:3743 - ??? BackendRouter.deleteEntry(): Error from backend: com.rli.slapd.server.LDAPException: (66); Only leaf entry can be deleted.; Operation not allowed on nonleaf</code>
+<br/><code class="language-text">2017-10-03 10:39:51,654 INFO SessionHandler:3152 - &lt;== conn[SSL/TLS]=1886 op=16 MsgID=16 DeleteResponse {resultCode=66, matchedDN=null, errorMessage=Only leaf entry can be deleted.} ### etime=128 ###</code>
+<br/><code class="language-text">2017-10-03 10:40:40,583 WARN session:561 - Session 17zh5m7l2n01j1gis29nv1entj is now immortal (maxInactiveInterval=-1)</code></p>
 <p class="chakra-text css-36k3oc">Delete request passing the subtree delete control:</p>
-
-          <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
-          
-<div class="gatsby-highlight" data-language="text"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-text">2017-10-03 10:40:40,584 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=17 MsgID=17 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {1.2.840.113556.1.4.805 true} LDAPControl {2.16.840.1.113730.3.4.2 false}
-
-2017-10-03 10:40:40,654 INFO SessionHandler:3152 - &lt;== conn[SSL/TLS]=1886 op=17 MsgID=17 DeleteResponse {resultCode=0, matchedDN=null, errorMessage=null} ### etime=70 ###</code></pre></code></div></div>
+<p class="chakra-text css-36k3oc"><code class="language-text">2017-10-03 10:40:40,584 INFO SessionHandler:1115 - --&gt; conn[SSL/TLS]=1886 op=17 MsgID=17 DeleteRequest {entry=ou=test,o=companydirectory} LDAPControl {1.2.840.113556.1.4.805 true} LDAPControl {2.16.840.1.113730.3.4.2 false}</code>
+<br/><code class="language-text">2017-10-03 10:40:40,654 INFO SessionHandler:3152 - &lt;== conn[SSL/TLS]=1886 op=17 MsgID=17 DeleteResponse {resultCode=0, matchedDN=null, errorMessage=null} ### etime=70 ###</code></p>
 <h4 class="chakra-heading css-10ar4s8" id="password-policy-control">Password Policy Control</h4>
 <p class="chakra-text css-36k3oc">The Password Policy Control is enabled by default and allows a client to request information about the current password policy information for a user entry. Specify the Password Policy Control in the LDAP request in the following ways:</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">
