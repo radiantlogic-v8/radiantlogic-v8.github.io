@@ -118,10 +118,8 @@ This section is accessible only in <style data-emotion="css yk429l">.css-yk429l{
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Click <strong>Browse</strong> to locate the Base DN or enter the location yourself.</p>
 </li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Specify the scope of search to perform to find the entries to join with. The drop-down options are base, one,</p>
-</li></ol>
-<p class="chakra-text css-36k3oc">or sub.</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">Specify the scope of search to perform to find the entries to join with. The drop-down options are base, one, or sub.</p>
+</li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Select the specific object class associated with the secondary entries you want to join with in the Object Class parameter from the drop-down list. For information on schema extension, please see <span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/07-directory-schema/#extending-the-radiantone-ldap-schema">Extending RadiantOne LDAP Schema</a></span>.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">Select the attribute from the secondary object that you want to base the join condition on from the Join Attribute drop-down menu. The value of this attribute should match the value of the primary source join attribute that you set in step above. The Join Condition parameter displays the attribute matching criteria for the join.</p>
@@ -135,7 +133,7 @@ This section is accessible only in <style data-emotion="css yk429l">.css-yk429l{
 <p class="chakra-text css-36k3oc">Click <strong>Save</strong>.</p>
 </li></ol>
 <div class="css-0"><hr aria-orientation="horizontal" class="chakra-divider css-5w2a8a"/><h2 class="chakra-heading css-1sf38d3" id="user-to-dn-mapping">User to DN Mapping</h2></div>
-<p class="chakra-text css-36k3oc">Typically, an LDAP client performs authentication first by searching RadiantOne for a specific user (based on configuration of the client to search for a specific attribute like cn, sAMAccountName, uid  …etc.), and then issues a bind with the user DN returned in the search. These two steps are referred to as identification and credential checking respectively.</p>
+<p class="chakra-text css-36k3oc">Typically, an LDAP client performs authentication first by searching RadiantOne for a specific user (based on configuration of the client to search for a specific attribute like cn, sAMAccountName, uid…etc.), and then issues a bind with the user DN returned in the search. These two steps are referred to as identification and credential checking respectively.</p>
 <p class="chakra-text css-36k3oc">If this functionality is not implemented at the client level, RadiantOne can be configured to perform the identification step with user ID to DN mappings. This configuration describes how RadiantOne should find the user DN based on the ID that was received in the bind request.</p>
 <p class="chakra-text css-36k3oc">Let’s look at the following examples to describe the difference.</p>
 <p class="chakra-text css-36k3oc">In the diagrams below, the client is configured to search for the user account and then issue the bind.</p>
