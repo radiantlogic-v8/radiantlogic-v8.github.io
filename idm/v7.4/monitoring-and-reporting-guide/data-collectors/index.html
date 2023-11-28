@@ -109,64 +109,13 @@ triggered. If the response is empty, this means there are currently no alerts tr
 <p class="chakra-text css-36k3oc">A description of the properties is shown below.</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">upTime – the amount of time (in milliseconds) the RadiantOne service on the node has been running. This property does NOT require a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">zkEnsembleCanRead – the value is true if the ZooKeeper service on the node can be read. This value is false if the ZooKeeper service on the node cannot be read.</li><li class="css-1msrd8y">data – the combined index size (in KB) of all RadiantOne Universal Directory (HDAP) stores in the cluster. This property requires a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">vdsLeader – the cloud ID associated with the current RadiantOne FID leader node in the cluster. This property requires an FID to be running to return information.</li><li class="css-1msrd8y">zkEnsembleCanWrite – the value is true if the ZooKeeper service on the node can be written to. This value is false if the ZooKeeper service on the node cannot be written to.</li><li class="css-1msrd8y">leaderSchedulerStarted - a value of true indicates the task scheduler is running on the RadiantOne leader node. A value of false indicates the task scheduler is not running on the leader node. This property does NOT require a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">name – the name of the cluster the node is a member of. This property does NOT require a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">storeCount – the number of RadiantOne Universal Directory stores on the node. This property requires a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">nodeCount – the number of nodes in the cluster. This property does NOT require a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">readOnly – the value is true if ZooKeeper on the node is in a read-only state. The value is false if ZooKeeper on the node is a read-write state. This property does NOT require a RadiantOne service to be running to return information.</li></ul>
 <h3 class="chakra-heading css-5cvzdn" id="cluster-latency">Cluster-latency</h3>
-<p class="chakra-text css-36k3oc">The cluster-latency data collector returns information about the current network latency and peak network latency both on the local node and between cluster nodes. The results indicate the current and peak network latency between all nodes. The format of the result is as follows:</p>
-
-          <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
-          
-<div class="gatsby-highlight" data-language="sh"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre"><code class="language-sh"><span class="token punctuation">{</span>
-
-source-cloud-ID1 <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
-
-target-cloud-ID1 <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
-
-currentLatency <span class="token builtin class-name">:</span> status,
-
-peakLatency: status,
-
-<span class="token punctuation">}</span>,
-
-target-cloud-ID2 <span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>,
-
-<span class="token punctuation">}</span>,
-
-source-cloud-ID2 <span class="token builtin class-name">:</span> <span class="token punctuation">{</span> <span class="token punctuation">..</span>. <span class="token punctuation">}</span>
-
-<span class="token punctuation">}</span>
-</code></pre></code></div></div>
+<p class="chakra-text css-36k3oc">The cluster-latency data collector returns information about the current network latency and peak network latency both on the local node and between cluster nodes. The results indicate the current and peak network latency between all nodes.</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">currentLatency– current network latency (in milliseconds). This property requires an FID to be running in order to return information.</li><li class="css-1msrd8y">peakLatency – peak network latency (in milliseconds), since the RadiantOne service started. This property does NOT require a RadiantOne service to be running to return information.</li></ul>
 <h3 class="chakra-heading css-5cvzdn" id="cluster-ldap">Cluster-LDAP</h3>
-<p class="chakra-text css-36k3oc">The cluster-ldap data collector returns information about the current LDAP/LDAPS connectivity between RadiantOne cluster nodes. The results indicate the LDAP connectivity between all nodes and include the status of the local connectivity. The format of the result is as follows:</p>
-<p class="chakra-text css-36k3oc">`
-{</p>
-<p class="chakra-text css-36k3oc">source-cloud-ID1 : {</p>
-<p class="chakra-text css-36k3oc">target-cloud-ID1 : {</p>
-<p class="chakra-text css-36k3oc">ldap-property : status,</p>
-<p class="chakra-text css-36k3oc">ldaps-property: status,</p>
-<p class="chakra-text css-36k3oc">errors: {</p>
-<p class="chakra-text css-36k3oc">}</p>
-<p class="chakra-text css-36k3oc">},</p>
-<p class="chakra-text css-36k3oc">target-cloud-ID2 : {...},</p>
-<p class="chakra-text css-36k3oc">},</p>
-<p class="chakra-text css-36k3oc">source-cloud-ID2 : { ... }</p>
-<p class="chakra-text css-36k3oc">}
-`</p>
+<p class="chakra-text css-36k3oc">The cluster-ldap data collector returns information about the current LDAP/LDAPS connectivity between RadiantOne cluster nodes. The results indicate the LDAP connectivity between all nodes and include the status of the local connectivity.</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">errors – if the RadiantOne LDAP service is running and there are problems connecting to the LDAP/LDAPS ports an error message is returned. Note – if the RadiantOne LDAP service isn’t running, the value of ldap/ldaps is NA and there is no error message. This property requires a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">ldap – a value of true indicates the ldap port of the RadiantOne service can be accessed successfully. A value of NA indicates connectivity to the LDAP port is unsuccessful because the RadiantOne LDAP service isn’t running. A value of false indicates the RadiantOne service is running but a connection on the LDAP port cannot be established. This property requires a RadiantOne service to be running to return information.</li><li class="css-1msrd8y">ldaps – a value of true indicates the ldaps port of the RadiantOne service can be accessed successfully. A value of NA indicates connectivity to the LDAPS port is unsuccessful because the RadiantOne LDAP service isn’t running. A value of false indicates RadiantOne service is running but a connection on the LDAPS port cannot be established. This property requires a RadiantOne service to be running to return information.</li></ul>
 <h3 class="chakra-heading css-5cvzdn" id="cluster-zk">Cluster-zk</h3>
-<p class="chakra-text css-36k3oc">The cluster-zk data collector returns information about the current ZooKeeper connectivity, both on the local node and between cluster nodes. The results indicate the ZooKeeper connectivity between all nodes and include the status of the local connectivity. The format of the result is as follows:</p>
-<p class="chakra-text css-36k3oc">`
-{</p>
-<p class="chakra-text css-36k3oc">source-cloud-ID1 : {</p>
-<p class="chakra-text css-36k3oc">target-cloud-ID1 : {</p>
-<p class="chakra-text css-36k3oc">canRead-property : status,</p>
-<p class="chakra-text css-36k3oc">canWrite-property: status,</p>
-<p class="chakra-text css-36k3oc">errors: {</p>
-<p class="chakra-text css-36k3oc">}</p>
-<p class="chakra-text css-36k3oc">},</p>
-<p class="chakra-text css-36k3oc">target-cloud-ID2 : {...},</p>
-<p class="chakra-text css-36k3oc">},</p>
-<p class="chakra-text css-36k3oc">source-cloud-ID2 : { ... }</p>
-<p class="chakra-text css-36k3oc">}</p>
-<p class="chakra-text css-36k3oc">`</p>
+<p class="chakra-text css-36k3oc">The cluster-zk data collector returns information about the current ZooKeeper connectivity, both on the local node and between cluster nodes. The results indicate the ZooKeeper connectivity between all nodes and include the status of the local connectivity.</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">canRead – a value of OK indicates the read access to ZooKeeper is successful. This property does NOT require a RadiantOne LDAP service to be running to return information.</li><li class="css-1msrd8y">canWrite – a value of OK indicates the write access to ZooKeeper is successful. This property does NOT require a RadiantOne LDAP service to be running to return information.</li><li class="css-1msrd8y">errors – if there are problems with the connectivity to ZooKeeper the error message is returned. This property does NOT require a RadiantOne LDAP service to be running to return information.</li></ul>
 <h3 class="chakra-heading css-5cvzdn" id="cluster-zk-v2">Cluster-zk-v2</h3>
 <p class="chakra-text css-36k3oc">This is like the cluster-zk data collector, but it supports monitoring an external ZooKeeper ensemble. If you have deployed ZooKeeper in a separate cluster than RadiantOne, use this data collector to monitor ZooKeeper connectivity.</p>
