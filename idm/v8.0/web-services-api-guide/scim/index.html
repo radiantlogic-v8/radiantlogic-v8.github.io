@@ -89,47 +89,19 @@
 <p class="chakra-text css-36k3oc">The configuration is saved in: &lt;RLI_HOME&gt;/vds_server/conf/scim2. This folder contains three sub-folders: resources, schemas, and templates. The resources folder contains all resource type definitions, each defined in a JSON-formatted file. The schemas folder contains a definition for attributes, each defined in a JSON-formatted file. The templates folder contains predefined attribute mappings.</p>
 <style data-emotion="css 5cvzdn">.css-5cvzdn{font-family:var(--chakra-fonts-heading);font-weight:var(--chakra-fontWeights-bold);font-size:var(--chakra-fontSizes-xl);line-height:1.2;color:var(--chakra-colors-rlBlack);}</style><h3 class="chakra-heading css-5cvzdn" id="quick-start-configuration">Quick Start Configuration</h3>
 <p class="chakra-text css-36k3oc">To configure SCIM access to RadiantOne entries you can use the Quick Start option to automatically define a SCIM schema and resource type that matches the objects and attributes associated with your entries, or you can define your own SCIM schema and resource type. This example describes the Quick Start steps. See Creating Schemas and Creating Resource Types for steps on customizing your own.</p>
-<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Create a virtual view of your identity sources. There are many methods to create virtual views using RadiantOne. If you need assistance, see the RadiantOne Namespace Configuration Guide, Context Builder Guide, and the Identity Service Wizards Guide. If your identities are in a RadiantOne Universal Directory instead of a virtual view, make sure you know what object class they are associated with.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">If using a virtual view, make sure it is mounted below a Root Naming Context in the RadiantOne namespace. If you need assistance, see the RadiantOne Namespace Configuration Guide.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">If the identities are associated with custom object classes or attributes (not currently defined in the RadiantOne schema), extend the RadiantOne schema with the objects and attributes. If you need assistance, see Chapter 4 in the RadiantOne System Administration Guide.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Go to the Main Control Panel &gt; Settings Tab &gt; Server Front End &gt; SCIM.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">In the SCIM Configuration, click <strong>Quick Start</strong>.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Enter a unique name in the Name property. This is used as the name for the Resource Type.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">For the Endpoint, enter an endpoint identifier. This comprises the URL a SCIM client uses to access the entries.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">For the Base DN, click Browse and select the root naming context in the RadiantOne namespace where your virtual view is mounted.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">For the Primary Object Class, select the object class associated with the identities in the virtual view from the drop-down list. If you do not see your object class here, extend the RadiantOne schema prior to using this Quick Start. See Chapter 4 in the RadiantOne System Administration Guide.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click Save. An example is shown below.</p>
-</li></ol>
+<style data-emotion="css 1k5xzx6">.css-1k5xzx6{list-style-type:decimal;-webkit-margin-start:1em;margin-inline-start:1em;margin-left:var(--chakra-space-2-5);}</style><ol role="list" class="css-1k5xzx6"><style data-emotion="css 1msrd8y">.css-1msrd8y{margin-left:var(--chakra-space-5);}</style><li class="css-1msrd8y">Create a virtual view of your identity sources. There are many methods to create virtual views using RadiantOne. If you need assistance, see the RadiantOne Namespace Configuration Guide, Context Builder Guide, and the Identity Service Wizards Guide. If your identities are in a RadiantOne Universal Directory instead of a virtual view, make sure you know what object class they are associated with.</li><li class="css-1msrd8y">If using a virtual view, make sure it is mounted below a Root Naming Context in the RadiantOne namespace. If you need assistance, see the RadiantOne Namespace Configuration Guide.</li><li class="css-1msrd8y">If the identities are associated with custom object classes or attributes (not currently defined in the RadiantOne schema), extend the RadiantOne schema with the objects and attributes. If you need assistance, see Chapter 4 in the RadiantOne System Administration Guide.</li><li class="css-1msrd8y">Go to the Main Control Panel &gt; Settings Tab &gt; Server Front End &gt; SCIM.</li><li class="css-1msrd8y">In the SCIM Configuration, click <strong>Quick Start</strong>.</li><li class="css-1msrd8y">Enter a unique name in the Name property. This is used as the name for the Resource Type.</li><li class="css-1msrd8y">For the Endpoint, enter an endpoint identifier. This comprises the URL a SCIM client uses to access the entries.</li><li class="css-1msrd8y">For the Base DN, click Browse and select the root naming context in the RadiantOne namespace where your virtual view is mounted.</li><li class="css-1msrd8y">For the Primary Object Class, select the object class associated with the identities in the virtual view from the drop-down list. If you do not see your object class here, extend the RadiantOne schema prior to using this Quick Start. See Chapter 4 in the RadiantOne System Administration Guide.</li><li class="css-1msrd8y">Click Save. An example is shown below.</li></ol>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:541px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:48.72727272727273%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAEDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHccqIigf/EABgQAQADAQAAAAAAAAAAAAAAAAACETIh/9oACAEBAAEFAqU4niGH/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxABAAAHAAAAAAAAAAAAAAAAAAECEDEycaH/2gAIAQEABj8CWY8RS6p//8QAGBABAQEBAQAAAAAAAAAAAAAAAREAECH/2gAIAQEAAT8hAmBihlYkQYxzVn1jn//aAAwDAQACAAMAAAAQrP8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBABAQACAgMAAAAAAAAAAAAAAREAIRAxQVGB/9oACAEBAAE/EBlAnoyPp9MSVzyUYrINwx6cZhRFWrrj/9k=&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/330e843b89573f7168c12226b132448b/24cf4/Image4.2.jpg" srcSet="/static/330e843b89573f7168c12226b132448b/c1cfe/Image4.2.jpg 275w /static/330e843b89573f7168c12226b132448b/24cf4/Image4.2.jpg 541w" sizes="(max-width: 541px) 100vw, 541px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 4.2: SCIM Quick Start</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">To view the attribute mappings that were auto-generated, select the Resource Types tab.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Select the resource type name you configured and click the MAPPINGS tab.  An example is shown below.</p>
-</li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">To view the attribute mappings that were auto-generated, select the Resource Types tab.</li><li class="css-1msrd8y">Select the resource type name you configured and click the MAPPINGS tab.  An example is shown below.</li></ol>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:624px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:47.27272727272727%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe80Qsf/xAAXEAADAQAAAAAAAAAAAAAAAAABEBIg/9oACAEBAAEFAlIx/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRABAAIDAAAAAAAAAAAAAAAAAQAgIUGB/9oACAEBAAE/IdTrFHNP/9oADAMBAAIAAwAAABCTz//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EEf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxBX/8QAGRABAAMBAQAAAAAAAAAAAAAAAQARQTEh/9oACAEBAAE/EDtPGI0PSWCyu3MjkZ//2Q==&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/8e8aa4cb1f2f16c791376ab06362c860/b966c/Image4.3.jpg" srcSet="/static/8e8aa4cb1f2f16c791376ab06362c860/c1cfe/Image4.3.jpg 275w /static/8e8aa4cb1f2f16c791376ab06362c860/67061/Image4.3.jpg 550w /static/8e8aa4cb1f2f16c791376ab06362c860/b966c/Image4.3.jpg 624w" sizes="(max-width: 624px) 100vw, 624px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 4.3: Example of Auto-generated Attribute Mappings</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click the Preview tab and select the Resource Type from the drop-down list.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click Send. The entries in the RadiantOne service are returned as SCIM entries.</p>
-</li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Click the Preview tab and select the Resource Type from the drop-down list.</li><li class="css-1msrd8y">Click Send. The entries in the RadiantOne service are returned as SCIM entries.</li></ol>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:415px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:45.09090909090909%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAMBAgX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB3JLCxgn/xAAYEAEBAAMAAAAAAAAAAAAAAAABAAIQMf/aAAgBAQABBQJ7DlO//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhABAQEAAAAAAAAAAAAAAAAAMRAg/9oACAEBAAY/AiGP/8QAGhAAAgMBAQAAAAAAAAAAAAAAAREAITFxEP/aAAgBAQABPyFNF2NChCha9mh7/9oADAMBAAIAAwAAABAw3//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EEf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAADAQADAQAAAAAAAAAAAAAAARExIYGh8f/aAAgBAQABPxCLrkdH6VPLKXTXufR7R4xH/9k=&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/282abd8990f80818676671279fe20981/acee4/Image4.4.jpg" srcSet="/static/282abd8990f80818676671279fe20981/c1cfe/Image4.4.jpg 275w /static/282abd8990f80818676671279fe20981/acee4/Image4.4.jpg 415w" sizes="(max-width: 415px) 100vw, 415px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
@@ -792,19 +764,36 @@ The resource type configuration and attribute mappings used in this example are 
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 4.10: Sample Attribute Mappings</p>
 <p class="chakra-text css-36k3oc">Based on the above configuration, the following is a sample SCIM POST query to create a user.</p>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">`http://&lt; RadiantOneService&gt;:8089/scim2/v2/&lt; ResourceType&gt;`
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">	http://localhost:8089/scim2/v2/companydirectory
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Post
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0
-</p></div></td></tr><tr class="css-1vcz8kh"></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/scim2/v2/companydirectory">http://localhost:8089/scim2/v2/companydirectory</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Post</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">The following body example can be used to insert a user:</p>
 
           <style data-emotion="css 1qjinhl">.css-1qjinhl{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;background:var(--chakra-colors-rlCodeBlockDark);padding-top:0.5em;border-top-left-radius:10px;border-top-right-radius:10px;-webkit-align-items:right;-webkit-box-align:right;-ms-flex-align:right;align-items:right;margin-top:1em;}</style><div class="css-1qjinhl"><style data-emotion="css 17xejub">.css-17xejub{-webkit-flex:1;-ms-flex:1;flex:1;justify-self:stretch;-webkit-align-self:stretch;-ms-flex-item-align:stretch;align-self:stretch;}</style><div class="css-17xejub"></div><style data-emotion="css 1696srw">.css-1696srw{display:inline-block;line-height:1em;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;color:var(--chakra-colors-rlBlack40);vertical-align:middle;width:var(--chakra-sizes-5);height:var(--chakra-sizes-5);margin-right:0.5em;}.css-1696srw:hover,.css-1696srw[data-hover]{color:var(--chakra-colors-rlWhite);cursor:pointer;}</style><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
@@ -863,19 +852,36 @@ The resource type configuration and attribute mappings used in this example are 
 <p class="chakra-text css-36k3oc">Figure 4.12: Sample Entry Created with a SCIM POST Operation</p>
 <h3 class="chakra-heading css-5cvzdn" id="insert-user-with-enterprise-extension-attributes">Insert User with Enterprise Extension Attributes</h3>
 <p class="chakra-text css-36k3oc">The following SCIM POST query example describes how to create a user entry that contains enterprise extension attributes like employeeNumber, division, and department. This example is based on the configuration described in the <span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/idm/v8.0/web-services-api-guide/scim/#insert-user">Insert Entry</a></span> example above.</p>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">`http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;`
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> http://localhost:8089/scim2/v2/companydirectory
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Post
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0
-</p></div></td></tr><tr class="css-1vcz8kh"></tr></tbody></table></div>                                                                                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/scim2/v2/companydirectory">http://localhost:8089/scim2/v2/companydirectory</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Post</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">The following body example can be used to insert a user containing enterprise extension attributes:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
@@ -933,19 +939,36 @@ To execute this example command, the default SCIM user schema must be used. To u
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 16: Sample Attribute Mappings</p>
 <p class="chakra-text css-36k3oc">Based on the above configuration, the following is a sample SCIM PATCH query to update a user.</p>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">`http://&lt; RadiantOneService&gt;:8089/scim2/v2/&lt; ResourceType&gt;/&lt; DN&gt;`
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">PATCH
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0
-</p></div></td></tr><tr class="css-1vcz8kh"></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;/&lt; DN&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory">http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Patch</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">The following body example can be used to update a user:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
@@ -984,18 +1007,36 @@ To execute this example command, the default SCIM user schema must be used. To u
 <p class="chakra-text css-36k3oc">
 For PUT requests, only attributes that are mapped for the resource type are replaced in the entry. If the body of the request contains an attribute that is not mapped, it is ignored by the RadiantOne service. If the body of the request does not contain an attribute that has a mapping, the value is removed (set to NULL) in the entry in RadiantOne. This behavior does not apply to the objectclass attribute.</p>
 </div></div></div>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">`http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;/&lt; DN&gt;`
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Put
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0
-</p></div></td></tr><tr class="css-1vcz8kh"></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://&lt; RadiantOneServer&gt;:8089/scim2/v2/&lt; ResourceType&gt;/&lt; DN&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory">http://localhost:8089/scim2/v2/companydirectory/uid=bjensen@example.com,o=companydirectory</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Put</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic Y249ZGlyZWN0b3J5IG1hbmFnZXI6c2VjcmV0c2VjcmV0</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">The following body example can be used to update a user containing enterprise extension attributes:</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
