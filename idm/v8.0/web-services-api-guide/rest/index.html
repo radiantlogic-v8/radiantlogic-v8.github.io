@@ -314,31 +314,13 @@ To allow the super user (e.g. cn=directory manager) to impersonate other users, 
 </li></ol>
 <p class="chakra-text css-36k3oc"><strong>Configuring External Token Validators</strong></p>
 <p class="chakra-text css-36k3oc">To add an external token validator:</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">In the Main Control Panel, navigate to Settings &gt; Security &gt; External Token Validators.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click <strong>Add</strong>. The New ADAP External Token Validator page displays.</p>
-</li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">In the Main Control Panel, navigate to Settings &gt; Security &gt; External Token Validators.</li><li class="css-1msrd8y">Click <strong>Add</strong>. The New ADAP External Token Validator page displays.</li></ol>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:980px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:59.63636363636364%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHuo1SFl//EABkQAAMAAwAAAAAAAAAAAAAAAAECEAAREv/aAAgBAQABBQKcqcY6E//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABkQAAEFAAAAAAAAAAAAAAAAAAABAiAhMf/aAAgBAQAGPwIwtqQ//8QAGhABAAIDAQAAAAAAAAAAAAAAAQARECFhUf/aAAgBAQABPyGo6LLcjuIekQq9M//aAAwDAQACAAMAAAAQ/A//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAEAAwACAwAAAAAAAAAAAAABABEhEDFBYZH/2gAIAQEAAT8QCmVY7Depnggv2O3iagsaH2W+3hZ//9k=&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="The New ADAP External Token Validator Page" title="" src="/static/2f03313d7f2e9d9a65d6497f75bb4bfd/ef1d5/externaltokenvalidatorpage.jpg" srcSet="/static/2f03313d7f2e9d9a65d6497f75bb4bfd/c1cfe/externaltokenvalidatorpage.jpg 275w /static/2f03313d7f2e9d9a65d6497f75bb4bfd/67061/externaltokenvalidatorpage.jpg 550w /static/2f03313d7f2e9d9a65d6497f75bb4bfd/ef1d5/externaltokenvalidatorpage.jpg 980w" sizes="(max-width: 980px) 100vw, 980px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span></p>
-<p class="chakra-text css-36k3oc">Figure 6: The New ADAP External Token Validator Page</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Name the external token validator.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Toggle the Enable switch to On.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Select an OIDC provider from the drop-down menu (if applicable, to assist with populating the Directory URL syntax). Otherwise, skip this step and enter your own Discovery URL.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">If the Discovery URL is not loaded automatically, paste the Metadata URI from your OIDC authorization server into the Discovery URL field.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click Discover. The JSON Web Key Set URI auto-populates.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Use the Expected Audience from your OIDC provider configuration to populate the Expected Audience field.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Enter the expected Scope.This property determines what information/claims (&quot;sub&quot; indicates Subject) in the token (based on scopes requested) can be used to identify the relevant account in the RadiantOne namespace for enforcing authorization on subsequent requests for this connection. The value of this attribute is used as input for the <em>Claims to FID User Mapping</em> configured later in the steps below. The standard claims associated with the scopes are shown in the table below.</p>
-</li></ol>
+    </span>
+Figure 6: The New ADAP External Token Validator Page</p>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Name the external token validator.</li><li class="css-1msrd8y">Toggle the Enable switch to On.</li><li class="css-1msrd8y">Select an OIDC provider from the drop-down menu (if applicable, to assist with populating the Discovery URL syntax). Otherwise, skip this step and enter your own Discovery URL.</li><li class="css-1msrd8y">If the Discovery URL is not loaded automatically, paste the Metadata URI from your OIDC authorization server into the Discovery URL field.</li><li class="css-1msrd8y">Click Discover. The JSON Web Key Set URI auto-populates.</li><li class="css-1msrd8y">Use the Expected Audience from your OIDC provider configuration to populate the Expected Audience field.</li><li class="css-1msrd8y">Enter the expected Scope.This property determines what information/claims (&quot;sub&quot; indicates Subject) in the token (based on scopes requested) can be used to identify the relevant account in the RadiantOne namespace for enforcing authorization on subsequent requests for this connection. The value of this attribute is used as input for the <em>Claims to FID User Mapping</em> configured later in the steps below. The standard claims associated with the scopes are shown in the table below.</li></ol>
 
 
 
@@ -384,13 +366,7 @@ To allow the super user (e.g. cn=directory manager) to impersonate other users, 
       <span class="gatsby-resp-image-background-image" style="padding-bottom:98.54545454545455%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAAAAIEAQMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAe21WEimIYCiK//EABoQAAMBAAMAAAAAAAAAAAAAAAACEQEDEyD/2gAIAQEAAQUCuFKcb4/hti97H//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABkQAAIDAQAAAAAAAAAAAAAAAAABECAhQf/aAAgBAQAGPwKXlGzh/8QAHBAAAwACAwEAAAAAAAAAAAAAAAERIVFBYfCR/9oACAEBAAE/IfUJ8hINUhTukWiLQsDUHCM7U+D/2gAMAwEAAgADAAAAEH8fwf/EABYRAQEBAAAAAAAAAAAAAAAAACEAEP/aAAgBAwEBPxBnf//EABgRAAIDAAAAAAAAAAAAAAAAAAABEBEh/9oACAECAQE/EKRk/wD/xAAdEAEAAgEFAQAAAAAAAAAAAAABABFhITFBcZFR/9oACAEBAAE/EKHOI74QXr5C4l1VE5riVuzyYkXADolOFol9RHTI1u+GZ//Z&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="search expression builder" title="" src="/static/3753a3be4f2cd4ecaa53d51042af858d/b04c3/searchexpressionbuilder.jpg" srcSet="/static/3753a3be4f2cd4ecaa53d51042af858d/c1cfe/searchexpressionbuilder.jpg 275w /static/3753a3be4f2cd4ecaa53d51042af858d/67061/searchexpressionbuilder.jpg 550w /static/3753a3be4f2cd4ecaa53d51042af858d/b04c3/searchexpressionbuilder.jpg 796w" sizes="(max-width: 796px) 100vw, 796px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
     </span></p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click OK.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click OK again to close the <em>OIDC to FID User Mappings</em> window.</p>
-</li><li class="css-1msrd8y">
-<p class="chakra-text css-36k3oc">Click Save.</p>
-</li></ol>
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Click OK.</li><li class="css-1msrd8y">Click OK again to close the <em>OIDC to FID User Mappings</em> window.</li><li class="css-1msrd8y">Click Save.</li></ol>
 <h3 class="chakra-heading css-5cvzdn" id="querying-radiantone-rest-api-adap-with-a-token">Querying RadiantOne REST API (ADAP) with a Token</h3>
 <p class="chakra-text css-36k3oc">In this example, Postman is the REST client that will issue calls to ADAP. Obtain an OpenID Connect Token for Postman from your OIDC provider. Use the token value in a header configured in a Postman client as follows.</p>
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">Request a new access token (see <span class="chakra-text css-yk429l"><a style="color:rlBlue" href="/idm/v8.0/web-services-api-guide/rest/#getting-an-access-token">Getting An Access Token</a></span>).</li><li class="css-1msrd8y">Click <em>Use Token</em>. This inserts an Authorization header that inserts your bearer token.</li></ol>
