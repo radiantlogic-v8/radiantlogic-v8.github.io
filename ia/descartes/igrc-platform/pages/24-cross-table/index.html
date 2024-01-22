@@ -256,7 +256,7 @@ Columns and rows of the cross table can be optionally grouped to further emphasi
 
 
 
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a column in the dataset that will provide a key for the column/row.<br/>It&#x27;s a good practice to use an attribute with compact values (such as recorduid or code) as the value , to ensure good performance of the cross table.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References an attribute in the dataset that will provide a label for the column/row.<br/>If not defined, the value attribute will be used also to display the label.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Display name for the dimension, to be displayed in the top left corner of the cross table.<br/>This could be a localized string. If not provided, the label of dimension will be the name of the value attribute.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>selection</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Single-valued variable that will hold the value (key)<br/>Of the matching column or row header when a cell is selected.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header-click</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Single-value variable that will hold the value (key) of the matching column or row header when the header is clicked.<br/>Note that when this attribute is provided, the header labels for that dimension are displayed as links</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>tooltip</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">The tooltip to be used to highlight. If not set, then the label attribute will be used as a tooltip.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px <br/> nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Limits the width for the row header.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>locked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Boolean</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">when the crossable is configurable, define if visibility of this dimension can be changed in the configuration dialog</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>initially-masked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Boolean</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">when crosstable is configurable, defines if the configurable dimension is initially masked.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>masked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable is set when the dimension visibility is changed after configuration or at startup. Useful to know which dimension events ( selection, filter, header-click) are relevant</p></div></td></tr></tbody></table></div>
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a column in the dataset that will provide a key for the column/row.<br/>It&#x27;s a good practice to use an attribute with compact values (such as recorduid or code) as the value , to ensure good performance of the cross table.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References an attribute in the dataset that will provide a label for the column/row.<br/>If not defined, the value attribute will be used also to display the label.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Display name for the dimension, to be displayed in the top left corner of the cross table.<br/>This could be a localized string. If not provided, the label of dimension will be the name of the value attribute.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>selection</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Single-valued variable that will hold the value (key)<br/>Of the matching column or row header when a cell is selected.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header-click</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Single-value variable that will hold the value (key) of the matching column or row header when the header is clicked.<br/>Note that when this attribute is provided, the header labels for that dimension are displayed as links.<br/>For the links to work you <strong>must</strong> set the <code class="language-text">row-header-click</code> <strong>and</strong> <code class="language-text">column-header-click</code> properties</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>tooltip</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">The tooltip to be used to highlight. If not set, then the label attribute will be used as a tooltip.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px <br/> nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Limits the width for the row header.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>locked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Boolean</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">when the crossable is configurable, define if visibility of this dimension can be changed in the configuration dialog</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>initially-masked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Boolean</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">when crosstable is configurable, defines if the configurable dimension is initially masked.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>masked</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">variable is set when the dimension visibility is changed after configuration or at startup. Useful to know which dimension events ( selection, filter, header-click) are relevant</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>CellContent</strong> defines how a cell of the cross table is displayed, as a combination of text, image and background coloring</p>
 
 
@@ -477,37 +477,175 @@ Cells that have not mapping in the variables cannot be edited. This allows to pr
     </span></p>
 <h3 class="chakra-heading css-5cvzdn" id="syntax-1">Syntax</h3>
 <p class="chakra-text css-36k3oc"><strong>EditCrossTable</strong> defines an editable crosstable component.</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>data*</strong> |  DataSet |  references a Dataset that will provide data for the cross table. <br/> - Each row in the dataset represents an editable cell in the crosstable.<br/>- The dataset must provide one or more attribute for displaying the cell content (see edit-value)<br/>- the dataset must provide attributes to determine the cell column and row.|
-| <strong>columns*</strong> | Dim list (comma- separated) | list of dimensions to be displayed as columns of the cross table, from top to bottom. if there is more than one dimension, the column headers will be grouped. <br/>see definition of <strong>Dim</strong> below |
-| <strong>rows*</strong>  | Dim list (comma- separated) | list of dimensions to be displayed as rows of the cross table, from left to right. <br/>if there is more than one dimension, the row headers will be grouped. <br/>see definition of <strong>Dim</strong> below |
-| <strong>edit-value*</strong> | EditValue | describes how each cell can be edited <br/>see <strong>EditValue</strong> below |
-| <strong>edit-event</strong> | Action list (comma- separated) | list of actions to execute each time a cell is edited by the user.<br/>The exact changes can be tracked through the edit-value variables. |
-| <strong>label</strong>  |  String  |  optional title of the crosstable |
-| <strong>layout</strong> |  Layout | Defines the sizing of the crosstable within its container and the layout inside the cross table itself. <br/>see <strong>Layout</strong> below |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>data*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">DataSet</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references a Dataset that will provide data for the cross table. <br/> - Each row in the dataset represents an editable cell in the crosstable.<br/>- The dataset must provide one or more attribute for displaying the cell content (see edit-value)<br/>- the dataset must provide attributes to determine the cell column and row.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>columns*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Dim list (comma- separated)</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">list of dimensions to be displayed as columns of the cross table, from top to bottom. if there is more than one dimension, the column headers will be grouped. <br/>see definition of <strong>Dim</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>rows*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Dim list (comma- separated)</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">list of dimensions to be displayed as rows of the cross table, from left to right. <br/>if there is more than one dimension, the row headers will be grouped. <br/>see definition of <strong>Dim</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>edit-value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">EditValue</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">describes how each cell can be edited <br/>see <strong>EditValue</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>edit-event</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Action list (comma- separated)</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">list of actions to execute each time a cell is edited by the user.<br/>The exact changes can be tracked through the edit-value variables.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">String</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">optional title of the crosstable</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>layout</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Layout</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Defines the sizing of the crosstable within its container and the layout inside the cross table itself. <br/>see <strong>Layout</strong> below</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Dim</strong> describes a row or column dimension of the editable cross table.</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>value</strong> * | multi-valued variable | References a multi-valued variable that holds the key for the column/row of each cell.<br/>It&#x27;s a good practice to use compact values (such as recorduid or code) as the value , to ensure good performance of the cross table. |
-| <strong>label</strong> | multi-valued variable | references a multi-valued variable that will provide a label for the column/row. <br/>if not defined, the value variable will be used also to display the label.  |
-| <strong>header</strong>   |  string | display name for the dimension, to be displayed in the top left corner of the cross table. <br/>his could be a localized string. <br/>If not provided, the label of dimension will be the name of the value variable. |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value</strong> *</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a multi-valued variable that holds the key for the column/row of each cell.<br/>It&#x27;s a good practice to use compact values (such as recorduid or code) as the value , to ensure good performance of the cross table.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references a multi-valued variable that will provide a label for the column/row. <br/>if not defined, the value variable will be used also to display the label.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">display name for the dimension, to be displayed in the top left corner of the cross table. <br/>his could be a localized string. <br/>If not provided, the label of dimension will be the name of the value variable.</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>EditValue</strong> defines how a cell of the cross table can be edited.</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>header</strong> | string | optional label for the edited value |
-| <strong>value*</strong> | multi-valued variable | References a multi-valued variables that will hold the current values of the edited cells. <br/>At startup this variable must contain the original values. <br/>In checkbox mode, the variable must contain boolean values |
-| <strong>text</strong> | multi-valued variable | References a multi-valued variables that will hold the current displayed labels of the edited cells.<br/>At startup this variable must contain the original displayed labels. <br/>If not provided, the labels will be retrieved from the labels of the choices combo (in Combo mode).<br/>This latter capability is useful for static list of choices for which the display labels are defined as NLS strings in Pages.<br/>It&#x27;s not recommended to use it for dynamic list of choice with possibly very large datasets. In this case, it&#x27;s better to have the labels computed in the values dataset. |
-| <strong>original-value*</strong> | multi-valued variable | References a multi-valued variables that will hold the original values of the edited cells (before any change could occur). <br/>This variable will be automatically filled at startup from <strong>value</strong> variable. <br/>This variable allows to track what cells have actually been modified, by comparing with value variable, in order to perfom incremental updates to the Ledger (eg. updating Review Tickets) |
-| <strong>mode*</strong> | CheckBox | Combo | indicates how the edit values can be modified. Possible values are CheckBox and Combo. <br/>In <strong>Checkbox</strong> mode, cells are displayed as check boxes. No other setting is required. <br/>In <strong>Combo</strong> mode, cells can be edited by selecting a value from a pop-up list. The contents of the list are defined in a <strong>Combo</strong> tag (see below) |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">optional label for the edited value</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a multi-valued variables that will hold the current values of the edited cells. <br/>At startup this variable must contain the original values. <br/>In checkbox mode, the variable must contain boolean values</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>text</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a multi-valued variables that will hold the current displayed labels of the edited cells.<br/>At startup this variable must contain the original displayed labels. <br/>If not provided, the labels will be retrieved from the labels of the choices combo (in Combo mode).<br/>This latter capability is useful for static list of choices for which the display labels are defined as NLS strings in Pages.<br/>It&#x27;s not recommended to use it for dynamic list of choice with possibly very large datasets. In this case, it&#x27;s better to have the labels computed in the values dataset.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>original-value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a multi-valued variables that will hold the original values of the edited cells (before any change could occur). <br/>This variable will be automatically filled at startup from <strong>value</strong> variable. <br/>This variable allows to track what cells have actually been modified, by comparing with value variable, in order to perfom incremental updates to the Ledger (eg. updating Review Tickets)</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>mode*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">CheckBox | Combo</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">indicates how the edit values can be modified. Possible values are CheckBox and Combo. <br/>In <strong>Checkbox</strong> mode, cells are displayed as check boxes. No other setting is required. <br/>In <strong>Combo</strong> mode, cells can be edited by selecting a value from a pop-up list. The contents of the list are defined in a <strong>Combo</strong> tag (see below)</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Combo</strong> defines the content of the selection list from which values can be selected.</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>data*</strong> | Dataset |  References a Dataset that will provide data for the suggestion list. <br/>This could be either static or dynamic data depending on the dataset. |
-| <strong>value*</strong> | dataset column | References a column in the dataset that will provide the internal values for the choices in the list. When an item is selected from the list, its <strong>value</strong> will be written at the appropriate index into the <strong>value</strong> variable of the EditValue tag |
-| <strong>text*</strong>| multi-valued variable | References a column in the dataset that will provide the display labels for the choices in the list. When an item is selected from the list, <br/> its <strong>text</strong> will be written at the appropriate index into the <br/><strong>text</strong> variable of the EditValue tag (if provided) |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>data*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Dataset</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a Dataset that will provide data for the suggestion list. <br/>This could be either static or dynamic data depending on the dataset.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a column in the dataset that will provide the internal values for the choices in the list. When an item is selected from the list, its <strong>value</strong> will be written at the appropriate index into the <strong>value</strong> variable of the EditValue tag</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>text*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">multi-valued variable</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">References a column in the dataset that will provide the display labels for the choices in the list. When an item is selected from the list, <br/> its <strong>text</strong> will be written at the appropriate index into the <br/><strong>text</strong> variable of the EditValue tag (if provided)</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Layout</strong> defines the sizing of the crosstable within its container and the layout inside the cross table itself.</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>cell-width</strong> | nnn px | defines the uniform width of cells in pixels. Content exceeding the width will be truncated, <br/>and a tooltip text will display the full content. <br/>Default width is 40px  |
-| <strong>cell-height</strong> | nnn px | defines the uniform height of cells in pixels. <br/>Default height is 25px |
-| <strong>col-headers-max-height</strong> | nnn px | nnn% | maximum height that the columns headers can take, in absolute pixels <br/>or in % or the cross table height. <br/>Default value is 30% of the table height |
-| <strong>row-headers-max-width</strong> | nnn px | nnn% | maximum width that the row headers can take, <br/>in absolute pixels or in % or the cross table width.<br/>Default value is 30% of the table width |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>cell-width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">defines the uniform width of cells in pixels. Content exceeding the width will be truncated, <br/>and a tooltip text will display the full content. <br/>Default width is 40px</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>cell-height</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">defines the uniform height of cells in pixels. <br/>Default height is 25px</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>col-headers-max-height</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px | nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">maximum height that the columns headers can take, in absolute pixels <br/>or in % or the cross table height. <br/>Default value is 30% of the table height</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>row-headers-max-width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px | nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">maximum width that the row headers can take, <br/>in absolute pixels or in % or the cross table width.<br/>Default value is 30% of the table width</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Example1</strong> : an simple editable cross table with check boxes. The view identitybyorganperm provides the initial values.</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
@@ -680,27 +818,123 @@ Cells that have not mapping in the variables cannot be edited. This allows to pr
     </span></p>
 <h3 class="chakra-heading css-5cvzdn" id="syntax-2">Syntax</h3>
 <p class="chakra-text css-36k3oc"><strong>DynamicCrossTable</strong> defines a dynamic crosstable component</p>
-<p class="chakra-text css-36k3oc">|  <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-|  <strong>data*</strong> |  DataSet |  references a Dataset that will provide data for the cross table for all the possible dimensions and measures <br/> - Each row in the dataset represents a cell in the crosstable.<br/>- The dataset must provide one attribute for displaying the cell content,<br/>- the dataset must provide attributes to determine the cell column and row.|
-| <strong>dimensions*</strong> | Dim list (comma- separated) |  list of all available dimensions , that can be interactively dropped to rows and columns <br/>see definition of <strong>Dim</strong> below |
-| <strong>measures*</strong>  | Measure list (comma- separated) |  list of measures that can be selected to display in cell content.<br/>See definition of <strong>Measure</strong> below |
-| <strong>layout</strong> | Layout | defines the sizing of the crosstable within its container and the layout inside the cross table itself.<br/>See <strong>Layout</strong> below |
-| <strong>label</strong>  |  String  |  optional title for the crosstable |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>data*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">DataSet</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references a Dataset that will provide data for the cross table for all the possible dimensions and measures <br/> - Each row in the dataset represents a cell in the crosstable.<br/>- The dataset must provide one attribute for displaying the cell content,<br/>- the dataset must provide attributes to determine the cell column and row.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>dimensions*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Dim list (comma- separated)</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">list of all available dimensions , that can be interactively dropped to rows and columns <br/>see definition of <strong>Dim</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>measures*</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Measure list (comma- separated)</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">list of measures that can be selected to display in cell content.<br/>See definition of <strong>Measure</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>layout</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Layout</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">defines the sizing of the crosstable within its container and the layout inside the cross table itself.<br/>See <strong>Layout</strong> below</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">String</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">optional title for the crosstable</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Dim</strong> describes a possible dimension for the dynamic cross table</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>value</strong> * | dataset column | references a column in the dataset that will provide a key for the column/row.<br/>It&#x27;s a good practice to use an attribute with compact values (such as recorduid or code) as the value , to ensure good performance of the cross table. |
-| <strong>label</strong> |  dataset column | references an attribute in the dataset that will provide a label for the column/row. <br/>if not defined, the value attribute will be used also to display the label. |
-| <strong>header</strong> |  string | display name for the dimension, to be displayed in the top left corner of the cross table and in the dimension interactive areas. <br/>This could be a localized string.<br/>If not provided, the label of dimension will be the name of the value attribute. |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value</strong> *</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references a column in the dataset that will provide a key for the column/row.<br/>It&#x27;s a good practice to use an attribute with compact values (such as recorduid or code) as the value , to ensure good performance of the cross table.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>label</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references an attribute in the dataset that will provide a label for the column/row. <br/>if not defined, the value attribute will be used also to display the label.</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">display name for the dimension, to be displayed in the top left corner of the cross table and in the dimension interactive areas. <br/>This could be a localized string.<br/>If not provided, the label of dimension will be the name of the value attribute.</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Measure</strong> describes a possible measure for the dynamic crosstable</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>value</strong> * | dataset column | references a column in the dataset that will provide a value for the cell.<br/>This is usually a numeric value  |
-| <strong>header</strong>   |  string | display name for the measure <br/>This could be a localized string. <br/>If not provided, the label of the measure will be the name of the dataset column. |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>value</strong> *</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">dataset column</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">references a column in the dataset that will provide a value for the cell.<br/>This is usually a numeric value</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>header</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">string</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">display name for the measure <br/>This could be a localized string. <br/>If not provided, the label of the measure will be the name of the dataset column.</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Layout</strong> defines the sizing of the crosstable within its container and the layout inside the cross table itself</p>
-<p class="chakra-text css-36k3oc">| <em>attribute</em> | <em>type</em> | <em>purpose</em> |
-| <strong>cell-width</strong> | nnn px | defines the uniform width of cells in pixels. Content exceeding the width will be truncated, and a tooltip text will display the full content.<br/>Default width is 40px  |
-| <strong>cell-height</strong> | nnn px | defines the uniform height of cells in pixels. <br/>Default height is 25px |
-| <strong>col-headers-max-height</strong> | nnn px | nnn% | maximum height that the columns headers can take,<br/> in absolute pixels or in % or the cross table height.<br/>Default value is 30% of the table height |
-| <strong>row-headers-max-width</strong> | nnn px | nnn% | maximum width that the row headers can take, <br/>in absolute pixels or in % or the cross table width. <br/>Default value is 30% of the table width |</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>attribute</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>type</em></div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx"><em>purpose</em></div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>cell-width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">defines the uniform width of cells in pixels. Content exceeding the width will be truncated, and a tooltip text will display the full content.<br/>Default width is 40px</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>cell-height</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">defines the uniform height of cells in pixels. <br/>Default height is 25px</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>col-headers-max-height</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px | nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">maximum height that the columns headers can take,<br/> in absolute pixels or in % or the cross table height.<br/>Default value is 30% of the table height</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><strong>row-headers-max-width</strong></p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">nnn px | nnn%</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">maximum width that the row headers can take, <br/>in absolute pixels or in % or the cross table width. <br/>Default value is 30% of the table width</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc"><strong>Example1</strong> : a simple dynamic crosstable, with 3 possible dimensions and one possible measure.</p>
 
           <div class="css-1qjinhl"><div class="css-17xejub"></div><svg viewBox="0 0 24 24" focusable="false" class="chakra-icon css-1696srw"><path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg></div>
