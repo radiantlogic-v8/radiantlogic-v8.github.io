@@ -400,10 +400,11 @@ Alert ID: 00000000 - 0000 - 0000 - 0000 - 000000000002
 <ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">From the Zookeeper tab in the Main Control Panel navigate to
 /radiantone/<version>/<clustername>/config/logging/log4j2-scheduler.json.</clustername></version></li><li class="css-1msrd8y">On the right, click Edit Mode.</li><li class="css-1msrd8y">To customize the email subject, edit the alert.email.subject property and overwrite the
 default value.</li><li class="css-1msrd8y">To customize the email content type, locate the property named:
-alert.email.contentType.</li><li class="css-1msrd8y">Enter a value of text/plain or text/html (to send HTML emails).</li><li class="css-1msrd8y">To customize the email message, locate the property named: alert.email.pattern.</li><li class="css-1msrd8y">Enter the pattern that dictates the email message. In addition to the regular log4j2 pattern elements, the following properties are available by using %X{property}: rli.alert.id - example &quot;00000000- 0000 - 0000 - 0000 - 000000000002&quot;
-rli.alert.name - name of the monitoring alert (for example &quot;Alert Disk Usage above 90%&quot;)
-rli.alert.status - &quot;TRIGGERED&quot; or &quot;BACK TO NORMAL&quot;</li></ol>
+alert.email.contentType.</li><li class="css-1msrd8y">Enter a value of text/plain or text/html (to send HTML emails).</li><li class="css-1msrd8y">To customize the email message, locate the property named: alert.email.pattern.</li><li class="css-1msrd8y">Enter the pattern that dictates the email message. In addition to the regular log4j2 pattern elements, the following properties are available by using %X{property}:</li></ol>
 <p class="chakra-text css-36k3oc"><code class="language-text">rli.node.hostname</code>
+<br/><code class="language-text">rli.alert.id - example &quot;00000000- 0000 - 0000 - 0000 - 000000000002&quot;</code>
+<br/> <code class="language-text">rli.alert.name - name of the monitoring alert (for example &quot;Alert Disk Usage above 90%&quot;)</code>
+<br/><code class="language-text">rli.alert.status - &quot;TRIGGERED&quot; or &quot;BACK TO NORMAL&quot;</code>
 <br/><code class="language-text">rli.instance.name</code>
 <br/><code class="language-text">rli.alert.data.table.cli - The data that has been polled in the form of a CLI table</code>
 <br/><code class="language-text">rli.alert.data.table.html - The data that has been polled in the form of an HTML table (forHTML emails)</code>
@@ -412,8 +413,7 @@ rli.alert.status - &quot;TRIGGERED&quot; or &quot;BACK TO NORMAL&quot;</li></ol>
 <br/><code class="language-text">rli.alert.trigger</code>
 <br/><code class="language-text">rli.alert.trigger.id</code>
 <br/><code class="language-text">rli.alert.trigger.&lt;parameter&gt;</code>
-<br/><code class="language-text">rli.alert.data.&lt;prop1&gt;.&lt;prop2&gt;...&lt;propn&gt; - allows you to fetch any value in the collected
-data</code></p>
+<br/><code class="language-text">rli.alert.data.&lt;prop1&gt;.&lt;prop2&gt;...&lt;propn&gt; - allows you to fetch any value in the collected data</code></p>
 <p class="chakra-text css-36k3oc">The pattern can be as simple as:</p>
 <p class="chakra-text css-36k3oc">%X{rli.alert.name} %X{rli.alert.status} at %d{yyyy-MM-dd HH:mm:ss}</p>
 <p class="chakra-text css-36k3oc">Which produces an email message like:</p>
