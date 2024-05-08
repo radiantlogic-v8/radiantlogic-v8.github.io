@@ -397,8 +397,8 @@ diskPercent 96.19
 Alert ID: 00000000 - 0000 - 0000 - 0000 - 000000000002
 ------------------------------------</code></p>
 <p class="chakra-text css-36k3oc">To customize the email message associated with email alerts:</p>
-<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">From the Zookeeper tab in the Main Control Panel navigate to
-/radiantone/<version>/<clustername>/config/logging/log4j2-scheduler.json.</clustername></version></li><li class="css-1msrd8y">On the right, click Edit Mode.</li><li class="css-1msrd8y">To customize the email subject, edit the alert.email.subject property and overwrite the
+<ol role="list" class="css-1k5xzx6"><li class="css-1msrd8y">From the Zookeeper tab in the Main Control Panel navigate to:
+<code class="language-text">/radiantone/&lt;version&gt;/&lt;clusterName&gt;/config/logging/log4j2-scheduler.json</code></li><li class="css-1msrd8y">On the right, click Edit Mode.</li><li class="css-1msrd8y">To customize the email subject, edit the alert.email.subject property and overwrite the
 default value.</li><li class="css-1msrd8y">To customize the email content type, locate the property named:
 alert.email.contentType.</li><li class="css-1msrd8y">Enter a value of text/plain or text/html (to send HTML emails).</li><li class="css-1msrd8y">To customize the email message, locate the property named: alert.email.pattern.</li><li class="css-1msrd8y">Enter the pattern that dictates the email message. In addition to the regular log4j2 pattern elements, the following properties are available by using %X{property}:</li></ol>
 <p class="chakra-text css-36k3oc"><code class="language-text">rli.node.hostname</code>
