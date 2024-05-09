@@ -590,11 +590,13 @@ Connection number: 9
 <br/>RadiantOne IP address: 10.11.12.164
 <br/>RadiantOne LDAP Port: 2389
 <br/>Operation Count: 23</p>
-<ul role="list" class="css-9822z3"><li class="css-1msrd8y">connectionCount - the total (cumulative) number of connections established to</li></ul>
-<p class="chakra-text css-36k3oc">RadiantOne since last startup.</p>
-<ul role="list" class="css-9822z3"><li class="css-1msrd8y">connectionIdleTimeout – the value of the Idle Timeout property configured for</li></ul>
-<p class="chakra-text css-36k3oc">RadiantOne.</p>
 <ul role="list" class="css-9822z3"><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">connectionCount - the total (cumulative) number of connections established to RadiantOne since last startup.</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">adapProcessingCount - the number of active requests that ADAP is currently processing at a given point in time.</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">connectionIdleTimeout – the value of the Idle Timeout property configured for RadiantOne.</p>
+</li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">connectionMax - the maximum concurrent connections allowed to RadiantOne.</p>
 </li><li class="css-1msrd8y">
 <p class="chakra-text css-36k3oc">connectionPeak - the peak number of concurrent connections to RadiantOne since last startup.</p>
@@ -722,8 +724,8 @@ directory backends.</p>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:624px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:45.81818181818183%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAessMrD/xAAaEAADAAMBAAAAAAAAAAAAAAAAAQIDEBET/9oACAEBAAEFApxyxQueaJJ1/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRAAAgMBAAAAAAAAAAAAAAAAAAEQETFx/9oACAEBAAE/IdZYM2oQ4fZf/9oADAMBAAIAAwAAABAgD//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8QP//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAECAQE/EKf/xAAdEAEAAgICAwAAAAAAAAAAAAABADERYRDRgaHw/9oACAEBAAE/EAVFVq44YMOKOpgW+up9WiW8cf/Z&#x27;);background-size:cover;display:block"></span>
   <img class="gatsby-resp-image-image" alt="An image showing " title="" src="/static/08096699231d8d08e1c388f7cc685e1a/b966c/Image1.49.jpg" srcSet="/static/08096699231d8d08e1c388f7cc685e1a/c1cfe/Image1.49.jpg 275w /static/08096699231d8d08e1c388f7cc685e1a/67061/Image1.49.jpg 550w /static/08096699231d8d08e1c388f7cc685e1a/b966c/Image1.49.jpg 624w" sizes="(max-width: 624px) 100vw, 624px" style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0" loading="lazy" decoding="async"/>
-    </span>
-Figure 1.49: Example of JNDI Connection Pool Activity</p>
+    </span></p>
+<p class="chakra-text css-36k3oc">Figure 1.49: Example of JNDI Connection Pool Activity</p>
 <p class="chakra-text css-36k3oc"><em>Current pool size (anonymous)</em>: Number of connections in the pool that are currently
 connected using authentication type “none”.</p>
 <p class="chakra-text css-36k3oc"><em>Preferred pool size</em>: This is the optimal pool size. Idle connections are removed when the number of connections grows larger than this value. A value of zero means that there is no
