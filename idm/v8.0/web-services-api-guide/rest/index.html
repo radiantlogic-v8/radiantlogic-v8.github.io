@@ -974,7 +974,15 @@ Figure 6: The New ADAP External Token Validator Page</p>
     </span></p>
 <p class="chakra-text css-36k3oc">Figure 24: Example Search Result Leveraging Context Filter</p>
 <p class="chakra-text css-36k3oc"><strong>Return Mode</strong></p>
-<p class="chakra-text css-36k3oc">This option allows you to parse search results so they can be more easily interpreted by applications. By adding “?returnMode=array” to the URL of a standard search operation, you activate this option. With this option, attribute values are arranged in an array, regardless of the quantity of attribute values. Without this option, attribute values are arranged in an array only if there are two or more attribute values.</p>
+<p class="chakra-text css-36k3oc">This options controls how the JSON response is formatted when ADAP returns a search response. The options include the following.</p>
+<ul role="list" class="css-9822z3"><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">array (attribute values are arranged in an array, regardless of the quantity of attribute values. Without this option, attribute values are arranged in an array only if there are two or more attribute values.)</p>
+</li><li class="css-1msrd8y">
+<p class="chakra-text css-36k3oc">ldapschema (the RadiantOne server LDAP schema is checked for each attribute. If the attribute schema is single-valued, a JSON String is used. If the attribute schema is multi-valued, a JSON array is used.)</p>
+</li></ul>
+<div class="css-0"><div class="css-cy4tg7"></div><div data-status="info" role="alert" class="chakra-alert css-q83wl"><div data-status="info" class="chakra-alert__title css-koga8d"><div class="css-ikuqbj"><svg viewBox="0 0 72 72" focusable="false" class="chakra-icon chakra-icon css-1hlv1gp"><path fill="currentColor" d="M64 0H7.96C3.56 0 0 3.6 0 8L0.04 64C0.04 68.4 3.6 72 8 72H48L72 48V8C72 3.6 68.4 0 64 0ZM16 20H56V28H16V20ZM36 44H16V36H36V44ZM44 66V44H66L44 66Z"></path></svg></div>Note</div><div data-status="info" class="chakra-alert__desc css-zzks76">
+<p class="chakra-text css-36k3oc"> If returnMode is not specified, default formatting is used; if there is a single value for an attribute, a JSON string is used. If there is more than one value for an attribute, a JSON array is used. The RadiantOne server LDAP schema is not used.</p>
+</div></div></div>
 
 
 
