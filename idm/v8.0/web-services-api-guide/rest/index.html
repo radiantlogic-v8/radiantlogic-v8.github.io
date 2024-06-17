@@ -1158,28 +1158,40 @@ Dereferencing alias entries is only supported on base-level searches. One-level 
 <p class="chakra-text css-36k3oc">Figure 26: Example Search Returning Root Naming Contexts</p>
 <h3 class="chakra-heading css-5cvzdn" id="add">Add</h3>
 <p class="chakra-text css-36k3oc">In this section, a new entry is added to RadiantOne using the parameters shown in the table below. The value in the Request Body field contains the information for the entry to be added.</p>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> http://localhost:8089/adap
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Post
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Basic `<userdn>:<password>`
-</password></userdn></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> <style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{ &quot;params&quot; : { 
-&quot;dn&quot; : &quot;uid=alice,cn=config&quot;, 
-&quot;attributes&quot; : { &quot;objectClass&quot; : [ &quot;top&quot;, 
-&quot;person&quot;, 
-&quot;organizationalPerson&quot;, 
-&quot;inetOrgPerson&quot; ], 
-&quot;cn&quot; : &quot;Alice Wonderland&quot;, 
-&quot;sn&quot; : &quot;Wonderland&quot;, 
-&quot;uid&quot; : &quot;alice&quot; } } 
-}
-</pre></code></div></p></div></td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://localhost:8089/adap</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/adap">http://localhost:8089/adap</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Post</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic <code class="language-text">&lt;userDN&gt;:&lt;password&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">{ &quot;params&quot; : { <br/>&quot;dn&quot; : &quot;uid=alice,cn=config&quot;, <br/>&quot;attributes&quot; : { &quot;objectClass&quot; : [ &quot;top&quot;, <br/>&quot;person&quot;, <br/>&quot;organizationalPerson&quot;, <br/>&quot;inetOrgPerson&quot; ], <br/>&quot;cn&quot; : &quot;Alice Wonderland&quot;, <br/>&quot;sn&quot; : &quot;Wonderland&quot;, <br/>&quot;uid&quot; : &quot;alice&quot; } } <br/>}</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">Table 25: Add Operation</p>
 <p class="chakra-text css-36k3oc"><span class="gatsby-resp-image-wrapper" style="position:relative;display:block;margin-left:auto;margin-right:auto;max-width:475px;z-index:-1">
       <span class="gatsby-resp-image-background-image" style="padding-bottom:50.54545454545455%;position:relative;bottom:0;left:0;background-image:url(&#x27;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAe5qUIP/xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAEFAl//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAWEAEBAQAAAAAAAAAAAAAAAAABEAD/2gAIAQEAAT8hKR3/2gAMAwEAAgADAAAAEFPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGxABAAMBAAMAAAAAAAAAAAAAAQARITFRgaH/2gAIAQEAAT8QQuNt8IFmle40dfsIWhUt8wW7s//Z&#x27;);background-size:cover;display:block"></span>
@@ -1297,7 +1309,7 @@ Dereferencing alias entries is only supported on base-level searches. One-level 
 </p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
 </p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic <userdn>:<password>
 </password></userdn></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{
+</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{
     &quot;params&quot;: {
         &quot;mods&quot;: [
             {
