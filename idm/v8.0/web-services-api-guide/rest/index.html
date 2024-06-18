@@ -1296,31 +1296,40 @@ Dereferencing alias entries is only supported on base-level searches. One-level 
 <p class="chakra-text css-36k3oc">If successful, the Response section displays the message “{&quot;httpStatus&quot;:200}”.</p>
 <h3 class="chakra-heading css-5cvzdn" id="modify-patch-delete-attribute-value">Modify (PATCH) Delete Attribute Value</h3>
 <p class="chakra-text css-36k3oc">In this example an attribute (e.g. email) containing a specified value (e.g. <a class="chakra-link css-1on117q" href="mailto:alice@radiantlogic.com">alice@radiantlogic.com</a>) is deleted by using the parameters shown in the table below.</p>
-<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Field	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Value
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">http://localhost:8089/adap/`&lt; baseDN&gt;`
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">http://localhost:8089/adap/uid=alice,cn=config
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Patch
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization
-</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic <userdn>:<password>
-</password></userdn></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{
-    &quot;params&quot;: {
-        &quot;mods&quot;: [
-            {
-                &quot;attribute&quot;: &quot;email&quot;,
-                &quot;type&quot;: &quot;DELETE&quot;,
-                &quot;values&quot;: [alice@radiantlogic.com]
-            }
-        ]
-    }
-}
-</pre></code></div></p></div></td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="chakra-table__container css-cnygor"><table class="chakra-table css-5605sr"><thead class="css-d1ivz7"><tr class="css-1vcz8kh"><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Field</div></th><th style="text-transform:none" class="css-18q8pyb"><div class="css-uuz2hx">Value</div></th></tr></thead><tbody class="css-0"><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">URL Syntax</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><code class="language-text">http://localhost:8089/adap/&lt;baseDN&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example URL</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"><a class="chakra-link css-1on117q" href="http://localhost:8089/adap/uid=alice,cn=config">http://localhost:8089/adap/uid=alice,cn=config</a></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Method</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Patch</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Name</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Authorization</p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Basic <code class="language-text">&lt;userDN&gt;:&lt;password&gt;</code></p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">{ &quot;params&quot;: {<br/>&quot;mods&quot;: [ { &quot;attribute&quot;: &quot;email&quot;, <br/>&quot;type&quot;: &quot;DELETE&quot;, <br/> &quot;values&quot;: [<a class="chakra-link css-1on117q" href="mailto:alice@radiantlogic.com">alice@radiantlogic.com</a>]} ]  } <br/>}</p></div></td></tr></tbody></table></div>
 <p class="chakra-text css-36k3oc">Table 28: REST Operation to Delete an Attribute Value</p>
 <p class="chakra-text css-36k3oc">If successful, the Response section displays the message “{&quot;httpStatus&quot;:200}”.</p>
 <h3 class="chakra-heading css-5cvzdn" id="modify-patch-delete-attribute">Modify (PATCH) Delete Attribute</h3>
@@ -1338,7 +1347,7 @@ Dereferencing alias entries is only supported on base-level searches. One-level 
 </p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Header Value	
 </p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> Basic  &lt; userDN&gt;:&lt; password&gt;
 </p></div></td></tr><tr class="css-1vcz8kh"><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0">Example Request Body	
-</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> <div class="css-pdsrdc"><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{
+</p></div></td><td class="css-1tk3kxa"><div class="css-174cwi7"><p class="chakra-text css-0"> <style data-emotion="css pdsrdc">.css-pdsrdc{background:var(--chakra-colors-rlCodeBlockDark);border-radius:10px;padding:var(--chakra-space-3);}</style><div class="css-pdsrdc"><style data-emotion="css 1lnh5oo">.css-1lnh5oo{display:inline-block;font-family:var(--chakra-fonts-mono);-webkit-padding-start:0.2em;padding-inline-start:0.2em;-webkit-padding-end:0.2em;padding-inline-end:0.2em;border-radius:var(--chakra-radii-sm);color:var(--badge-color);box-shadow:var(--badge-shadow);--badge-bg:var(--chakra-colors-gray-100);--badge-color:var(--chakra-colors-gray-800);background:var(--chakra-colors-rlCodeBlockDark);font-size:16px;}.chakra-ui-dark .css-1lnh5oo:not([data-theme]),[data-theme=dark] .css-1lnh5oo:not([data-theme]),.css-1lnh5oo[data-theme=dark]{--badge-bg:rgba(226, 232, 240, 0.16);--badge-color:var(--chakra-colors-gray-200);}</style><code class="chakra-code css-1lnh5oo"><pre class="multilineCodeBlockPre">{
     &quot;params&quot;: {
         &quot;mods&quot;: [
             {
